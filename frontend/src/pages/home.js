@@ -1,14 +1,14 @@
-import './App.css';
+import React from "react";
 
-function App() {
+
+function Home({ userService }) {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          HOME
         </p>
         <a
-          className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

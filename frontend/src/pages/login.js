@@ -1,23 +1,52 @@
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
+function Login({ userService }) {
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleLogin = async (e) => {
+    // e.preventDefault();
+    userService.loginUser(credentials);
+  };
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <form onSubmit={handleLogin} >
+        <p>Login</p>
+        <div>
+          <input
+            type="text"
+            placeholder="Username"
+            onChange={(e) =>
+              setCredentials({
+                username: e.target.value,
+                password: credentials.password,
+              })
+            }
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Password"
+            onChange={(e) =>
+              setCredentials({
+                username: credentials.username,
+                password: e.target.value,
+              })
+            }
+          />
+        </div>
+        <div>
+          <button type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
 
-export default App;
+export default Login;
