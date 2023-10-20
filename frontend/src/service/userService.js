@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { environment } from "../environment"
+
 export class UserService {
   constructor() {
     this.isLoggedIn = this.checkLoggedIn();
@@ -24,7 +26,7 @@ export class UserService {
   }
 
   async loginUser(credentials) {
-    const userToken = await fetch("http://localhost:5050/login", {
+    const userToken = await fetch(`${environment.url}/auth`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

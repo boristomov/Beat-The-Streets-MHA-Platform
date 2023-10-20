@@ -9,6 +9,7 @@ function Login({ userService }) {
   const handleLogin = async (e) => {
     // e.preventDefault();
     userService.loginUser(credentials);
+    window.location.reload(false);
   };
   
   return (

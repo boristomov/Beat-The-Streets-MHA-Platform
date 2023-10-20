@@ -5,9 +5,9 @@ const PORT = 5050;
 const app = express();
 app.use(cors());
 
-app.use("/login", (req, res) => {
+app.post("/auth", (req, res) => {
   res.send({
-    token: "test12345",
+    token: `test12345`
   });
 });
 
