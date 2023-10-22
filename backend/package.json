@@ -1,5 +1,6 @@
 {
   "name": "beat-the-streets-mha-platform",
+  "displayName": "Beat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

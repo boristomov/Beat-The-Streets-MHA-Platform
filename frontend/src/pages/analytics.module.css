@@ -1,0 +1,325 @@
+.analyticsV2Child,
+.analyticsV2Item {
+  position: absolute;
+  top: 81px;
+  left: 773px;
+  background-color: #efefef;
+  width: 739px;
+  height: 901px;
+}
+.analyticsV2Item {
+  top: 80px;
+  left: 0;
+  background-color: #e6f6fe;
+  width: 773px;
+}
+.yourResults {
+  margin: 0;
+}
+.yourResultsAndContainer {
+  position: absolute;
+  top: 132px;
+  left: 73px;
+  font-size: var(--font-size-41xl);
+  font-family: var(--font-inter);
+}
+.analyticsV2Inner {
+  position: absolute;
+  top: 304px;
+  left: 73px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-top: 5px solid var(--color-khaki);
+  box-sizing: border-box;
+  width: 631px;
+  height: 153px;
+}
+.foundationarrowUpIcon {
+  position: absolute;
+  top: 355px;
+  left: 85px;
+  width: 75.02px;
+  height: 52px;
+  overflow: hidden;
+}
+.wordsWordswordsWor {
+  position: absolute;
+  top: 344px;
+  left: 169px;
+  display: inline-block;
+  width: 523px;
+  height: 144px;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 488px;
+  left: 73px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-top: 5px solid var(--color-khaki);
+  box-sizing: border-box;
+  width: 631px;
+  height: 153px;
+}
+.foundationarrowUpIcon1 {
+  position: absolute;
+  top: 539px;
+  left: 85px;
+  width: 75.02px;
+  height: 52px;
+  overflow: hidden;
+}
+.wordsWordswordsWor1 {
+  position: absolute;
+  top: 528px;
+  left: 169px;
+  display: inline-block;
+  width: 523px;
+  height: 144px;
+}
+.analyticsV2Child1 {
+  position: absolute;
+  top: 672px;
+  left: 73px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-top: 5px solid var(--color-khaki);
+  box-sizing: border-box;
+  width: 631px;
+  height: 153px;
+}
+.foundationarrowUpIcon2 {
+  position: absolute;
+  top: 723px;
+  left: 85px;
+  width: 75.02px;
+  height: 52px;
+  overflow: hidden;
+}
+.wordsWordswordsWor2 {
+  position: absolute;
+  top: 712px;
+  left: 169px;
+  display: inline-block;
+  width: 523px;
+  height: 144px;
+}
+.analyticsV2Child2 {
+  position: absolute;
+  top: 79px;
+  left: 773px;
+  background-color: #f9f9f9;
+  width: 745px;
+  height: 903px;
+}
+.analyticsV2Child3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #8cd1ff;
+  width: 1518px;
+  height: 83.04px;
+}
+.analyticsV2Child4 {
+  position: absolute;
+  top: 816.38px;
+  left: 918.25px;
+  border-radius: 56.42px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 476.48px;
+  height: 37.62px;
+}
+.detectedSymptoms {
+  position: absolute;
+  top: 131px;
+  left: 901px;
+  font-size: 45.14px;
+}
+.analyticsV2Child5 {
+  position: absolute;
+  top: 284.74px;
+  left: 918.25px;
+  border-radius: 56.42px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 476.48px;
+  height: 37.62px;
+}
+.analyticsV2Child6 {
+  position: absolute;
+  top: 285px;
+  left: 918px;
+  border-radius: 56.42px 0 0 56.42px;
+  background-color: var(--color-dodgerblue);
+  width: 237px;
+  height: 37px;
+}
+.analyticsV2Child10,
+.analyticsV2Child7,
+.analyticsV2Child8,
+.analyticsV2Child9 {
+  position: absolute;
+  top: 375.02px;
+  left: 918.25px;
+  border-radius: 56.42px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 476.48px;
+  height: 37.62px;
+}
+.analyticsV2Child10,
+.analyticsV2Child8,
+.analyticsV2Child9 {
+  top: 455.26px;
+}
+.analyticsV2Child10,
+.analyticsV2Child9 {
+  top: 545.54px;
+}
+.analyticsV2Child10 {
+  top: 635.82px;
+}
+.ellipseIcon {
+  position: absolute;
+  top: 288.5px;
+  left: 922.61px;
+  width: 28.84px;
+  height: 28.84px;
+}
+.analyticsV2Child11 {
+  position: absolute;
+  top: 375.02px;
+  left: 918.25px;
+  border-radius: 56.42px 0 0 56.42px;
+  background-color: var(--color-darkorange-200);
+  width: 387.45px;
+  height: 37.62px;
+}
+.analyticsV2Child12 {
+  position: absolute;
+  top: 378.78px;
+  left: 922.61px;
+  width: 28.84px;
+  height: 28.84px;
+}
+.analyticsV2Child13 {
+  position: absolute;
+  top: 546px;
+  left: 918px;
+  border-radius: 56.42px 0 0 56.42px;
+  background-color: var(--color-dodgerblue);
+  width: 183px;
+  height: 37px;
+}
+.analyticsV2Child14 {
+  position: absolute;
+  top: 549.31px;
+  left: 922.61px;
+  width: 28.84px;
+  height: 28.84px;
+}
+.analyticsV2Child15 {
+  position: absolute;
+  top: 636px;
+  left: 917px;
+  border-radius: 56.42px 0 0 56.42px;
+  background-color: var(--color-darkorange-200);
+  width: 221.94px;
+  height: 37.62px;
+}
+.analyticsV2Child16 {
+  position: absolute;
+  top: 639.59px;
+  left: 921.36px;
+  width: 28.84px;
+  height: 28.84px;
+}
+.analyticsV2Child17 {
+  position: absolute;
+  top: 726px;
+  left: 917px;
+  border-radius: 56.42px 0 0 56.42px;
+  background-color: var(--color-khaki);
+  width: 123px;
+  height: 38px;
+}
+.analyticsV2Child18 {
+  position: absolute;
+  top: 729.87px;
+  left: 921.36px;
+  width: 28.84px;
+  height: 28.84px;
+}
+.analyticsV2Child19 {
+  position: absolute;
+  top: 816.38px;
+  left: 918.25px;
+  border-radius: 56.42px 0 0 56.42px;
+  background-color: var(--color-dodgerblue);
+  width: 421.31px;
+  height: 37.62px;
+}
+.analyticsV2Child20 {
+  position: absolute;
+  top: 820.15px;
+  left: 922.61px;
+  width: 28.84px;
+  height: 28.84px;
+}
+.analyticsV2Child21 {
+  position: absolute;
+  top: 455px;
+  left: 918px;
+  border-radius: 56.42px 0 0 56.42px;
+  background-color: var(--color-khaki);
+  width: 347.33px;
+  height: 37.62px;
+}
+.analyticsV2Child22 {
+  position: absolute;
+  top: 459.03px;
+  left: 922.61px;
+  width: 28.84px;
+  height: 28.84px;
+}
+.analyticsV2Child23 {
+  position: absolute;
+  top: 726.1px;
+  left: 918.25px;
+  border-radius: 56.42px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 476.48px;
+  height: 37.62px;
+}
+.analyticsV2Child24 {
+  position: absolute;
+  top: 727px;
+  left: 918px;
+  border-radius: 56.42px 0 0 56.42px;
+  background-color: var(--color-khaki);
+  width: 347.33px;
+  height: 37.62px;
+}
+.analyticsV2Child25 {
+  position: absolute;
+  top: 731px;
+  left: 923px;
+  width: 28.84px;
+  height: 28.84px;
+}
+.analyticsV2 {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 982px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 15.57px;
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}

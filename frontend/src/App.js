@@ -4,11 +4,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useUserService } from "./service/userService"
 import Home from "./pages/home";
 import Login from "./pages/login" 
+import Analytics from "./pages/analytics";
 
 function App() {
   const userService = useUserService();
   if (!userService.isLoggedIn) {
-    return <Login userService={userService}/>
+    return <Analytics userService={userService}/>
   }
 
   return (
