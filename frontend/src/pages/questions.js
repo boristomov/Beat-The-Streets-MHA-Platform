@@ -1,33 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
+// Import Questions and Create Iterator
 import allQuestions from "../questionCategories.json";
-
-
-function Questions({ userService }) {
-  const questions = allQuestions.questions;
-  const iter = createIterator(questions); // iter is an iterator through question objects
-  /** Here is an example of a question object
-    {
-      "question": "Are you only relaxed when you have total control over your life?",
-      "Depression": 0,
-      "Anxiety": 1,
-      "Stress": 0,
-      "Self-esteem": 0,
-      "Cultural Sensitivity": 0,
-      "Quality of Life": 1,
-      "PTSD": 0
-    } 
-  */
-  
-  return (
-    <div>
-      <h3>{iter.next().question}</h3>
-      <button>Me</button>
-      <button>Not Me</button>
-    </div>
-  );
-}
-
 function createIterator(array) {
   let i = 0;
   const length = array.length;
@@ -38,13 +12,56 @@ function createIterator(array) {
       return newVal;
     },
     hasNext() {
-      if (i < length) {
+      if (i < length - 1) {
         return true;
       }
       return false;
+    },
+    curr() {
+      return array[i];
+    },
+    answer(bool) {
+      array[i]["user_response"] = bool;
     }
-  }
+  };
   return iterator;
 }
+const iter = createIterator(allQuestions.questions);
+
+
+// Main Component
+function Questions({ userService }) {
+  const [update, setUpdate] = useState(1);
+
+  function answerMe() {
+    iter.answer(true);
+    nextQuestion();
+  }
+
+  function answerNotMe() {
+    iter.answer(false);
+    nextQuestion();
+  }
+
+  function nextQuestion() {
+    if (iter.hasNext()) {
+      iter.next();
+      setUpdate(update + 1);
+    }
+    else {
+      userService.submitAssessmentData(allQuestions);
+      window.open(window.location.href = "/home"); // assessment results page
+    }
+  }
+
+  return (
+    <div>
+      <h3>{iter.curr().question}</h3>
+      <button onClick={answerMe}>Me</button>
+      <button onClick={answerNotMe}>Not Me</button>
+    </div>
+  );
+}
+
 
 export default Questions;

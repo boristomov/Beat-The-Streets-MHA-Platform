@@ -2,11 +2,7 @@ import { useState } from "react";
 
 import { environment } from "../environment"
 
-export class UserService {
-  constructor() {
-    this.isLoggedIn = this.checkLoggedIn();
-  }
-
+class UserService {
   checkLoggedIn() {
     const token = this.getToken();
     if (token && true) { // TODO: check if token is valid
@@ -37,6 +33,31 @@ export class UserService {
     sessionStorage.setItem("token", JSON.stringify(userToken));
     this.isLoggedIn = this.checkLoggedIn();
   }
+
+  async getUserData() {
+    const token = { token: this.getToken() };
+    const data = await fetch(`${environment.url}/get_user_data`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(token),
+    }).then((data) => data.json());
+    return data
+  }
+
+  async submitAssessmentData(data) {
+    const token = this.getToken();
+    const newData = { token: token, data: data };
+    await fetch(`${environment.url}/submit_assessment_data`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newData),
+    });
+  }
+
 }
 
 export function useUserService() {

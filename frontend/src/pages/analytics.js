@@ -1,7 +1,7 @@
 import DetectedSymtomsBars from "../components/DetectedSymtomsBars";
 import styles from "./analytics.module.css";
 
-const analytics = () => {
+const analytics = ({ userService }) => {
   return (
     <div className={styles.analyticsV2}>
       <div className={styles.analyticsV2Child} />
