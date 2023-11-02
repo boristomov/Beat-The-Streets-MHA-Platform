@@ -13,13 +13,24 @@
   background-color: #e6f6fe;
   width: 773px;
 }
+.containerStyles {
+  width: 280px;
+  height: 500px;
+  position: relative;
+  top: 100px;
+}
+.containerList {
+  display: flex;
+  justify-content: space-between;
+}
 .yourResults {
   margin: 0;
+  
 }
 .yourResultsAndContainer {
   position: absolute;
   top: 132px;
-  left: 73px;
+  left: 50px;
   font-size: var(--font-size-41xl);
   font-family: var(--font-inter);
 }
@@ -322,4 +333,10 @@
   font-size: 15.57px;
   color: var(--color-black);
   font-family: var(--font-poppins);
+}
+.nextStepsContainer {
+  position: relative;
+  width: 100%;
+  top: 982px;
+  background-color: var(--color-yellow);
 }

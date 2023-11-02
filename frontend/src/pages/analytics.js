@@ -11,11 +11,7 @@ const slides = [
   { url: "http://localhost:3000/image-4.jpg", title: "city" },
   { url: "http://localhost:3000/image-5.jpg", title: "italy" },
 ];
-const containerStyles = {
-  width: "500px",
-  height: "280px",
-  // margin: "0 auto",
-};
+
 
 function Analytics({ userService }) {
   return (
@@ -25,6 +21,17 @@ function Analytics({ userService }) {
       <b className={styles.yourResultsAndContainer}>
         <p className={styles.yourResults}>{`Your Results `}</p>
         <p className={styles.yourResults}>and Next Steps:</p>
+        <div className={styles.containerList}>
+          <div className={styles.containerStyles}>
+            <ImageSlider slides = {slides}/>
+          </div>
+          <div className={styles.containerStyles}>
+            <ImageSlider slides = {slides}/>
+          </div>
+          <div className={styles.containerStyles}>
+            <ImageSlider slides = {slides}/>
+          </div>
+      </div>
       </b>
       {/* <div className={styles.analyticsV2Inner} /> */}
       
@@ -33,9 +40,7 @@ function Analytics({ userService }) {
         alt=""
         src="/foundationarrowup.svg"
       /> */}
-        <div style={containerStyles}>
-          <ImageSlider slides = {slides}/>
-        </div>
+      
       {/* <div
         className={styles.wordsWordswordsWor}
       >{`words wordswords wor dswords wor words wordsvwords cwords wordsw ordswordswo rdswor words wordsvwords words w or ds words words wordswords wor dswords wor words wordsvwords `}</div>
@@ -84,6 +89,9 @@ function Analytics({ userService }) {
       <DetectedSymtomsBars />
       <div className={styles.analyticsV2Child24} />
       <img className={styles.analyticsV2Child25} alt="" src="/ellipse-13.svg" />
+      <div className={styles.nextStepsContainer}>
+        <b> Your Next Steps: </b>
+      </div>
     </div>
   );
 };
