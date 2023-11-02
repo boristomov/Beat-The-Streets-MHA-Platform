@@ -1,7 +1,23 @@
+import React from 'react';
+import ImageSlider from "../components/ImageSlider";
 import DetectedSymtomsBars from "../components/DetectedSymtomsBars";
 import styles from "./analytics.module.css";
+import { Link } from "react-router-dom";
 
-const analytics = ({ userService }) => {
+const slides = [
+  { url: "http://localhost:3000/image-1.jpg", title: "beach" },
+  { url: "http://localhost:3000/image-2.jpg", title: "boat" },
+  { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+  { url: "http://localhost:3000/image-4.jpg", title: "city" },
+  { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+];
+const containerStyles = {
+  width: "500px",
+  height: "280px",
+  // margin: "0 auto",
+};
+
+function Analytics({ userService }) {
   return (
     <div className={styles.analyticsV2}>
       <div className={styles.analyticsV2Child} />
@@ -10,13 +26,17 @@ const analytics = ({ userService }) => {
         <p className={styles.yourResults}>{`Your Results `}</p>
         <p className={styles.yourResults}>and Next Steps:</p>
       </b>
-      <div className={styles.analyticsV2Inner} />
-      <img
+      {/* <div className={styles.analyticsV2Inner} /> */}
+      
+      {/* <img
         className={styles.foundationarrowUpIcon}
         alt=""
         src="/foundationarrowup.svg"
-      />
-      <div
+      /> */}
+        <div style={containerStyles}>
+          <ImageSlider slides = {slides}/>
+        </div>
+      {/* <div
         className={styles.wordsWordswordsWor}
       >{`words wordswords wor dswords wor words wordsvwords cwords wordsw ordswordswo rdswor words wordsvwords words w or ds words words wordswords wor dswords wor words wordsvwords `}</div>
       <div className={styles.rectangleDiv} />
@@ -36,7 +56,7 @@ const analytics = ({ userService }) => {
       />
       <div
         className={styles.wordsWordswordsWor2}
-      >{`words wordswords wor dswords wor words wordsvwords cwords wordsw ordswordswo rdswor words wordsvwords words w or ds words words wordswords wor dswords wor words wordsvwords `}</div>
+      >{`words wordswords wor dswords wor words wordsvwords cwords wordsw ordswordswo rdswor words wordsvwords words w or ds words words wordswords wor dswords wor words wordsvwords `}</div> */}
       <div className={styles.analyticsV2Child2} />
       <div className={styles.analyticsV2Child3} />
       <div className={styles.analyticsV2Child4} />
@@ -68,4 +88,4 @@ const analytics = ({ userService }) => {
   );
 };
 
-export default analytics;
+export default Analytics;

@@ -10,27 +10,27 @@ import Questions from "./pages/questions";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const userService = useUserService();
-  if (userService.checkLoggedIn() && loggedIn === false) {
-    setLoggedIn(true);
-  }
-  if (!loggedIn) {
-    return <Login userService={userService} />;
-  }
+  // if (userService.checkLoggedIn() && loggedIn === false) {
+  //   setLoggedIn(true);
+  // }
+  // if (!loggedIn) {
+  //   return <Login userService={userService} />;
+  // }
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home userService={userService} />}></Route>
+        {/* <Route path="/" element={<Home userService={userService} />}></Route>
         <Route
           path="/home"
           element={<Home userService={userService} />}
-        ></Route>
+        ></Route> */}
         <Route
           path="/assessments/take-assessment"
           element={<Questions userService={userService} />}
         ></Route>
         <Route
-          path="/analytics/"
+          path="/"
           element={<Analytics userService={userService} />}
         ></Route>
       </Routes>
