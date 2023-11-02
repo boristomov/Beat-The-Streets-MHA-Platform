@@ -16,23 +16,48 @@ const slides = [
 function Analytics({ userService }) {
   return (
     <div className={styles.analyticsV2}>
-      <div className={styles.analyticsV2Child} />
-      <div className={styles.analyticsV2Item} />
-      <b className={styles.yourResultsAndContainer}>
-        <p className={styles.yourResults}>{`Your Results `}</p>
-        <p className={styles.yourResults}>and Next Steps:</p>
-        <div className={styles.containerList}>
-          <div className={styles.containerStyles}>
-            <ImageSlider slides = {slides}/>
-          </div>
-          <div className={styles.containerStyles}>
-            <ImageSlider slides = {slides}/>
-          </div>
-          <div className={styles.containerStyles}>
-            <ImageSlider slides = {slides}/>
-          </div>
+      {/* Assigns page layout panels */}
+
+      {/* Header Bar */}
+      <div className={styles.headerBar} />
+      {/* Container for the two adjacent panels at the top. */}
+      <div className={styles.panelList}>
+        <div className={styles.blueMainPanel}>
+          <b className={styles.yourResultsAndContainer}>
+            <p className={styles.yourResults}>{`Your Results `}</p>
+            <p className={styles.yourResults}>and Next Steps:</p>
+          </b>
+        </div>
+        <div className={styles.detectedSymptomsMainPanel}>
+          <div className={styles.analyticsV2Child4} />
+          <b className={styles.detectedSymptoms}>Detected Symptoms</b>
+          <div className={styles.analyticsV2Child5} />
+          <div className={styles.analyticsV2Child6} />
+          <div className={styles.analyticsV2Child7} />
+          <div className={styles.analyticsV2Child8} />
+          <div className={styles.analyticsV2Child9} />
+          <div className={styles.analyticsV2Child10} />
+          <img className={styles.ellipseIcon} alt="" src="/ellipse-6.svg" />
+          <div className={styles.analyticsV2Child11} />
+          <img className={styles.analyticsV2Child12} alt="" src="/ellipse-7.svg" />
+          <div className={styles.analyticsV2Child13} />
+          <img className={styles.analyticsV2Child14} alt="" src="/ellipse-9.svg" />
+          <div className={styles.analyticsV2Child15} />
+          <img className={styles.analyticsV2Child16} alt="" src="/ellipse-10.svg" />
+          <div className={styles.analyticsV2Child17} />
+          <img className={styles.analyticsV2Child18} alt="" src="/ellipse-11.svg" />
+          <div className={styles.analyticsV2Child19} />
+          <img className={styles.analyticsV2Child20} alt="" src="/ellipse-12.svg" />
+          <div className={styles.analyticsV2Child21} />
+          <img className={styles.analyticsV2Child22} alt="" src="/ellipse-8.svg" />
+          <div className={styles.analyticsV2Child23} />
+          <DetectedSymtomsBars />
+          <div className={styles.analyticsV2Child24} />
+          <img className={styles.analyticsV2Child25} alt="" src="/ellipse-13.svg" />
+        </div>
       </div>
-      </b>
+      
+    
       {/* <div className={styles.analyticsV2Inner} /> */}
       
       {/* <img
@@ -62,36 +87,26 @@ function Analytics({ userService }) {
       <div
         className={styles.wordsWordswordsWor2}
       >{`words wordswords wor dswords wor words wordsvwords cwords wordsw ordswordswo rdswor words wordsvwords words w or ds words words wordswords wor dswords wor words wordsvwords `}</div> */}
-      <div className={styles.analyticsV2Child2} />
-      <div className={styles.analyticsV2Child3} />
-      <div className={styles.analyticsV2Child4} />
-      <b className={styles.detectedSymptoms}>Detected Symptoms</b>
-      <div className={styles.analyticsV2Child5} />
-      <div className={styles.analyticsV2Child6} />
-      <div className={styles.analyticsV2Child7} />
-      <div className={styles.analyticsV2Child8} />
-      <div className={styles.analyticsV2Child9} />
-      <div className={styles.analyticsV2Child10} />
-      <img className={styles.ellipseIcon} alt="" src="/ellipse-6.svg" />
-      <div className={styles.analyticsV2Child11} />
-      <img className={styles.analyticsV2Child12} alt="" src="/ellipse-7.svg" />
-      <div className={styles.analyticsV2Child13} />
-      <img className={styles.analyticsV2Child14} alt="" src="/ellipse-9.svg" />
-      <div className={styles.analyticsV2Child15} />
-      <img className={styles.analyticsV2Child16} alt="" src="/ellipse-10.svg" />
-      <div className={styles.analyticsV2Child17} />
-      <img className={styles.analyticsV2Child18} alt="" src="/ellipse-11.svg" />
-      <div className={styles.analyticsV2Child19} />
-      <img className={styles.analyticsV2Child20} alt="" src="/ellipse-12.svg" />
-      <div className={styles.analyticsV2Child21} />
-      <img className={styles.analyticsV2Child22} alt="" src="/ellipse-8.svg" />
-      <div className={styles.analyticsV2Child23} />
-      <DetectedSymtomsBars />
-      <div className={styles.analyticsV2Child24} />
-      <img className={styles.analyticsV2Child25} alt="" src="/ellipse-13.svg" />
+      
+      
+      
       <div className={styles.nextStepsContainer}>
-        <b> Your Next Steps: </b>
+        <b className={styles.nextStepsContainerText}> Your Next Steps: </b>
+        <div className={styles.containerList}>
+          <div className={styles.containerStyles}>
+            <ImageSlider slides = {slides}/>
+          </div>
+          <div className={styles.containerStyles}>
+            <ImageSlider slides = {slides}/>
+          </div>
+          <div className={styles.containerStyles}>
+            <ImageSlider slides = {slides}/>
+          </div>
+        </div>
+        <div className={styles.vectorGraphicBTS} alt="" src="/Vector.png"/>
       </div>
+      
+      <div className={styles.footerBar} />
     </div>
   );
 };

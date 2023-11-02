@@ -1,27 +1,38 @@
-.analyticsV2Child,
-.analyticsV2Item {
+.panelList {
+  display: flex;
   position: absolute;
-  top: 81px;
-  left: 773px;
-  background-color: #efefef;
-  width: 739px;
-  height: 901px;
-}
-.analyticsV2Item {
+  width: 100%;
   top: 80px;
-  left: 0;
+}
+.blueMainPanel {
+  /* position: absolute; */
+  top: 80px;
+  width: 65%;
   background-color: #e6f6fe;
-  width: 773px;
+  height: 900px;
+  /* z-index: 2; */
+}
+.detectedSymptomsMainPanel {
+  position: absolute;
+  width: 35%;
+  left: 65%;
+  background-color: #6d1c1c;
+  height: 900px;
+  z-index: 0;
+  align-content: center;
 }
 .containerStyles {
   width: 280px;
   height: 500px;
   position: relative;
+  padding: 20px;
   top: 100px;
 }
 .containerList {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  align-content: center;
 }
 .yourResults {
   margin: 0;
@@ -118,26 +129,20 @@
   width: 523px;
   height: 144px;
 }
-.analyticsV2Child2 {
-  position: absolute;
-  top: 79px;
-  left: 773px;
-  background-color: #f9f9f9;
-  width: 745px;
-  height: 903px;
-}
-.analyticsV2Child3 {
+
+.headerBar {
   position: absolute;
   top: 0;
   left: 0;
   background-color: #8cd1ff;
-  width: 1518px;
-  height: 83.04px;
+  width: 100%;
+  height: 80px;
 }
 .analyticsV2Child4 {
   position: absolute;
   top: 816.38px;
-  left: 918.25px;
+  /* left: 918.25px; */
+  left: 10%;
   border-radius: 56.42px;
   background-color: var(--color-white);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -147,13 +152,15 @@
 .detectedSymptoms {
   position: absolute;
   top: 131px;
-  left: 901px;
+  /* left: 901px; */
+  left: 10%;
   font-size: 45.14px;
 }
 .analyticsV2Child5 {
   position: absolute;
   top: 284.74px;
-  left: 918.25px;
+  /* left: 918.25px; */
+  left: 10%;
   border-radius: 56.42px;
   background-color: var(--color-white);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -163,7 +170,8 @@
 .analyticsV2Child6 {
   position: absolute;
   top: 285px;
-  left: 918px;
+  /* left: 918px; */
+  left: 10%;
   border-radius: 56.42px 0 0 56.42px;
   background-color: var(--color-dodgerblue);
   width: 237px;
@@ -175,7 +183,8 @@
 .analyticsV2Child9 {
   position: absolute;
   top: 375.02px;
-  left: 918.25px;
+  /* left: 918.25px; */
+  left: 10%;
   border-radius: 56.42px;
   background-color: var(--color-white);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -197,14 +206,16 @@
 .ellipseIcon {
   position: absolute;
   top: 288.5px;
-  left: 922.61px;
+  /* left: 922.61px; */
+  left: 11%;
   width: 28.84px;
   height: 28.84px;
 }
 .analyticsV2Child11 {
   position: absolute;
   top: 375.02px;
-  left: 918.25px;
+  /* left: 918.25px; */
+  left: 10%;
   border-radius: 56.42px 0 0 56.42px;
   background-color: var(--color-darkorange-200);
   width: 387.45px;
@@ -213,14 +224,16 @@
 .analyticsV2Child12 {
   position: absolute;
   top: 378.78px;
-  left: 922.61px;
+  /* left: 922.61px; */
+  left: 11%;
   width: 28.84px;
   height: 28.84px;
 }
 .analyticsV2Child13 {
   position: absolute;
   top: 546px;
-  left: 918px;
+  /* left: 918px; */
+  left: 10%;
   border-radius: 56.42px 0 0 56.42px;
   background-color: var(--color-dodgerblue);
   width: 183px;
@@ -229,14 +242,16 @@
 .analyticsV2Child14 {
   position: absolute;
   top: 549.31px;
-  left: 922.61px;
+  /* left: 922.61px; */
+  left: 11%;
   width: 28.84px;
   height: 28.84px;
 }
 .analyticsV2Child15 {
   position: absolute;
   top: 636px;
-  left: 917px;
+  /* left: 917px; */
+  left: 10%;
   border-radius: 56.42px 0 0 56.42px;
   background-color: var(--color-darkorange-200);
   width: 221.94px;
@@ -245,14 +260,16 @@
 .analyticsV2Child16 {
   position: absolute;
   top: 639.59px;
-  left: 921.36px;
+  /* left: 921.36px; */
+  left: 11%;
   width: 28.84px;
   height: 28.84px;
 }
 .analyticsV2Child17 {
   position: absolute;
   top: 726px;
-  left: 917px;
+  /* left: 917px; */
+  left: 10%;
   border-radius: 56.42px 0 0 56.42px;
   background-color: var(--color-khaki);
   width: 123px;
@@ -261,14 +278,16 @@
 .analyticsV2Child18 {
   position: absolute;
   top: 729.87px;
-  left: 921.36px;
+  /* left: 921.36px; */
+  left: 11%;
   width: 28.84px;
   height: 28.84px;
 }
 .analyticsV2Child19 {
   position: absolute;
   top: 816.38px;
-  left: 918.25px;
+  /* left: 918.25px; */
+  left: 10%;
   border-radius: 56.42px 0 0 56.42px;
   background-color: var(--color-dodgerblue);
   width: 421.31px;
@@ -277,14 +296,16 @@
 .analyticsV2Child20 {
   position: absolute;
   top: 820.15px;
-  left: 922.61px;
+  /* left: 922.61px; */
+  left: 11%;
   width: 28.84px;
   height: 28.84px;
 }
 .analyticsV2Child21 {
   position: absolute;
   top: 455px;
-  left: 918px;
+  /* left: 918px; */
+  left: 10%;
   border-radius: 56.42px 0 0 56.42px;
   background-color: var(--color-khaki);
   width: 347.33px;
@@ -293,24 +314,28 @@
 .analyticsV2Child22 {
   position: absolute;
   top: 459.03px;
-  left: 922.61px;
+  /* left: 922.61px; */
+  left: 11%;
   width: 28.84px;
   height: 28.84px;
 }
 .analyticsV2Child23 {
   position: absolute;
   top: 726.1px;
-  left: 918.25px;
+  /* left: 918.25px; */
+  left: 10%;
   border-radius: 56.42px;
   background-color: var(--color-white);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   width: 476.48px;
   height: 37.62px;
+  z-index: -1;
 }
 .analyticsV2Child24 {
   position: absolute;
   top: 727px;
-  left: 918px;
+  /* left: 918px; */
+  left: 10%;
   border-radius: 56.42px 0 0 56.42px;
   background-color: var(--color-khaki);
   width: 347.33px;
@@ -319,7 +344,8 @@
 .analyticsV2Child25 {
   position: absolute;
   top: 731px;
-  left: 923px;
+  /* left: 923px; */
+  left: 11%;
   width: 28.84px;
   height: 28.84px;
 }
@@ -327,7 +353,7 @@
   position: relative;
   background-color: var(--color-white);
   width: 100%;
-  height: 982px;
+  height: 1960px;
   overflow: hidden;
   text-align: left;
   font-size: 15.57px;
@@ -336,7 +362,34 @@
 }
 .nextStepsContainer {
   position: relative;
+  text-align: center;
+  align-content: center;
+  align-items: center;
   width: 100%;
-  top: 982px;
-  background-color: var(--color-yellow);
+  height: 900px; 
+  top: 980px;
+  background-color: #003559;
+  font-size: var(--font-size-41xl);
+  font-family: var(--font-inter);
+}
+.nextStepsContainerText {
+  text-align: center;
+  font-size: var(--font-size-41xl);
+  color: #fff;
+  font-family: var(--font-inter);
+}
+
+.vectorGraphics {
+  position: absolute;
+  background-color: var(--color-black);
+  bottom: 80px;
+ 
+}
+
+.footerBar {
+  position: absolute;
+  bottom: 0;
+  background-color: #8cd1ff;
+  width: 100%;
+  height: 80px;
 }
