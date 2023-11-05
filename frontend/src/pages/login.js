@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-function Login({ userService }) {
+import { UserService } from "../service/userService";
+// import { EventEmitter } from "../service/eventEmitter";
+
+function Login() {
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -8,14 +11,17 @@ function Login({ userService }) {
 
   const handleLogin = async (e) => {
     // e.preventDefault();
-    userService.loginUser(credentials);
+    UserService.loginUser(credentials);
     window.location.reload(false);
   };
   
   return (
     <div>
       <form onSubmit={handleLogin} >
-        <p>Login</p>
+        <h3>Login</h3>
+        <p>NOTE: TYPE RANDOM STUFF AND CLICK SUBMIT TO GET PAST THIS PAGE</p>
+        <p>NOTE: MAKE SURE TO RUN THE BACKEND LOCALLY OR THIS WILL NOT WORK</p>
+        <p>To Run The Backend: cd into backend, run "npm install", then run "node server.mjs"</p>
         <div>
           <input
             type="text"

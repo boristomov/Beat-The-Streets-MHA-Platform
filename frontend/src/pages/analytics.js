@@ -2,7 +2,10 @@ import React from 'react';
 import ImageSlider from "../components/ImageSlider";
 import DetectedSymtomsBars from "../components/DetectedSymtomsBars";
 import styles from "./analytics.module.css";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
+
+import { UserService } from "../service/userService";
+import { EventEmitter } from "../service/eventEmitter";
 
 const slides = [
   { url: "http://localhost:3000/image-1.jpg", title: "beach" },
@@ -13,7 +16,7 @@ const slides = [
 ];
 
 
-function Analytics({ userService }) {
+function Analytics() {
   return (
     <div className={styles.analyticsV2}>
       {/* Assigns page layout panels */}

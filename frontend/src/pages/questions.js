@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import { UserService } from "../service/userService";
+//import { EventEmitter } from "../service/eventEmitter";
 import "./questions.css";
 //import WomanHelp from "../../public/Woman_seeking_psycholigist_help.svg"
 
@@ -32,7 +35,7 @@ const iter = createIterator(allQuestions.questions);
 
 
 // Main Component
-function Questions({ userService }) {
+function Questions() {
   const [update, setUpdate] = useState(1);
 
   function answerMe() {
@@ -51,7 +54,7 @@ function Questions({ userService }) {
       setUpdate(update + 1);
     }
     else {
-      userService.submitAssessmentData(allQuestions);
+      UserService.submitAssessmentData(allQuestions);
       window.open(window.location.href = "/home"); // assessment results page
     }
   }

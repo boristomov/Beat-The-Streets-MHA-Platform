@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { environment } from "../environment";
+import { EventEmitter } from "./eventEmitter";
 
-import { environment } from "../environment"
+class UserServiceClass {
+  constructor() {
+    EventEmitter.create("getLoggedIn");
+    EventEmitter.create("getToken");
+    EventEmitter.create("getUserData");
+  }
 
-class UserService {
+  async eventDispatch() {
+    EventEmitter.dispatch("getLoggedIn", this.checkLoggedIn());
+    EventEmitter.dispatch("getToken", this.getToken());
+    EventEmitter.dispatch("getUserData", await this.getUserData());
+  }
+  
   checkLoggedIn() {
     const token = this.getToken();
     if (token && true) { // TODO: check if token is valid
@@ -21,6 +32,18 @@ class UserService {
     return userToken?.token;
   }
 
+  async getUserData() {
+    const token = { token: this.getToken() };
+    const data = await fetch(`${environment.url}/get_user_data`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(token),
+    }).then((data) => data.json());
+    return data;
+  }
+
   async loginUser(credentials) {
     const userToken = await fetch(`${environment.url}/auth`, {
       method: "POST",
@@ -32,18 +55,7 @@ class UserService {
 
     sessionStorage.setItem("token", JSON.stringify(userToken));
     this.isLoggedIn = this.checkLoggedIn();
-  }
-
-  async getUserData() {
-    const token = { token: this.getToken() };
-    const data = await fetch(`${environment.url}/get_user_data`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(token),
-    }).then((data) => data.json());
-    return data
+    this.eventDispatch();
   }
 
   async submitAssessmentData(data) {
@@ -60,7 +72,4 @@ class UserService {
 
 }
 
-export function useUserService() {
-  const [userService] = useState(new UserService());
-  return userService;
-}
+export const UserService = new UserServiceClass();
