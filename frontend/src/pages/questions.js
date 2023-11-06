@@ -6,7 +6,10 @@ import "./questions.css";
 import Woman_seeking_psycholigist_help from "../assets/Woman_seeking_psycholigist_help.svg"
 import LeftArrow from "../assets/LeftArrow.svg"
 import RightArrow from "../assets/RightArrow.svg"
-import MeButtons from "../assets/Me-buttons.svg"
+
+import MeButton from "../assets/MeButton.svg"
+import NotMeButton from "../assets/NotMeButton.svg"
+
 import BTSLOGO from "../assets/BTS-Logo.svg"
 
 // Import Questions and Create Iterator
@@ -67,12 +70,7 @@ function Questions() {
     <>
       <div className="answering-questions-pages">
         <div className="frame">
-          <div className="frame1">
-            <div className="frame-parent">
-              <div className="frame1">
-                <div className="frame-child" />
-                <b className="b-left">1</b>
-              </div>
+          <div className="frame-parent">
               <div className="frame2">
                 <div className="frame-child" />
                 <b className="b-left">2</b>
@@ -135,11 +133,6 @@ function Questions() {
                 <div className="frame-child" />
                 <b className="b-right">16</b>
               </div>
-              <div className="frame17">
-                <div className="frame-child" />
-                <b className="b-right">17</b>
-              </div>
-            </div>
           </div>
           <div className="frame36">
             <div className="frame37">
@@ -165,9 +158,14 @@ function Questions() {
                 </div>
                 <div className="frame42">
                   <div className="me-parent">
+                    <button className="me-button" onClick={answerMe}>
+                      <img className="me-not-me-button-icons" alt="" src={MeButton} />
+                    </button>
                     <div className="me">Me</div>
+                    <button className="not-me-button" onClick={answerNotMe}>
+                      <img className="me-not-me-button-icons" alt="" src={NotMeButton} />
+                    </button>
                     <div className="not-me">Not Me</div>
-                    <img className="frame-icon" alt="" src={MeButtons} />
                   </div>
                 </div>
                 <div className="frame44">
@@ -209,11 +207,6 @@ function Questions() {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <h3>{}</h3>
-        <button onClick={answerMe}>Me</button>
-        <button onClick={answerNotMe}>Not Me</button>
       </div>
     </>
   );

@@ -179,8 +179,7 @@ body {
   .frame13,
   .frame14,
   .frame15,
-  .frame16,
-  .frame17 {
+  .frame16 {
     position: absolute;
     top: 0.75rem;
     left: 25.44rem;
@@ -188,29 +187,22 @@ body {
     height: 1.38rem;
     overflow: hidden;
   }
-  .frame14 {
+  .frame13 {
     left: 27.5rem;
   }
-  .frame15 {
+  .frame14 {
     left: 29.56rem;
   }
-  .frame16 {
+  .frame15 {
     left: 31.63rem;
   }
-  .frame17 {
+  .frame16 {
     left: 33.69rem;
   }
-  .frame-parent,
-  .frame1 {
+  .frame-parent {
     position: absolute;
     width: 37.13rem;
     height: 2.88rem;
-  }
-  .frame-parent {
-    top: 0;
-    left: calc(50% - 297px);
-  }
-  .frame1 {
     top: 11.25rem;
     left: 40.44rem;
     overflow: hidden;
@@ -273,7 +265,8 @@ body {
   .me,
   .not-me {
     position: absolute;
-    top: 7.13rem;
+    font-weight: bolder;
+    top: 8rem;
     left: 2.13rem;
     font-weight: 300;
   }
@@ -295,19 +288,46 @@ body {
     width: 49.94rem;
     height: 10.06rem;
   }
-  .frame-icon,
   .frame42 {
     position: absolute;
     overflow: hidden;
-  }
-  .frame42 {
     top: 8.56rem;
     left: 6.06rem;
     width: 49.94rem;
-    height: 17.25rem;
+    height: 18rem;
     font-size: 1.96rem;
   }
+  .me-button,
+  .not-me-button {
+    position: absolute;
+    top: 2rem;
+    left: 0rem;
+    width: 7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+  }
+  .not-me-button {
+    left: 43rem;
+  }
+  .me-button:hover,
+  .not-me-button:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+  /*
+  .me-not-me-button-icons {
+    position: relative;
+    width: 24.75rem;
+    height: 6.06rem;
+    overflow: hidden;
+  }*/
   .frame-icon {
+    position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     width: 49.5rem;
