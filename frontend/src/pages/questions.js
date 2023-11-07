@@ -18,6 +18,12 @@ function createIterator(array) {
   let i = 0;
   const length = array.length;
   const iterator = {
+    length() {
+      return length;
+    },
+    indexNum() {
+      return i;
+    },
     next() {
       const newVal = array[i];
       i += 1;
@@ -25,6 +31,17 @@ function createIterator(array) {
     },
     hasNext() {
       if (i < length - 1) {
+        return true;
+      }
+      return false;
+    },
+    prev() {
+      const newVal = array[i];
+      i -= 1;
+      return newVal;
+    },
+    hasPrev() {
+      if (i > 0) {
         return true;
       }
       return false;
@@ -66,72 +83,98 @@ function Questions() {
     }
   }
 
+  function prevQuestion() {
+    if (iter.hasPrev()) {
+      iter.prev();
+      setUpdate(update - 1);
+    }
+  }
+
+  function questionNum(displacement) {
+    let questNum = iter.indexNum() + displacement + 1
+    return 1<=questNum && questNum<=iter.length() ? questNum : " ";
+  }
+
   return (
     <>
       <div className="answering-questions-pages">
         <div className="frame">
           <div className="frame-parent">
               <div className="frame2">
-                <div className="frame-child" />
-                <b className="b-left">2</b>
+                <div className="frame-child">
+                  <b className="b-left">{questionNum(-7)}</b>
+                </div>
               </div>
               <div className="frame3">
-                <div className="frame-child" />
-                <b className="b-left">3</b>
+                <div className="frame-child">
+                  <b className="b-left">{questionNum(-6)}</b>
+                </div>
               </div>
               <div className="frame4">
-                <div className="frame-child" />
-                <b className="b-left">4</b>
+                <div className="frame-child">
+                  <b className="b-left">{questionNum(-5)}</b>
+                </div>
               </div>
               <div className="frame5">
-                <div className="frame-child" />
-                <b className="b-left">5</b>
+                <div className="frame-child">
+                  <b className="b-left">{questionNum(-4)}</b>
+                </div>
               </div>
               <div className="frame6">
-                <div className="frame-child" />
-                <b className="b-left">6</b>
+                <div className="frame-child">
+                  <b className="b-left">{questionNum(-3)}</b>
+                </div>
               </div>
               <div className="frame7">
-                <div className="frame-child" />
-                <b className="b-left">7</b>
+                <div className="frame-child">
+                  <b className="b-left">{questionNum(-2)}</b>
+                </div>
               </div>
               <div className="frame8">
-                <div className="frame-child-medium" />
-                <b className="b-mid-left">8</b>
+                <div className="frame-child-medium">
+                  <b className="b-mid-left">{questionNum(-1)}</b>
+                </div>
               </div>
               <div className="frame9">
                 <div className="frame-child-large" />
                 <b className="b-mid">
-                  <p className="p">9</p>
+                  <p>{questionNum(0)}</p>
                 </b>
               </div>
               <div className="frame10">
-                <div className="frame-child-medium" />
-                <b className="b-mid-right">10</b>
+                <div className="frame-child-medium">
+                  <b className="b-mid-right">{questionNum(1)}</b>
+                </div>
               </div>
               <div className="frame11">
-                <div className="frame-child" />
-                <b className="b-mid-mid-right">11</b>
+                <div className="frame-child">
+                  <b className="b-right">{questionNum(2)}</b>
+                </div>
               </div>
               <div className="frame12">
-                <div className="frame-child" />
-                <b className="b-right">12</b>
+                <div className="frame-child">
+                  <b className="b-right">{questionNum(3)}</b>
+                </div>
               </div>
               <div className="frame13">
-                <div className="frame-child" />
-                <b className="b-right">13</b>
+                <div className="frame-child">
+                  <b className="b-right">{questionNum(4)}</b>
+                </div>
               </div>
               <div className="frame14">
-                <div className="frame-child" />
-                <b className="b-right">14</b>
+                <div className="frame-child">
+                  <b className="b-right">{questionNum(5)}</b>
+                </div>
               </div>
               <div className="frame15">
-                <div className="frame-child" />
-                <b className="b-right">15</b>
+                <div className="frame-child">
+                  <b className="b-right">{questionNum(6)}</b>
+                </div>
               </div>
               <div className="frame16">
-                <div className="frame-child" />
-                <b className="b-right">16</b>
+                <div className="frame-child">
+                  <b className="b-right">{questionNum(7)}</b>
+                </div>
               </div>
           </div>
           <div className="frame36">
@@ -194,15 +237,17 @@ function Questions() {
           </div>
           <div className="frame51">
             <div className="frame-container">
-              <div className="frame-div">
-                <div className="frame-child96" />
-                <b className="next1">Next</b>
-                <div className="frame-child97" />
-                <b className="back1">Back</b>
-              </div>
               <div className="vector-parent">
-                <img className="vector-icon" alt="" src={LeftArrow} />
-                <img className="oouinext-ltr-icon" alt="" src={RightArrow} />
+                <button className="vector-button" onClick={prevQuestion}>
+                  <img className="vector-icon" alt="" src={LeftArrow} />
+                </button>
+                <button className="vector-button" onClick={nextQuestion}>
+                  <img className="oouinext-ltr-icon" alt="" src={RightArrow} />
+                </button>
+              </div>
+              <div className="frame-div">
+                <button className="back-button" onClick={prevQuestion}>Back</button>
+                <button className="next-button" onClick={nextQuestion}>Next</button>
               </div>
             </div>
           </div>

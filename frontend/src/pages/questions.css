@@ -34,11 +34,12 @@ body {
   --br-45xl-5: 64.5px;
   --br-11xl: 30px;
   --br-6xl-4: 25.4px;
+
+  user-select: none;
 }
 
 
 .frame-child {
-    position: absolute;
     top: 0;
     left: 0;
     border-radius: 50%;
@@ -47,9 +48,8 @@ body {
     height: 1.38rem;
   }
   .b-left {
-    position: absolute;
+    position: relative;
     top: 0.25rem;
-    left: 0.44rem;
   }
   .frame1 {
     position: absolute;
@@ -71,6 +71,7 @@ body {
     width: 1.38rem;
     height: 1.38rem;
     overflow: hidden;
+    text-align: center;
   }
   .frame3 {
     left: 4.13rem;
@@ -88,18 +89,19 @@ body {
     left: 12.38rem;
   }
   .frame-child-medium {
-    position: absolute;
     top: 0;
     left: 0;
     border-radius: 50%;
     background-color: var(--color-cornflowerblue);
     width: 2rem;
     height: 2rem;
+    text-align: center;
   }
   .b-mid-left {
-    position: absolute;
-    top: 0.56rem;
-    left: 0.75rem;
+    position: relative;
+    top: 0.3rem;
+    text-align: center;
+    font-size: large;
   }
   .frame8 {
     position: absolute;
@@ -118,16 +120,15 @@ body {
     width: 3.25rem;
     height: 3.25rem;
   }
-  .p {
-    margin: 0;
-  }
   .b-mid {
-    position: absolute;
+    position: relative;
     top: 0.38rem;
-    left: 0.88rem;
-    display: inline-block;
+    text-align: center;
     width: 1.19rem;
     height: 2.08rem;
+  }
+  .b-mid > p {
+    margin: 0;
   }
   .frame9 {
     position: absolute;
@@ -141,9 +142,10 @@ body {
     color: var(--color-cornflowerblue);
   }
   .b-mid-right {
-    position: absolute;
-    top: 0.56rem;
-    left: 0.56rem;
+    position: relative;
+    top: 0.3rem;
+    text-align: center;
+    font-size: large;
   }
   .frame10 {
     position: absolute;
@@ -153,17 +155,9 @@ body {
     height: 2rem;
     overflow: hidden;
   }
-  .b-mid-mid-right {
-    position: absolute;
-    top: 0.25rem;
-    left: 0.31rem;
-    /*
-    position: relative;
-    display: flex;
-    align-self: center;*/
-  }
   .frame11 {
     position: absolute;
+    text-align: center;
     top: 0.75rem;
     left: 23.38rem;
     width: 1.38rem;
@@ -171,9 +165,8 @@ body {
     overflow: hidden;
   }
   .b-right {
-    position: absolute;
+    position: relative;
     top: 0.25rem;
-    left: 0.25rem;
   }
   .frame12,
   .frame13,
@@ -186,6 +179,7 @@ body {
     width: 1.38rem;
     height: 1.38rem;
     overflow: hidden;
+    text-align: center
   }
   .frame13 {
     left: 27.5rem;
@@ -269,6 +263,7 @@ body {
     top: 8rem;
     left: 2.13rem;
     font-weight: 300;
+    cursor: default;
   }
   .not-me {
     left: 43.19rem;
@@ -452,6 +447,15 @@ body {
     height: 3.38rem;
     overflow: hidden;
   }
+  .vector-button {
+    background-color: transparent;
+    border-width: 0;
+    padding-top: 0;
+  }
+  .vector-button:hover {
+    cursor: pointer;
+    scale: 1.2;
+  }
   .vector-icon {
     position: relative;
     width: 1.2rem;
@@ -459,14 +463,12 @@ body {
   }
   .oouinext-ltr-icon {
     position: relative;
-    width: 2.31rem;
-    height: 2.31rem;
-    overflow: hidden;
-    flex-shrink: 0;
+    width: 1.2rem;
+    height: 2.08rem;
   }
   .vector-parent {
     position: absolute;
-    top: 0.69rem;
+    top: 0.5rem;
     left: calc(50% - 252.1px);
     display: flex;
     flex-direction: row;
@@ -528,34 +530,26 @@ body {
     left: 0;
     width: 31.51rem;
   }
-  .frame-child96 {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: calc(50% + 13px);
-    border-radius: 64.46px;
-    background-color: var(--color-cornflowerblue);
-    width: 11.94rem;
-  }
-  .next1 {
-    position: absolute;
-    height: 54.72%;
-    top: 22.64%;
-    left: calc(50% + 81px);
-    display: inline-block;
-    width: 3.44rem;
-  }
-  .frame-child97 {
+  .back-button {
     position: absolute;
     height: 100%;
     top: 0;
     bottom: 0;
     left: calc(50% - 204px);
     border-radius: 64.46px;
+    border: none;
     background-color: var(--color-cornflowerblue);
     width: 11.94rem;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+    font-weight: bold;
+    pointer-events: auto;
   }
+  .back-button:hover {
+    cursor: pointer;
+  }
+  /*
   .back1 {
     position: absolute;
     height: 54.72%;
@@ -563,7 +557,34 @@ body {
     left: calc(50% - 136px);
     display: inline-block;
     width: 3.63rem;
+  }*/
+  .next-button {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: calc(50% + 13px);
+    border-radius: 64.46px;
+    background-color: var(--color-cornflowerblue);
+    border: none;
+    width: 11.94rem;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+    font-weight: bold;
   }
+  .next-button:hover {
+    cursor: pointer;
+  }
+  /*
+  .next1 {
+    position: absolute;
+    height: 54.72%;
+    top: 22.64%;
+    left: calc(50% + 81px);
+    display: inline-block;
+    width: 3.44rem;
+  }*/
   .frame49,
   .frame51 {
     position: absolute;
