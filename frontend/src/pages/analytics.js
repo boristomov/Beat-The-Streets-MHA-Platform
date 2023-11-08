@@ -44,9 +44,12 @@ function Analytics() {
       <div className={styles.panelList}>
         <div className={styles.blueMainPanel}>
           <b className={styles.yourResultsAndContainer}>
-            <p className={styles.yourResults}>{`Your Results `}</p>
-            <p className={styles.yourResults}>and Next Steps:</p>
+            <p className={styles.yourResults}>{`Survey Results `}</p>
           </b>
+          <a href="https://www.example.com">
+            <img src="http://localhost:3000/Union.png" alt="Icon Description" className={styles.previousBar}></img>
+            <img src="http://localhost:3000/previousIcon.png" alt="Icon Description" className={styles.previousIcon}></img>
+          </a>
         </div>
         <div className={styles.detectedSymptomsMainPanel}>
           <div className={styles.analyticsV2Child4} />
@@ -77,39 +80,7 @@ function Analytics() {
         </div>
       </div>
       
-    
-      {/* <div className={styles.analyticsV2Inner} /> */}
-      
-      {/* <img
-        className={styles.foundationarrowUpIcon}
-        alt=""
-        src="/foundationarrowup.svg"
-      /> */}
-      
-      {/* <div
-        className={styles.wordsWordswordsWor}
-      >{`words wordswords wor dswords wor words wordsvwords cwords wordsw ordswordswo rdswor words wordsvwords words w or ds words words wordswords wor dswords wor words wordsvwords `}</div>
-      <div className={styles.rectangleDiv} />
-      <img
-        className={styles.foundationarrowUpIcon1}
-        alt=""
-        src="/foundationarrowup.svg"
-      />
-      <div
-        className={styles.wordsWordswordsWor1}
-      >{`words wordswords wor dswords wor words wordsvwords cwords wordsw ordswordswo rdswor words wordsvwords words w or ds words words wordswords wor dswords wor words wordsvwords `}</div>
-      <div className={styles.analyticsV2Child1} />
-      <img
-        className={styles.foundationarrowUpIcon2}
-        alt=""
-        src="/foundationarrowup.svg"
-      />
-      <div
-        className={styles.wordsWordswordsWor2}
-      >{`words wordswords wor dswords wor words wordsvwords cwords wordsw ordswordswo rdswor words wordsvwords words w or ds words words wordswords wor dswords wor words wordsvwords `}</div> */}
-      
-      
-      
+      <img src="http://localhost:3000/Vector.png" alt="Icon Description" className={styles.vectorGraphic}></img>
       <div className={styles.nextStepsContainer}>
         <b className={styles.nextStepsContainerText}> Your Next Steps: </b>
         <div className={styles.containerList}>
@@ -123,7 +94,6 @@ function Analytics() {
             <ImageSlider slides = {slides3}/>
           </div>
         </div>
-        <div className={styles.vectorGraphicBTS} alt="" src="/Vector.png"/>
       </div>
       <a href="https://www.example.com">
         <img src="http://localhost:3000/Goback.png" alt="Icon Description" className={styles.back_button}></img>

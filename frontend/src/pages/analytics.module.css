@@ -18,7 +18,7 @@
   left: 65%;
   background-color: #ffffff;
   height: 900px;
-  z-index: 0;
+  z-index: 1;
   align-content: center;
 }
 .containerStyles {
@@ -41,8 +41,8 @@
 }
 .yourResultsAndContainer {
   position: absolute;
-  top: 132px;
-  left: 50px;
+  top: 10%;
+  left: 15%;
   font-size: var(--font-size-41xl);
   font-family: var(--font-inter);
 }
@@ -152,7 +152,7 @@
 }
 .detectedSymptoms {
   position: absolute;
-  top: 131px;
+  top: 10%;
   /* left: 901px; */
   left: 10%;
   font-size: 45.14px;
@@ -386,12 +386,27 @@
   bottom: 80px;
  
 }
-
+.previousIcon{
+  position: absolute;
+  left: 0%;
+  top: 20%;
+}
+.previousBar{
+  position: absolute;
+  left: 0%;
+  top: 15%;
+  
+}
 .back_button {
   position: absolute;
   left: 80%;
   bottom: 15%;
- 
+}
+
+.vectorGraphic {
+  position: absolute;
+  top: 32%;
+  z-index: 0;
 }
 
 .footerBar {
