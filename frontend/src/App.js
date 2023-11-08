@@ -25,10 +25,14 @@ function App() {
           path="/home"
           element={<Home userService={userService} />}
         ></Route> */}
-        <Route
+        {/* <Route
           path="/assessments/take-assessment"
           element={<Questions userService={userService} />}
-        ></Route>
+        ></Route> */}
+        {/* <Route
+          path="/"
+          element={<Questions userService={userService} />}
+        ></Route> */}
         <Route
           path="/"
           element={<Analytics userService={userService} />}
