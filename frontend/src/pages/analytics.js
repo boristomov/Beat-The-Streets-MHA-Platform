@@ -126,7 +126,7 @@ function Analytics() {
         <div className={styles.vectorGraphicBTS} alt="" src="/Vector.png"/>
       </div>
       <a href="https://www.example.com">
-        <img src="/public/Goback.png" alt="Icon Description" className={styles.back_button}></img>
+        <img src="http://localhost:3000/Goback.png" alt="Icon Description" className={styles.back_button}></img>
       </a>
       <div className={styles.footerBar} />
     </div>
