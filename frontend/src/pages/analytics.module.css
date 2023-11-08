@@ -387,6 +387,13 @@
  
 }
 
+.back_button {
+  position: absolute;
+  left: 80%;
+  bottom: 15%;
+ 
+}
+
 .footerBar {
   position: absolute;
   bottom: 0;
