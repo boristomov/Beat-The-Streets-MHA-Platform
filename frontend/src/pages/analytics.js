@@ -2,10 +2,21 @@ import React from 'react';
 import ImageSlider from "../components/ImageSlider";
 import DetectedSymtomsBars from "../components/DetectedSymtomsBars";
 import styles from "./analytics.module.css";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
-const slides = [
-  { url: "http://localhost:3000/image-1.jpg", title: "beach" },
+import { UserService } from "../service/userService";
+import { EventEmitter } from "../service/eventEmitter";
+
+const slides1 = [
+  { url: "http://localhost:3000/male-student.jpeg", title: "beach" },
+  { url: "http://localhost:3000/image-2.jpg", title: "boat" },
+  { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+  { url: "http://localhost:3000/image-4.jpg", title: "city" },
+  { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+];
+
+const slides2 = [
+  { url: "http://localhost:3000/Professional-development-1024x682-1.jpeg", title: "beach" },
   { url: "http://localhost:3000/image-2.jpg", title: "boat" },
   { url: "http://localhost:3000/image-3.jpg", title: "forest" },
   { url: "http://localhost:3000/image-4.jpg", title: "city" },
@@ -13,7 +24,16 @@ const slides = [
 ];
 
 
-function Analytics({ userService }) {
+const slides3 = [
+  { url: "http://localhost:3000/pexels-emmy-e-2381069.jpg", title: "beach" },
+  { url: "http://localhost:3000/image-2.jpg", title: "boat" },
+  { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+  { url: "http://localhost:3000/image-4.jpg", title: "city" },
+  { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+];
+
+
+function Analytics() {
   return (
     <div className={styles.analyticsV2}>
       {/* Assigns page layout panels */}
@@ -94,18 +114,20 @@ function Analytics({ userService }) {
         <b className={styles.nextStepsContainerText}> Your Next Steps: </b>
         <div className={styles.containerList}>
           <div className={styles.containerStyles}>
-            <ImageSlider slides = {slides}/>
+            <ImageSlider slides = {slides1}/>
           </div>
           <div className={styles.containerStyles}>
-            <ImageSlider slides = {slides}/>
+            <ImageSlider slides = {slides2}/>
           </div>
           <div className={styles.containerStyles}>
-            <ImageSlider slides = {slides}/>
+            <ImageSlider slides = {slides3}/>
           </div>
         </div>
         <div className={styles.vectorGraphicBTS} alt="" src="/Vector.png"/>
       </div>
-      
+      <a href="https://www.example.com">
+        <img src="/public/your-icon.png" alt="Icon Description"/>
+      </a>
       <div className={styles.footerBar} />
     </div>
   );
