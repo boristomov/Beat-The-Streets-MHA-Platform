@@ -19,7 +19,7 @@
   background-color: #ffffff;
   height: 900px;
   z-index: 1;
-  align-content: center;
+  justify-content: center;
 }
 .containerStyles {
   width: 280px;
@@ -156,6 +156,7 @@
   /* left: 901px; */
   left: 10%;
   font-size: 45.14px;
+
 }
 .analyticsV2Child5 {
   position: absolute;
