@@ -14,12 +14,16 @@
 }
 .detectedSymptomsMainPanel {
   position: absolute;
-  width: 35%;
-  left: 65%;
+  width: 40%; 
+  left: 60%; 
   background-color: #ffffff;
-  height: 900px;
+  height: 900px; /* Adjust height as needed */
   z-index: 1;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .containerStyles {
   width: 280px;
