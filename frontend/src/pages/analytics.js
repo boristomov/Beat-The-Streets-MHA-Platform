@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ImageSlider from "../components/ImageSlider";
 import DetectedSymtomsBars from "../components/DetectedSymtomsBars";
 import styles from "./analytics.module.css";
