@@ -34,6 +34,9 @@ const slides3 = [
 
 
 function Analytics() {
+
+const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className={styles.analyticsV2}>
       {/* Assigns page layout panels */}
@@ -51,7 +54,20 @@ function Analytics() {
             <img src="http://localhost:3000/previousIcon.png" alt="Icon Description" className={styles.previousIcon}></img>
           </a>
         </div>
-        <div className={styles.detectedSymptomsMainPanel}>
+        <div 
+          className={`${styles.detectedSymptomsMainPanel} ${isExpanded ? styles.expandedPanel : ''}`}
+          style={{ width: isExpanded ? '100%' : '40%' }} // Inline style to control width
+        >
+          <button
+            className={styles.expandButton}
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {/* You can use an actual icon here */}
+            {isExpanded ? '>' : '<'}
+          </button>
+
+
+
           <div className={styles.analyticsV2Child4} />
           <b className={styles.detectedSymptoms}>Detected Symptoms</b>
           <div className={styles.analyticsV2Child5} />
@@ -77,6 +93,13 @@ function Analytics() {
           <DetectedSymtomsBars />
           <div className={styles.analyticsV2Child24} />
           <img className={styles.analyticsV2Child25} alt="" src="/ellipse-13.svg" />
+          {/* Conditionally render the new information section */}
+          {isExpanded && (
+            <div className={styles.newInformation}>
+
+              {/* Content for the new information section */}
+            </div>
+          )}
         </div>
       </div>
       

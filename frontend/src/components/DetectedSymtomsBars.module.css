@@ -19,6 +19,7 @@
 .qualityOfLife,
 .ptsd {
   width: 100%; /* Take full width to allow center text alignment */
-  text-align: center; /* Center the text within the bar */
+  text-align: inherit; /* Center the text within the bar */
   margin: 30px 0; /* Add some vertical spacing between items */
+  padding-left: 450px;
 }

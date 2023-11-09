@@ -15,7 +15,7 @@
 .detectedSymptomsMainPanel {
   position: absolute;
   width: 40%; 
-  left: 60%; 
+  right: 0;
   background-color: #ffffff;
   height: 900px; /* Adjust height as needed */
   z-index: 1;
@@ -24,6 +24,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: width 0.5s ease-in;
 }
 .containerStyles {
   width: 280px;
@@ -421,3 +422,19 @@
   width: 100%;
   height: 80px;
 }
+.detectedSymptomsMainPanel.expanded {
+  width: 100%; /* Or whatever the expanded width should be */
+  transition: width 0.5s ease; /* This creates a smooth transition effect */
+}
+.expandButton {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Centers the button vertically */
+  /* Add more styles for button appearance */
+}
+
+.expandedPanel {
+  width: 100%;
+}
+
