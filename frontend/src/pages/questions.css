@@ -3,6 +3,7 @@
 body {
   margin: 0;
   line-height: normal;
+  background-color: #ddf1ff;
 }
 :root {
   /* fonts */
@@ -194,31 +195,34 @@ body {
     left: 33.69rem;
   }
   .frame-parent {
-    position: absolute;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     width: 37.13rem;
     height: 2.88rem;
     top: 11.25rem;
-    left: 40.44rem;
     overflow: hidden;
   }
   .frame-child91,
   .rectangle-div {
     position: absolute;
     top: 2.5rem;
-    border-radius: 25.39px;
     background-color: var(--color-gray);
-    width: 26.19rem;
+    width: 20%;
+    /*width: 26.19rem;*/
     height: 29.56rem;
   }
   .rectangle-div {
     left: 0;
+    border-radius: 0 25.39px 25.39px 0;
   }
   .frame-child91 {
-    left: 91.88rem;
+    left: 80%;
+    border-radius: 25.39px 0 0 25.39px;
   }
   .rectangle-parent {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    width: 118.06rem;
+    width: 100%;
     height: 35.13rem;
   }
   .frame-child94,
@@ -229,7 +233,7 @@ body {
     left: 0;
   }
   .frame38 {
-    width: 118.06rem;
+    width: 100%;
     height: 35.13rem;
     overflow: hidden;
   }
@@ -347,10 +351,14 @@ body {
     overflow: hidden;
   }
   .frame39 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     top: 0.38rem;
-    left: 28.19rem;
+    left: 0;
     width: 61.56rem;
     height: 34.38rem;
+    box-shadow: 0 2px 5px black;
   }
   .frame37,
   .image-3-icon {
@@ -359,7 +367,8 @@ body {
   }
   .frame37 {
     top: 15.63rem;
-    width: 118.06rem;
+    width: 100%;
+    /*width: 118.06rem;*/
     height: 35.13rem;
     overflow: hidden;
   }
@@ -404,9 +413,9 @@ body {
   .frame46 {
     position: absolute;
     top: 0;
-    left: 11.75rem;
+    left: 0;
     background: linear-gradient(#fff, #fff), #fff;
-    width: 94.88rem;
+    width: 100%;
     height: 5.19rem;
     overflow: hidden;
     text-align: left;
@@ -415,7 +424,7 @@ body {
   }
   .frame,
   .frame36 {
-    width: 118.06rem;
+    width: 100%;
     height: 50.75rem;
     overflow: hidden;
   }
@@ -428,24 +437,17 @@ body {
     color: var(--color-black);
     font-family: var(--font-poppins);
   }
-  .frame {
-    left: -11.75rem;
-  }
   .frame,
   .frame50,
   .question {
     position: absolute;
     top: 0;
   }
-  .question {
-    left: calc(50% - 81.5px);
-    font-weight: 500;
-  }
   .frame50 {
-    left: 10.69rem;
-    width: 10.19rem;
+    /*width: 10.68rem;*/
+    width: 100%;
     height: 3.38rem;
-    overflow: hidden;
+    font-weight: 500;
   }
   .vector-button {
     background-color: transparent;
@@ -518,7 +520,7 @@ body {
   }
   .frame-container,
   .frame-div {
-    position: absolute;
+    position: relative;
     top: 0;
     height: 3.31rem;
   }
@@ -585,36 +587,34 @@ body {
     display: inline-block;
     width: 3.44rem;
   }*/
-  .frame49,
   .frame51 {
-    position: absolute;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     width: 31.51rem;
     overflow: hidden;
-  }
-  .frame51 {
     top: 46.88rem;
-    left: 0;
     height: 3.31rem;
-    text-align: left;
     font-size: var(--font-size-5xl);
     color: var(--color-white);
     font-family: var(--font-inter);
   }
   .frame49 {
+    position: relative;
+    width: 100%;
     top: 7.38rem;
-    left: 31.5rem;
-    height: 50.19rem;
     text-align: center;
     font-size: var(--font-size-17xl);
     color: var(--color-darkslateblue);
     font-family: var(--font-poppins);
+    display: flex;
+    flex-direction: row;
   }
   .answering-questions-pages {
     position: relative;
-    background-color: #ddf1ff;
     width: 100%;
     height: 61.38rem;
-    overflow: scroll;
+    overflow: hidden;
     text-align: left;
     font-size: var(--font-size-xs-6);
     color: var(--color-white);

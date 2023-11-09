@@ -61,17 +61,17 @@ const iter = createIterator(allQuestions.questions);
 // Main Component
 function Questions() {
   const [update, setUpdate] = useState(1);
-
+  //Me Button
   function answerMe() {
     iter.answer(true);
     nextQuestion();
   }
-
+  //Not Me Button
   function answerNotMe() {
     iter.answer(false);
     nextQuestion();
   }
-
+  //Next Button
   function nextQuestion() {
     if (iter.hasNext()) {
       iter.next();
@@ -82,14 +82,14 @@ function Questions() {
       window.open(window.location.href = "/home"); // assessment results page
     }
   }
-
+  //Back button
   function prevQuestion() {
     if (iter.hasPrev()) {
       iter.prev();
       setUpdate(update - 1);
     }
   }
-
+  //Question numbers in little blue circles
   function questionNum(displacement) {
     let questNum = iter.indexNum() + displacement + 1
     return 1<=questNum && questNum<=iter.length() ? questNum : " ";
@@ -232,9 +232,7 @@ function Questions() {
           </div>
         </div>
         <div className="frame49">
-          <div className="frame50">
-            <div className="question">Question</div>
-          </div>
+          <div className="frame50">Question</div>
           <div className="frame51">
             <div className="frame-container">
               <div className="vector-parent">
