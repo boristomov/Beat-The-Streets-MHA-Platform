@@ -95,7 +95,7 @@ function Analytics() {
 
         {/* Right Section - Detected Symptoms */}
         <div className={`${styles.detectedSymptomsMainPanel} ${isExpanded ? styles.expandedPanel : ''}`}>
-          {/* Existing Detected Symptoms Content */}
+          <div className={styles.analyticsV2Child4} />
           <b className={styles.detectedSymptoms}>Detected Symptoms</b>
           <div className="barz">
            <div className={styles.analyticsV2Child5} />
