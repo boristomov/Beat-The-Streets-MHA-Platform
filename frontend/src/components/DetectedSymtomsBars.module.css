@@ -8,6 +8,7 @@
   color: var(--color-black);
   font-family: var(--font-poppins);
   margin-top: 150px;
+  margin-right: 150px;
 }
 
 /* Update the individual symptom classes like this */

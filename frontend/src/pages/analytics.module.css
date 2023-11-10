@@ -1,9 +1,3 @@
-.panelList {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  top: 80px;
-}
 .blueMainPanel {
   /* position: absolute; */
   top: 80px;
@@ -99,14 +93,7 @@
   height: 52px;
   overflow: hidden;
 }
-.wordsWordswordsWor1 {
-  position: absolute;
-  top: 528px;
-  left: 169px;
-  display: inline-block;
-  width: 523px;
-  height: 144px;
-}
+
 .analyticsV2Child1 {
   position: absolute;
   top: 672px;
@@ -426,15 +413,240 @@
   width: 100%; /* Or whatever the expanded width should be */
   transition: width 0.5s ease; /* This creates a smooth transition effect */
 }
-.expandButton {
+
+.expandedPanel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blueBox {
+  background-color: blue; /* Blue background for the box */
+  padding: 20px; /* Padding inside the box */
+  margin-top: 20px; /* Space above the box */
+  color: white; /* Text color */
+}
+
+.blueBoxText {
+  margin-bottom: 10px; /* Space between text sections */
+}
+
+.panelList {
+  display: flex;
   position: absolute;
+  width: 100%;
+  top: 80px;
+}
+
+.detectedSymptomsMainPanel {
+  position: absolute;
+  width: 55%;
+  left: 55%;
+  background-color: #ffffff;
+  height: 900px;
+  z-index: 1;
+  align-content: center;
+  margin-right: 300px;
+  transition: width 0.5s ease-in;
+}
+.containerStyles {
+  width: 280px;
+  height: 500px;
+  position: relative;
+  padding: 20px;
+  top: 100px;
+  
+  
+}
+.containerList {
+  display: flex;
+  position: relative;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+.yourResults {
+  margin: 0;
+  font-size: 45px;
+  
+}
+.yourResultsAndContainer {
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  font-size: var(--font-size-41xl);
+  font-family: var(--font-inter);
+}
+
+.analyticsV2Child1 {
+  position: absolute;
+  top: 672px;
+  left: 73px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-top: 5px solid var(--color-khaki);
+  box-sizing: border-box;
+  width: 631px;
+  height: 153px;
+}
+.foundationarrowUpIcon2 {
+  position: absolute;
+  top: 723px;
+  left: 85px;
+  width: 75.02px;
+  height: 52px;
+  overflow: hidden;
+}
+.wordsWordswordsWor2 {
+  position: absolute;
+  top: 712px;
+  left: 169px;
+  display: inline-block;
+  width: 523px;
+  height: 144px;
+}
+
+.headerBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #8cd1ff;
+  width: 100%;
+  height: 80px;
+}
+.analyticsV2Child4 {
+  position: absolute;
+  top: 816.38px;
+  /* left: 918.25px; */
+  left: 10%;
+  border-radius: 56.42px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 476.48px;
+  height: 37.62px;
+}
+
+
+.nextStepsContainer {
+  position: relative;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 900px; 
+  top: 980px;
+  background-color: #003559;
+  font-size: var(--font-size-41xl);
+  font-family: var(--font-inter);
+  z-index: 2;
+}
+.nextStepsContainerText {
+  text-align: center;
+  font-size: var(--font-size-41xl);
+  color: #fff;
+  font-family: var(--font-inter);
+}
+
+.vectorGraphics {
+  position: absolute;
+  background-color: var(--color-black);
+  bottom: 80px;
+ 
+}
+
+.footerBar {
+  position: absolute;
+  bottom: 0;
+  background-color: #8cd1ff;
+  width: 100%;
+  height: 80px;
+}
+
+.toggleButton {
+  /* Add styles for your expand/exit button here */
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 20px; /* Adjust as needed */
+  margin-left: 10px;
+  background-color: #e2e2e2; /* Example color - use what fits your design */
+  color: rgb(92, 92, 92);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  position: absolute; /* Position it relative to the parent */
   left: 0;
   top: 50%;
   transform: translateY(-50%); /* Centers the button vertically */
   /* Add more styles for button appearance */
 }
 
-.expandedPanel {
-  width: 100%;
+
+.moreInformationPanel {
+  background-color: #ffffff; 
+  margin-top: 80px;
+  margin-bottom: 0px;
+  width: 40%;
+  font-size: 32px;
+  padding-right: 200px;
+  padding-bottom: 138px;
+  padding-left: 90px;
+  z-index: 1;
+
 }
 
+.informationBox {
+  background-color: #0e9dfd6c; 
+  padding: 15px; 
+  margin-top: 10px; 
+  border-radius: 5px;
+  width: 100%; 
+  font-size: 15px;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 30px;
+}
+
+.circleButton {
+  background-color: #0e9cfd; /* Example color, change as needed */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 40px;
+  margin: 0 5px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circleButton:focus {
+  outline: none;
+}
+
+.circleButton:not(:disabled):not(.disabled):active {
+  background-color: #ff8b37; /* Darken color on click */
+}
+
+/* Adjust sizes for mobile responsiveness if needed */
+@media (max-width: 768px) {
+  .circleButton {
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
+  }
+}
+.messageResult {
+  font-size: 20px;
+  color: rgb(255, 129, 38);
+}
+
+.messageResultP {
+  font-size: 16px;
+  color: black;
+}

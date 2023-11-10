@@ -34,72 +34,98 @@ const slides3 = [
 
 
 function Analytics() {
+  // State to control whether the details are expanded or not
+  const [isExpanded, setIsExpanded] = useState(false);
 
-const [isExpanded, setIsExpanded] = useState(false);
+  // Toggle the expanded state
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <div className={styles.analyticsV2}>
-      {/* Assigns page layout panels */}
 
       {/* Header Bar */}
       <div className={styles.headerBar} />
-      {/* Container for the two adjacent panels at the top. */}
-      <div className={styles.panelList}>
-        <div className={styles.blueMainPanel}>
-          <b className={styles.yourResultsAndContainer}>
-            <p className={styles.yourResults}>{`Survey Results `}</p>
-          </b>
-          <a href="https://www.example.com">
-            <img src="http://localhost:3000/Union.png" alt="Icon Description" className={styles.previousBar}></img>
-            <img src="http://localhost:3000/previousIcon.png" alt="Icon Description" className={styles.previousIcon}></img>
-          </a>
-        </div>
-        <div 
-          className={`${styles.detectedSymptomsMainPanel} ${isExpanded ? styles.expandedPanel : ''}`}
-          style={{ width: isExpanded ? '100%' : '40%' }} // Inline style to control width
-        >
-          <button
-            className={styles.expandButton}
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            {/* You can use an actual icon here */}
-            {isExpanded ? '>' : '<'}
-          </button>
 
+      {/* Main Content Area */}
+      <div className={`${styles.panelList} ${isExpanded ? styles.expandedPanel : ''}`}>
 
+        {/* Expanded Left Section - More Information */}
+        {isExpanded && (
+          <div className={styles.moreInformationPanel}>
+            <div className={styles.messageResult}>
+            <h2>You are born a champion!</h2>
+            <div className={styles.messageResultP}>
+            <p>Your survey results show you have a greart character when it comes to deling with stress but may need some help maintaining your emotional balance. Dont worry! Everyone has room to grow, read to find out how!</p>
+            </div>
+            </div>
+            <h2>Question Analysis</h2>
+            {/* Button Container with Circular Buttons */}
+            <div className={styles.buttonContainer}>
+                {Array.from({ length: 10 }, (_, i) => (
+                  <button key={i} className={styles.circleButton}>
+                    {i + 1}
+                  </button>
+                 ))}
+              </div>
+            <div className={styles.informationBox}>
+              <h3>Question 1</h3>
+              <p>Lorem ipsum dolor sit amet...</p>
+              <h3>Response</h3>
+              <p>Consectetur adipiscing elit...</p>
+              <h3>Symptom</h3>
+              <p>Sed do eiusmod tempor incididunt...</p>
+            </div>
+            </div>
+        )}
 
-          <div className={styles.analyticsV2Child4} />
+        {/* Collapsed Left Section - Your Results and Next Steps */}
+        {!isExpanded && (
+          <div className={styles.blueMainPanel}>
+            <b className={styles.yourResultsAndContainer}>
+              <p className={styles.yourResults}>Your Results and Next Steps:</p>
+            </b>
+            <a href="https://www.example.com">
+//             <img src="http://localhost:3000/Union.png" alt="Icon Description" className={styles.previousBar}></img>
+//             <img src="http://localhost:3000/previousIcon.png" alt="Icon Description" className={styles.previousIcon}></img>
+//           </a>
+          </div>
+        )}
+
+        {/* Right Section - Detected Symptoms */}
+        <div className={`${styles.detectedSymptomsMainPanel} ${isExpanded ? styles.expandedPanel : ''}`}>
+          {/* Existing Detected Symptoms Content */}
           <b className={styles.detectedSymptoms}>Detected Symptoms</b>
-          <div className={styles.analyticsV2Child5} />
-          <div className={styles.analyticsV2Child6} />
-          <div className={styles.analyticsV2Child7} />
-          <div className={styles.analyticsV2Child8} />
-          <div className={styles.analyticsV2Child9} />
-          <div className={styles.analyticsV2Child10} />
-          <img className={styles.ellipseIcon} alt="" src="/ellipse-6.svg" />
-          <div className={styles.analyticsV2Child11} />
-          <img className={styles.analyticsV2Child12} alt="" src="/ellipse-7.svg" />
-          <div className={styles.analyticsV2Child13} />
-          <img className={styles.analyticsV2Child14} alt="" src="/ellipse-9.svg" />
-          <div className={styles.analyticsV2Child15} />
-          <img className={styles.analyticsV2Child16} alt="" src="/ellipse-10.svg" />
-          <div className={styles.analyticsV2Child17} />
-          <img className={styles.analyticsV2Child18} alt="" src="/ellipse-11.svg" />
-          <div className={styles.analyticsV2Child19} />
-          <img className={styles.analyticsV2Child20} alt="" src="/ellipse-12.svg" />
-          <div className={styles.analyticsV2Child21} />
-          <img className={styles.analyticsV2Child22} alt="" src="/ellipse-8.svg" />
-          <div className={styles.analyticsV2Child23} />
-          <DetectedSymtomsBars />
+          <div className="barz">
+           <div className={styles.analyticsV2Child5} />
+           <div className={styles.analyticsV2Child6} />
+           <div className={styles.analyticsV2Child7} />
+           <div className={styles.analyticsV2Child8} />
+           <div className={styles.analyticsV2Child9} />
+           <div className={styles.analyticsV2Child10} />
+           <img className={styles.ellipseIcon} alt="" src="/ellipse-6.svg" />
+           <div className={styles.analyticsV2Child11} />
+           <img className={styles.analyticsV2Child12} alt="" src="/ellipse-7.svg" />
+           <div className={styles.analyticsV2Child13} />
+           <img className={styles.analyticsV2Child14} alt="" src="/ellipse-9.svg" />
+           <div className={styles.analyticsV2Child15} />
+           <img className={styles.analyticsV2Child16} alt="" src="/ellipse-10.svg" />
+           <div className={styles.analyticsV2Child17} />
+           <img className={styles.analyticsV2Child18} alt="" src="/ellipse-11.svg" />
+           <div className={styles.analyticsV2Child19} />
+           <img className={styles.analyticsV2Child20} alt="" src="/ellipse-12.svg" />
+           <div className={styles.analyticsV2Child21} />
+           <img className={styles.analyticsV2Child22} alt="" src="/ellipse-8.svg" />
+           <div className={styles.analyticsV2Child23} />
           <div className={styles.analyticsV2Child24} />
           <img className={styles.analyticsV2Child25} alt="" src="/ellipse-13.svg" />
-          {/* Conditionally render the new information section */}
-          {isExpanded && (
-            <div className={styles.newInformation}>
-
-              {/* Content for the new information section */}
-            </div>
-          )}
+          <DetectedSymtomsBars />
+          </div>
+          {/* Conditionally rendered Expand/Exit button */}
+          <button onClick={toggleExpand} className={styles.toggleButton}>
+            {isExpanded ? '>' : '<'}
+          </button>
         </div>
       </div>
       
