@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { UserService } from "../service/userService";
-//import { EventEmitter } from "../service/eventEmitter";
+
 import "./questions.css";
 import Woman_seeking_psycholigist_help from "../assets/Woman_seeking_psycholigist_help.svg"
 import LeftArrow from "../assets/LeftArrow.svg"
@@ -13,7 +13,7 @@ import NotMeButton from "../assets/NotMeButton.svg"
 import BTSLOGO from "../assets/BTS-Logo.svg"
 
 // Import Questions and Create Iterator
-import allQuestions from "../questionCategories.json";
+import AllQuestions from "../questionCategories.json";
 function createIterator(array) {
   let i = 0;
   const length = array.length;
@@ -55,7 +55,7 @@ function createIterator(array) {
   };
   return iterator;
 }
-const iter = createIterator(allQuestions.questions);
+const iter = createIterator(AllQuestions.questions);
 
 
 // Main Component
@@ -78,7 +78,8 @@ function Questions() {
       setUpdate(update + 1);
     }
     else {
-      UserService.submitAssessmentData(allQuestions);
+      AllQuestions["date"] = (new Date()).toString();
+      UserService.submitAssessmentData(AllQuestions);
       window.open(window.location.href = "/home"); // assessment results page
     }
   }

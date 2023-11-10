@@ -8,7 +8,8 @@
       "Self-esteem": 0,
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
-      "PTSD": 0
+      "PTSD": 0,
+      "user_response": null
     },
     {
       "question": "Does thinking about what you’ve done the past few months sound unenjoyable?",
@@ -18,7 +19,8 @@
       "Self-esteem": 1,
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
-      "PTSD": 0
+      "PTSD": 0,
+      "user_response": null
     },
     {
       "question": "Have you recently experienced any negative major changes in your life or relationships?",
@@ -28,7 +30,8 @@
       "Self-esteem": 0,
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
-      "PTSD": 1
+      "PTSD": 1,
+      "user_response": null
     },
     {
       "question": "I often pretend to believe certain things so I can \"fit in.\"",
@@ -38,7 +41,8 @@
       "Self-esteem": 0,
       "Cultural Sensitivity": 1,
       "Quality of Life": 0,
-      "PTSD": 0
+      "PTSD": 0,
+      "user_response": null
     },
     {
       "question": "Have you gotten less sleep than usual?",
@@ -48,7 +52,8 @@
       "Self-esteem": 0,
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
-      "PTSD": 0
+      "PTSD": 0,
+      "user_response": null
     },
     {
       "question": "When speaking to others, do you generally talk about yourself in a positive way?",
@@ -58,7 +63,8 @@
       "Self-esteem": 1,
       "Cultural Sensitivity": 0,
       "Quality of Life": 0,
-      "PTSD": 0
+      "PTSD": 0,
+      "user_response": null
     },
     {
       "question": "Do you avoid talking about your culture because people might think it is weird?",
@@ -68,7 +74,8 @@
       "Self-esteem": 0,
       "Cultural Sensitivity": 1,
       "Quality of Life": 0,
-      "PTSD": 0
+      "PTSD": 0,
+      "user_response": null
     },
     {
       "question": "Have you stopped doing things you used to enjoy?",
@@ -78,7 +85,8 @@
       "Self-esteem": 0,
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
-      "PTSD": 0
+      "PTSD": 0,
+      "user_response": null
     },
     {
       "question": "I often feel calm and in control, even when things get busy.",
@@ -88,7 +96,8 @@
       "Self-esteem": 0,
       "Cultural Sensitivity": 0,
       "Quality of Life": 0,
-      "PTSD": 0
+      "PTSD": 0,
+      "user_response": null
     },
     {
       "question": "Have you been constantly on guard, watchful, or easily startled?",
@@ -98,7 +107,8 @@
       "Self-esteem": 0,
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
-      "PTSD": 1
+      "PTSD": 1,
+      "user_response": null
     },
     {
       "question": "Have you recently experienced any major changes in your life or relationships?",
@@ -108,7 +118,8 @@
       "Self-esteem": 0,
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
-      "PTSD": 1
+      "PTSD": 1,
+      "user_response": null
     },
     {
       "question": "Is it hard to find motivation to do schoolwork, chores, or daily activities?",
@@ -118,7 +129,8 @@
       "Self-esteem": 1,
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
-      "PTSD": 0
+      "PTSD": 0,
+      "user_response": null
     }
   ]
 }

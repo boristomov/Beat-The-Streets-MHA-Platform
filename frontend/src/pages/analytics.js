@@ -4,8 +4,10 @@ import DetectedSymtomsBars from "../components/DetectedSymtomsBars";
 import styles from "./analytics.module.css";
 //import { Link } from "react-router-dom";
 
+// Data Retrieval Classes
 import { UserService } from "../service/userService";
 import { EventEmitter } from "../service/eventEmitter";
+import { DataParse } from "../service/dataParse";
 
 const slides1 = [
   { url: "http://localhost:3000/male-student.jpeg", title: "beach" },
@@ -34,6 +36,15 @@ const slides3 = [
 
 
 function Analytics() {
+  // Data Retrieval Setup
+  const [userData, setUserData] = useState(null);
+  EventEmitter.subscribe("getUserData", setUserData);
+  if (userData == null) {
+    UserService.eventDispatch();
+  }
+  const dataParse = new DataParse(userData);
+
+
   // State to control whether the details are expanded or not
   const [isExpanded, setIsExpanded] = useState(false);
 

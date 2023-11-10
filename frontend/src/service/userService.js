@@ -58,6 +58,10 @@ class UserServiceClass {
     this.eventDispatch();
   }
 
+  logoutUser() {
+    sessionStorage.removeItem("token");
+  }
+
   async submitAssessmentData(data) {
     const token = this.getToken();
     const newData = { token: token, data: data };
