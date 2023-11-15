@@ -20,6 +20,7 @@
   align-items: center;
   transition: width 0.5s ease-in;
 }
+
 .containerStyles {
   width: 280px;
   height: 500px;
@@ -65,14 +66,7 @@
   height: 52px;
   overflow: hidden;
 }
-.wordsWordswordsWor {
-  position: absolute;
-  top: 344px;
-  left: 169px;
-  display: inline-block;
-  width: 523px;
-  height: 144px;
-}
+
 .rectangleDiv {
   position: absolute;
   top: 488px;
@@ -113,14 +107,6 @@
   width: 75.02px;
   height: 52px;
   overflow: hidden;
-}
-.wordsWordswordsWor2 {
-  position: absolute;
-  top: 712px;
-  left: 169px;
-  display: inline-block;
-  width: 523px;
-  height: 144px;
 }
 
 .headerBar {
@@ -402,6 +388,7 @@
   z-index: 0;
 }
 
+
 .footerBar {
   position: absolute;
   bottom: 0;
@@ -574,20 +561,34 @@
 .toggleButton {
   /* Add styles for your expand/exit button here */
   cursor: pointer;
-  padding: 10px 20px;
-  margin-top: 20px; /* Adjust as needed */
-  margin-left: 10px;
-  background-color: #e2e2e2; /* Example color - use what fits your design */
-  color: rgb(92, 92, 92);
-  border: none;
-  border-radius: 5px;
+  /* padding: 10px 20px; */
+  /* margin-top: 20px;  */
+  /* Adjust as needed */
+  /* margin-left: 10px; */
+  /* background-color: #e2e2e2; */
+   /* Example color - use what fits your design */
+  /* color: rgb(92, 92, 92); */
+  
   font-size: 16px;
-  outline: none;
-  position: absolute; /* Position it relative to the parent */
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%); /* Centers the button vertically */
+  
+  position: absolute;
+   /* Position it relative to the parent */
+  /* right: 2%; */
+  top: 85%;
+  /* Centers the button vertically */
   /* Add more styles for button appearance */
+  z-index: 2;
+}
+.toggleOn {
+  position: absolute;
+  top: 85%;
+  left: 98%;
+  
+}
+.toggleOff {
+  position: absolute;
+  top: 85%;
+  left: 98%;
 }
 
 
@@ -595,13 +596,14 @@
   background-color: #ffffff; 
   margin-top: 80px;
   margin-bottom: 0px;
-  width: 40%;
+  width: 100%;
   font-size: 32px;
+  padding-bottom: 200px;
+  padding-left: 200px;
   padding-right: 200px;
-  padding-bottom: 138px;
-  padding-left: 90px;
+  justify-content: center;
   z-index: 1;
-
+  align-items: center;
 }
 
 .informationBox {
@@ -609,22 +611,22 @@
   padding: 15px; 
   margin-top: 10px; 
   border-radius: 5px;
-  width: 100%; 
+  width: 80%; 
   font-size: 15px;
 }
 .buttonContainer {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
 .circleButton {
-  background-color: #0e9cfd; /* Example color, change as needed */
+  background-color: #0e9dfd6c;  /* Example color, change as needed */
   color: white;
   border: none;
   border-radius: 50%;
   width: 50px;
-  height: 40px;
+  height: 50px;
   margin: 0 5px;
   margin-right: 10px;
   display: flex;
