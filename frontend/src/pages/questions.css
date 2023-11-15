@@ -619,5 +619,6 @@ body {
     font-size: var(--font-size-xs-6);
     color: var(--color-white);
     font-family: var(--font-inter);
+    font-family: var(--font-inter);
   }
   
