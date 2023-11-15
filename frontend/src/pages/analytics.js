@@ -98,9 +98,9 @@ function Analytics() {
               <p className={styles.yourResults}>Your Results and Next Steps:</p>
             </b>
             <a href="https://www.example.com">
-//             <img src="http://localhost:3000/Union.png" alt="Icon Description" className={styles.previousBar}></img>
-//             <img src="http://localhost:3000/previousIcon.png" alt="Icon Description" className={styles.previousIcon}></img>
-//           </a>
+             <img src="http://localhost:3000/Union.png" alt="Icon Description" className={styles.previousBar}></img>
+             <img src="http://localhost:3000/previousIcon.png" alt="Icon Description" className={styles.previousIcon}></img>
+           </a>
           </div>
         )}
 
@@ -141,6 +141,7 @@ function Analytics() {
       </div>
       
       <img src="http://localhost:3000/Vector.png" alt="Icon Description" className={styles.vectorGraphic}></img>
+      {/* Next Steps panels container */}
       <div className={styles.nextStepsContainer}>
         <b className={styles.nextStepsContainerText}> Your Next Steps: </b>
         <div className={styles.containerList}>
@@ -155,6 +156,9 @@ function Analytics() {
           </div>
         </div>
       </div>
+      {/* Bubbles */}
+      <img src="http://localhost:3000/bubbles1.png" alt="" className={styles.bubbles1}></img>
+      {/* Go back */}
       <a href="https://www.example.com">
         <img src="http://localhost:3000/Goback.png" alt="Icon Description" className={styles.back_button}></img>
       </a>

@@ -382,7 +382,7 @@
 .previousIcon{
   position: absolute;
   left: 0%;
-  top: 20%;
+  top: 22%;
 }
 .previousBar{
   position: absolute;
@@ -546,6 +546,14 @@
   font-size: var(--font-size-41xl);
   color: #fff;
   font-family: var(--font-inter);
+}
+
+.bubbles1 {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  display: flex;
+  z-index: 1;
 }
 
 .vectorGraphics {
