@@ -5,7 +5,7 @@ body {
   line-height: normal;
   background-color: #ddf1ff;
 }
-:root {
+.root {
   /* fonts */
   --font-inter: Inter;
   --font-poppins: Poppins;
@@ -37,4 +37,68 @@ body {
   --br-6xl-4: 25.4px;
 
   user-select: none;
+}
+.page-parent {
+  font-family: var(--font-inter);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.instructions {
+  position: absolute;
+  border: black;
+  border-style: solid;
+  width: 20%;
+  top: 25%;
+  left: 1rem;
+}
+.page-header-container {
+  font-family: var(--font-poppins);
+  width: 100%;
+  margin-top: 3%;
+  height: 15%;
+  border: black;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  
+}
+.header-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border: brown;
+  border-style: solid;
+  width: 50%;
+}
+.logo {
+  width: 20%;
+  border: red;
+  border-style: solid;
+}
+.BTS-header {
+  width: 80%;
+  border: blue;
+  border-style: solid;
+}
+.BTS-title {
+  font-weight: 1200;
+}
+.BTS-description {
+  font-weight: 350;
+}
+
+.login-form {
+  position: relative;
+  margin-top: 20px;
+  justify-self: center;
+  width: 50%;
+  border: black;
+  border-style: solid;
+  text-align: center;
+}
+h3 {
+  margin-bottom: 0;  
 }
