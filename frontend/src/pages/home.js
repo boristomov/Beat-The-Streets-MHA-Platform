@@ -24,7 +24,7 @@ function Home() {
 
 
   return (
-    /* <div>
+     <div>
       <p>
         HOME
       </p>
@@ -37,7 +37,8 @@ function Home() {
       <Link to="/assessments/take-assessment">take assessment page</Link>
       { userData != null && <p>Hi, { userData.username }</p>}
       { userData != null && dataParse.assessmentExists() && <p>Date of most recent assessment: { dataParse.getMostRecentAssessments().date }</p>}
-    </div> */
+    </div> 
+    /*
     <div>
       <nav class = "navbar">
           <ul class = "navbar__menu">
@@ -45,8 +46,8 @@ function Home() {
               <li><a href = "#">Dashboard</a></li>
               <li><a href = "#">Quick Links</a></li>
           </ul>
-          <button type = {button} className = {styles.navbar__button} style = "color:white"> Profile</button>
-          
+          {/* <button type = {button} className = {styles.navbar__button} style = "color:white"> Profile</button> 
+           }
       </nav>
 
       <div class = "gradient">
@@ -77,7 +78,7 @@ function Home() {
               </div>
           </div>
         </div>
-      </div>
+      </div> */
 
   );
 }
