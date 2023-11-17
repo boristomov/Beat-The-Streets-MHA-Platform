@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "question": "Are you only relaxed when you have total control over your life?",
+      "question": "I am only relaxed when I have total control over my life.",
       "Depression": 0,
       "Anxiety": 1,
       "Stress": 0,
@@ -12,7 +12,7 @@
       "user_response": null
     },
     {
-      "question": "Does thinking about what you’ve done the past few months sound unenjoyable?",
+      "question": "Thinking about what I’ve done the past few months felt unenjoyable.",
       "Depression": 1,
       "Anxiety": 0,
       "Stress": 0,
@@ -20,17 +20,6 @@
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
       "PTSD": 0,
-      "user_response": null
-    },
-    {
-      "question": "Have you recently experienced any negative major changes in your life or relationships?",
-      "Depression": 0,
-      "Anxiety": 0,
-      "Stress": 1,
-      "Self-esteem": 0,
-      "Cultural Sensitivity": 0,
-      "Quality of Life": 1,
-      "PTSD": 1,
       "user_response": null
     },
     {
@@ -45,18 +34,7 @@
       "user_response": null
     },
     {
-      "question": "Have you gotten less sleep than usual?",
-      "Depression": 0,
-      "Anxiety": 0,
-      "Stress": 1,
-      "Self-esteem": 0,
-      "Cultural Sensitivity": 0,
-      "Quality of Life": 1,
-      "PTSD": 0,
-      "user_response": null
-    },
-    {
-      "question": "When speaking to others, do you generally talk about yourself in a positive way?",
+      "question": "When speaking to others, I generally don't talk about myself in a positive way.",
       "Depression": 0,
       "Anxiety": 1,
       "Stress": 0,
@@ -67,7 +45,7 @@
       "user_response": null
     },
     {
-      "question": "Do you avoid talking about your culture because people might think it is weird?",
+      "question": "I avoid talking about my culture because people might think it is weird.",
       "Depression": 0,
       "Anxiety": 0,
       "Stress": 0,
@@ -78,7 +56,7 @@
       "user_response": null
     },
     {
-      "question": "Have you stopped doing things you used to enjoy?",
+      "question": "I have stopped doing things I used to enjoy.",
       "Depression": 1,
       "Anxiety": 0,
       "Stress": 1,
@@ -89,18 +67,7 @@
       "user_response": null
     },
     {
-      "question": "I often feel calm and in control, even when things get busy.",
-      "Depression": 0,
-      "Anxiety": 0,
-      "Stress": 1,
-      "Self-esteem": 0,
-      "Cultural Sensitivity": 0,
-      "Quality of Life": 0,
-      "PTSD": 0,
-      "user_response": null
-    },
-    {
-      "question": "Have you been constantly on guard, watchful, or easily startled?",
+      "question": "Recently I have been on guard, watchful, or easily startled.",
       "Depression": 0,
       "Anxiety": 1,
       "Stress": 0,
@@ -111,10 +78,87 @@
       "user_response": null
     },
     {
-      "question": "Have you recently experienced any major changes in your life or relationships?",
-      "Depression": 0,
+      "question": "It has been hard finding motivation to do schoolwork, chores, or daily activities.",
+      "Depression": 1,
+      "Anxiety": 0,
+      "Stress": 0,
+      "Self-esteem": 1,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "It has been easy to lose my appetite and I have been eating less than usual.",
+      "Depression": 1,
       "Anxiety": 0,
       "Stress": 1,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "It has been difficult to enjoy daily activities or routines.",
+      "Depression": 1,
+      "Anxiety": 0,
+      "Stress": 1,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I have been feeling disconnected from friends, family, or colleagues.",
+      "Depression": 1,
+      "Anxiety": 0,
+      "Stress": 0,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 0,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I feel unwelcome and/or uncomfortable in social situations because of my culture or background.",
+      "Depression": 0,
+      "Anxiety": 0,
+      "Stress": 0,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 1,
+      "Quality of Life": 0,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I feel like I don't \"fit in.\" because my culture or background is different from others'.",
+      "Depression": 0,
+      "Anxiety": 0,
+      "Stress": 0,
+      "Self-esteem": 1,
+      "Cultural Sensitivity": 1,
+      "Quality of Life": 0,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I often feel the need to hide my culture or parts of my identity.",
+      "Depression": 0,
+      "Anxiety": 0,
+      "Stress": 0,
+      "Self-esteem": 1,
+      "Cultural Sensitivity": 1,
+      "Quality of Life": 0,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I have been experiencing moments of racing thoughts and restlessness that I find difficult to control.",
+      "Depression": 0,
+      "Anxiety": 0,
+      "Stress": 0,
       "Self-esteem": 0,
       "Cultural Sensitivity": 0,
       "Quality of Life": 1,
@@ -122,13 +166,145 @@
       "user_response": null
     },
     {
-      "question": "Is it hard to find motivation to do schoolwork, chores, or daily activities?",
+      "question": "I frequently worry about the future of various aspects of my life, such as work, relationships, or health.",
+      "Depression": 0,
+      "Anxiety": 1,
+      "Stress": 0,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I do not feel satisfied with my overall well-being.",
+      "Depression": 0,
+      "Anxiety": 1,
+      "Stress": 0,
+      "Self-esteem": 1,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I do not regularly spend time pursuing my hobbies and doing things I enjoy.",
+      "Depression": 1,
+      "Anxiety": 0,
+      "Stress": 1,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I find it hard to relax and wind down.",
+      "Depression": 0,
+      "Anxiety": 1,
+      "Stress": 1,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "My daily responsibilities, activities, or interactions feel overwhelming.",
+      "Depression": 0,
+      "Anxiety": 0,
+      "Stress": 1,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I sleep less than I normally do.",
+      "Depression": 1,
+      "Anxiety": 1,
+      "Stress": 1,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I have too manny commitments (work, school, clubs, extracurriculars, etc.).",
+      "Depression": 0,
+      "Anxiety": 0,
+      "Stress": 1,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 0,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I have recently been experiencing nightmares or distressing dreams.",
+      "Depression": 0,
+      "Anxiety": 0,
+      "Stress": 0,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 1,
+      "user_response": null
+    },
+    {
+      "question": "I often feel on edge or easily startled, even in non-threatening situations.",
+      "Depression": 0,
+      "Anxiety": 1,
+      "Stress": 0,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 1,
+      "PTSD": 1,
+      "user_response": null
+    },
+    {
+      "question": "I have recently experienced bad major changes in my life and/or relationships.",
+      "Depression": 0,
+      "Anxiety": 0,
+      "Stress": 1,
+      "Self-esteem": 0,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 0,
+      "PTSD": 1,
+      "user_response": null
+    },
+    {
+      "question": "I am rarely congragulated or encouraged by my friends or family.",
       "Depression": 1,
       "Anxiety": 0,
       "Stress": 0,
       "Self-esteem": 1,
       "Cultural Sensitivity": 0,
-      "Quality of Life": 1,
+      "Quality of Life": 0,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I am not confident about how I look and how other people see me.",
+      "Depression": 0,
+      "Anxiety": 1,
+      "Stress": 0,
+      "Self-esteem": 1,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 0,
+      "PTSD": 0,
+      "user_response": null
+    },
+    {
+      "question": "I am very hesitant to try things and doubt my abilities.",
+      "Depression": 0,
+      "Anxiety": 0,
+      "Stress": 0,
+      "Self-esteem": 1,
+      "Cultural Sensitivity": 0,
+      "Quality of Life": 0,
       "PTSD": 0,
       "user_response": null
     }
