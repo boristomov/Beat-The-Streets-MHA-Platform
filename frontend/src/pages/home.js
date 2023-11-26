@@ -43,48 +43,54 @@ function Home() {
   // );
 
   return (
-    <div className={homestyles.homepage}>
-      <p className={homestyles.text}> Hi there</p>
-      <nav className={homestyles.navbar}>
-        <ul className={homestyles.navbarmenu}>
-          <li className={homestyles.li}><a href = "https://www.beatthestreetsca.org/">Back to Website</a></li>
+    <div className="homepage">
+      <nav className="navbar">
+        <ul className="navbarmenu">
+          <li className="li"><a href = "https://www.beatthestreetsca.org/">Back to Website</a></li>
 
-          <li className={homestyles.li}><a href = "#">Dashboard</a></li>
+          <li className="li"><a href = "#">Dashboard</a></li>
 
-          <li className={homestyles.li}><a href = "#">Quick Links</a></li>
+          <li className="li"><a href = "#">Quick Links</a></li>
+          <li className="li">
+            <Link to="/analytics">see analytics page</Link>
+          </li>
+          <li className="li">
+            <Link to="/assessments/take-assessment">take assessment page</Link>
+          </li>
         </ul>
         {/* <button type = {button} className = {styles.navbar__button} style = "color:white"> Profile</button>  */}
       </nav>
 
-      <div className={homestyles.gradient}>
-      <p> Hi here</p>
-        <div className={homestyles.maincontent}>
+      <div className="gradient">
+        <div className="maincontent">
           <h2 > Welcome Back!</h2>
-          <div className={homestyles.maintab}>
-            <div className={homestyles.rectanglecompleted}>
-              <div><h3>Completed</h3></div>
+          
+          <div className="rectanglecompleted">
+            <div><h3>Completed</h3></div>
+          </div>
+          <div className="rectangleassigned">
+            <div><h3>Assignments</h3></div>
+          </div>
+          
+          <div className='assessments-container'>
+            <section className="homepagecopy2child"></section>
+            <div className="framparent">
+              <div className="frame">
+                <img className="image4icon" alt="" src="http://localhost:3000/image-4@2x.png" />
+              </div>
+              <div className="frame1">
+                <div className="frame2">
+                  <u className="beatthestreets">Beat the Streets, Inc.</u>
+                  <u className="youngadultemployment"> Young Adult Employment, Vocational & Life Services</u>
+                </div>
+              </div>
             </div>
-            <div className={homestyles.rectangleassigned}>
-              <div><h3>Assignments</h3></div>
-            </div>
-          </div> 
-
-       <section className={homestyles.homepagecopy2child}></section>
-        <img className={homestyles.vectoricon} alt="" src="http://localhost:3000/vector.svg" />
-         <div className={homestyles.framparent}>
-            <div className={homestyles.frame}>
-               <img className={homestyles.image4icon} alt="" src="http://localhost:3000/image-4@2x.png" />
-            </div>
-            <div className={homestyles.frame1}>
-               <div className={homestyles.frame2}>
-                 <u className={homestyles.beatthestreets}>Beat the Streets, Inc.</u>
-                 <u className={homestyles.youngadultemployment}
-                   >Young Adult Employment, Vocational & Life Services</u>
-               </div>
-             </div>
-         </div>
-        </div>
-      </div> 
+          </div>
+          {/* Assessments container finishes here */}
+        </div> 
+        {/* MainContent finishes here   */}
+        <img className="vectoricon" alt="" src="http://localhost:3000/vector.svg" />
+      </div>
     </div>
   );
 }

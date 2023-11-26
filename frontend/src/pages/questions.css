@@ -441,6 +441,7 @@ body {
   .frame50,
   .question {
     position: absolute;
+    left:0;
     top: 0;
   }
   .frame50 {

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import ImageSlider from "../components/ImageSlider";
 import DetectedSymtomsBars from "../components/DetectedSymtomsBars";
 import styles from "./analytics.module.css";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 // Data Retrieval Classes
 import { UserService } from "../service/userService";
@@ -97,10 +98,10 @@ function Analytics() {
             <b className={styles.yourResultsAndContainer}>
               <p className={styles.yourResults}>Your Results and Next Steps:</p>
             </b>
-            <a href="https://www.example.com">
+            <Link to="/home">
              <img src="http://localhost:3000/Union.png" alt="Icon Description" className={styles.previousBar}></img>
              <img src="http://localhost:3000/previousIcon.png" alt="Icon Description" className={styles.previousIcon}></img>
-           </a>
+             </Link>
           </div>
         )}
 

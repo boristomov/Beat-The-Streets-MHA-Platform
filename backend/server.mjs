@@ -28,14 +28,14 @@ app.post("/get_user_data", jsonParser, (req, res) => {
   const userData = getUserData(token);
 
   res.send(userData);
-})
+});
 
 // POST: Saving Assessment Data
 app.post("/submit_assessment_data", jsonParser, (req, res) => {
   const { token, data } = req.body;
   const userData = getUserData(token);
   updateAssessmentData(userData, data);
-})
+});
 
 
 // start the Express server
