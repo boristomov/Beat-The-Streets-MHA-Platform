@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { UserService } from "./service/userService";
@@ -21,9 +21,10 @@ function App() {
   }
 
   return (
+    
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Home/>}></Route> */}
+        <Route path="/" element={<Home/>}></Route>
         <Route
           path="/home"
           element={<Home/>}
