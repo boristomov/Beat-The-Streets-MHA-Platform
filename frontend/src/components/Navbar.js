@@ -15,36 +15,54 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+      <div className="navbarmenu">
+        <ul className="navbarmenu">
+          <li className="li">
+            <div className="nav-button">
+              <Link className="Navbarlink" to="https://www.beatthestreetsca.org/">
+                Back to Main Website
+              </Link>
+            </div>
+          </li>
+        </ul>
+      </div>
       <ul className="navbarmenu">
         <li className="li">
-          <Link className="Navbarlink" to="https://www.beatthestreetsca.org/">
-            Back to Main Website
-          </Link>
+          <div className="nav-button">
+            <Link className="Navbarlink" to="/">
+              Dashboard
+            </Link>
+          </div>
         </li>
         <li className="li">
-          <Link className="Navbarlink" to="/">
-            Dashboard
-          </Link>
+          <div className="nav-button">
+            <Link className="Navbarlink" to="/assessments/take-assessment">
+              Take Assessment
+            </Link>
+          </div>
         </li>
         <li className="li">
-          <Link className="Navbarlink" to="/assessments/take-assessment">
-            Take Assessment
-          </Link>
+          <div className="nav-button">
+            <Link className="Navbarlink" to="/analytics">
+              Analytics
+            </Link>
+          </div>
         </li>
         <li className="li">
-          <Link className="Navbarlink" to="/analytics">
-            Analytics
-          </Link>
+          <div className="nav-button">
+            <Link className="Navbarlink" to="/">
+              Quick Links
+            </Link>
+          </div>
         </li>
         <li className="li">
-          <Link className="Navbarlink" to="/">
-            Quick Links
-          </Link>
+          <div className="nav-button">
+            <Link className="Navbarlink" onClick={logoutUser}>
+              Logout
+            </Link>
+          </div>
         </li>
       </ul>
-      <div className="profile-wrapper">
-        <button className="navbarbutton" onClick={logoutUser}> Logout</button>
-      </div>
     </nav>
   );
 }

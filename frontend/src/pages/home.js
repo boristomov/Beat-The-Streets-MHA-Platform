@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import homestyles from "./homepagestyle.css";
+import "./homepagestyle.css";
 
 
 // Data Retrieval Classes
