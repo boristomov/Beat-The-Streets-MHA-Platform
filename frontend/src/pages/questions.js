@@ -221,15 +221,6 @@ function Questions() {
                 </div>
               </div>
             </div>
-            <div className="frame46">
-              <div className="image-3-parent">
-                <img className="image-3-icon" alt="" src={BTSLOGO} />
-                <div className="frame47">
-                  <b className="beat-the-streets">Beat the Streets, Inc.</b>
-                  <div className="young-adult-employment">{`Young Adult Employment, Vocational & Life Services`}</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div className="frame49">

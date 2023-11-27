@@ -13,57 +13,13 @@
   right: 5%;
   z-index: 4;
 }
-.ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.Navbarlink {
-  color: #FFF;
-}
-.li {
-  display: block;
-  color: white;
-  
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+
 .homepage {
   position: absolute;
   width: 100%;
   height: 100%;
  
   z-index: 0;
-}
-.navbar {
-  
-  height: 50px;
-  display: flex;  
-  align-items: center;
-  font-size: 1.2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.navbarmenu {
-  display: flex;
-  justify-content: left;
-  top: 10%;
-  align-items: center;
-  text-align: center;
-}
-
-.navbarbutton {
-  top: 50%;
-  
-  padding: 10px;
-  min-height: 25px; 
-  min-width: 100px;
-  border: solid;
-  border-color: white;
-  border-radius: 15px;
 }
 
 .gradient {

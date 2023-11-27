@@ -57,9 +57,6 @@ function Analytics() {
   return (
     <div className={styles.analyticsV2}>
 
-      {/* Header Bar */}
-      <div className={styles.headerBar} />
-
       {/* Main Content Area */}
       <div className={`${styles.panelList} ${isExpanded ? styles.expandedPanel : ''}`}>
 

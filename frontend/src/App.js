@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { UserService } from "./service/userService";
 import { EventEmitter } from "./service/eventEmitter";
 
+import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Analytics from "./pages/analytics";
@@ -23,6 +24,7 @@ function App() {
   return (
     
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route

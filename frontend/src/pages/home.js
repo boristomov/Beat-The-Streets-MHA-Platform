@@ -18,13 +18,7 @@ function Home() {
     UserService.eventDispatch();
   }
   const dataParse = new DataParse(userData);
-
-  function logoutUser() {
-    UserService.logoutUser();
-    window.location.reload(false);
-  }
   
-
   // return (
   //   <div>
   //     <p>
@@ -44,16 +38,6 @@ function Home() {
 
   return (
     <div className="homepage">
-      <nav className="navbar">
-        <ul className="navbarmenu">
-          <li className="li"><a className = "Navbarlink" href = "https://www.beatthestreetsca.org/">Back to Website</a></li>
-
-          <li className="li"><a className = "Navbarlink" href = "#">Dashboard</a></li>
-
-          <li className="li"><a className = "Navbarlink" href = "#">Quick Links</a></li>
-        </ul>
-        {/* <button type = {button} className = {styles.navbar__button} style = "color:white"> Profile</button>  */}
-      </nav>
       <div className='welcomeBack'><b className='welcomeBack'> Welcome Back!</b> </div>
       <div className="maincontent">
           
