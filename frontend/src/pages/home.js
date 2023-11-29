@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import ImageSlider from "../components/ImageSlider";
+import bubbles_bottom_left from "../assets/login/bubbles_bottom_left.svg"
+import bubbles_top_right from "../assets/login/bubbles_top_right.svg"
 import "./homepagestyle.css";
 
 
@@ -19,43 +22,75 @@ function Home() {
   }
   const dataParse = new DataParse(userData);
   
-  // return (
-  //   <div>
-  //     <p>
-  //       HOME
-  //     </p>
-  //     <button onClick={logoutUser}>
-  //       Logout
-  //     </button>
-  //     <p></p>
-  //     <Link to="/analytics">see analytics page</Link>
-  //     <p></p>
-  //     <Link to="/assessments/take-assessment">take assessment page</Link>
-  //     { userData != null && <p>Hi, { userData.username }</p>}
-  //     { userData != null && dataParse.assessmentExists() && <p>Date of most recent assessment: { dataParse.getMostRecentAssessments().date }</p>}
-  //   </div>
-  // );
+  
+  const slides1 = [
+    { url: "http://localhost:3000/Depressionpic.png", title: "beach" },
+    { url: "http://localhost:3000/image-2.jpg", title: "boat" },
+    { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+    { url: "http://localhost:3000/image-4.jpg", title: "city" },
+    { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+  ];
+
+  const slides2 = [
+    { url: "http://localhost:3000/help.png", title: "beach" },
+    { url: "http://localhost:3000/happyslider.png", title: "boat" },
+    { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+    { url: "http://localhost:3000/image-4.jpg", title: "city" },
+    { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+  ];
+
+
+  const slides3 = [
+    { url: "http://localhost:3000/ptsd.png", title: "beach" },
+    { url: "http://localhost:3000/Picture10.jpg", title: "boat" },
+    { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+    { url: "http://localhost:3000/image-4.jpg", title: "city" },
+    { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+  ];
+
+
 
   return (
     <div className="homepage">
+      
       <div className='welcomeBack'><b className='welcomeBack'> Welcome Back!</b> </div>
+      <img src="http://localhost:3000/sidebar.png" alt="Icon Description" className="sidebarright"></img>
+      <img src="http://localhost:3000/sidebar.png" alt="Icon Description" className="sidebarleft"></img>
+      <img className="bubbleleft" alt="" src={bubbles_top_right} />
+      <img className="bubbleright" alt="" src={bubbles_bottom_left} />
       <div className="maincontent">
           
         <div className="assessments-container">
+          
           <div className="rectanglecompleted">
-            <h3>Completed</h3>
+            <p className='containertext'>Completed</p>
           </div>
           <img className="circlepicture" alt="" src="http://localhost:3000/userImageCircle.svg" />
           <img className="profilePicture" alt="" src="http://localhost:3000/profilePic.png" />
           <div className="rectangleassigned">
-            <h3>Assignments</h3>
+            <p className='containertext'>Assigned</p>
           </div>
           <section className="homepagecopy2child">
             
-            <Link to="/analytics" className="debuglink1">see analytics page</Link>
+            {/* <Link to="/analytics" className="debuglink1">see analytics page</Link>
 
-            <Link to="/assessments/take-assessment" className="debuglink2">take assessment page</Link>
+            <Link to="/assessments/take-assessment" className="debuglink2">take assessment page</Link> */}
+            {/* Image Sliders */}
             
+            <div className= "containerlist">
+              <div className="containerslider">
+              <p className="assessmenttype">  Anxiety Assessments</p>
+                <ImageSlider slides = {slides1}/>
+              </div>
+              <div className="containerslider">
+                <p className="assessmenttype">Depression Assessments</p>
+                <ImageSlider slides = {slides2}/>
+              </div>
+              <div className="containerslider">
+              <p className="assessmenttype">   PTSD Assessments</p>
+                <ImageSlider slides = {slides3}/>
+              </div>
+            </div>
           </section>
         </div>
         {/* Assessments container finishes here */}

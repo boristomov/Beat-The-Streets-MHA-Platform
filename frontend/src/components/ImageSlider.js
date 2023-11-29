@@ -4,7 +4,7 @@ import React from 'react';
 const slideStyles = {
   width: "100%",
   height: "100%",
-  borderRadius: "10px",
+  borderRadius: "40px",
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
@@ -47,7 +47,12 @@ const dotStyle = {
   fontSize: "20px",
   color: "white",
 };
-
+// const text = {
+//   position: "absolute",
+//   top: "50%",
+//   left: "10%",
+//   right: "10%",
+// }
 
 
 const ImageSlider = ({ slides }) => {
@@ -76,6 +81,7 @@ const ImageSlider = ({ slides }) => {
         <div onClick={goToPrevious} style={leftArrowStyles}>
           ❰
         </div>
+        {/* <div style={text}>Assessment</div> */}
         <div onClick={goToNext} style={rightArrowStyles}>
           ❱
         </div>

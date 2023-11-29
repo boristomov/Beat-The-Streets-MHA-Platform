@@ -55,28 +55,28 @@
   position: absolute;
   background-color:  #003559;
   align-items: center;
-  height: 90px;
-  width: 600px;
+  height: 15%;
+  width: 50%;
   top: 0%;
   right: 0%;
   text-align: center;
   border-radius: 0px 60px 60px 0px;
   border: 1px solid #FFF;
-  background: linear-gradient(180deg, rgba(0, 53, 89, 0.90) 0%, rgba(253, 132, 28, 0.00) 100%);
+  background: linear-gradient(180deg, rgba(0, 53, 89, 0.90) 0%, black 100%);
   z-index: 1;
 }
 .circlepicture {
   position: absolute;
   top: -15%;
-  height: 65%;
-  
+  height: 55%;
+  width: 65%;
   z-index: 3;
 }
 .profilePicture {
   position: absolute;
   top: -15%;
-  height: 65%;
-  
+  height: 55%;
+  /* width: 28%; */
   border-radius: 400px;
   z-index: 2;
 }
@@ -84,20 +84,23 @@
   color: white;
   position: absolute;
   background-color: #003559;
-  height: 120px;
-  width: 600px;
+  height: 15%;
+  width: 50%;
   top: 0%;
   left: 0%;
   border: 1px solid #FFF;
-  background: linear-gradient(180deg, rgba(0, 53, 89, 0.90) 0%, rgba(253, 132, 28, 0.00) 100%);
+  background: linear-gradient(180deg, rgba(0, 53, 89, 0.90) 0%, black 100%);
   text-align: center; 
   border-radius: 60px 0px 0px 60px;
-  z-index: inherit;
+  z-index: 1;
 }
 
-.h3{
-    color:white;
-    font-weight: normal 
+.containertext{
+  top:0%;
+  margin: 1%;
+  color:white;
+  font-weight: bold;
+  font-size: 110%;
 }
 
 .vectoricon {
@@ -164,12 +167,12 @@
 .assessments-container{
   position: absolute;
   display: flex;
-  top: 25%;
+  top: 22%;
   width: 74%;
-  height: 65%;
+  height: 70%;
   justify-content: center;
   align-items: center;
-  
+  z-index: 1;
 }
 .homepagecopy2child {
   display: flex;
@@ -209,3 +212,76 @@
   display: block;
   font-size: 1.5rem;
 }
+.containerslider {
+  width: 30%;
+  height: 40%;
+  position: relative;
+  padding: 20px;
+  top: 15%;
+  z-index: 2;
+  border-radius: 60px;
+  
+}
+.containerlist {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+.sidebarright {
+  position: absolute;
+  display: flex;
+  height: 45%;
+  width: 5%;
+  top: 30%;
+  right: 0%;
+}
+.sidebarleft {
+  position: absolute;
+  display: flex;
+  height: 45%;
+  width: 5%;
+  top: 30%;
+  left: -1%;
+  transform: scaleX(-1);
+}
+
+.bubbleleft{
+  position: absolute;
+  overflow: hidden;
+  left: 6%;
+  top: 32%;
+}
+
+.bubbleright {
+  position: absolute;
+  overflow: hidden;
+  right: 6%;
+}
+.assessmenttype{
+  top:45%;
+  position: absolute;
+  margin: 1%;
+  color:white;
+  font-weight: 700;
+  font-size: 45%;
+  z-index: 4;
+  justify-content: center;
+  display: flex;
+  left:10%;
+  right: 10%;
+}
+/* .filter {
+  display: flex;
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  padding: 0px;
+  top: 0px;
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(253, 132, 28, 0.90) 0%, transparent 100%);
+} */

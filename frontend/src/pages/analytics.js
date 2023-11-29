@@ -11,7 +11,7 @@ import { EventEmitter } from "../service/eventEmitter";
 import { DataParse } from "../service/dataParse";
 
 const slides1 = [
-  { url: "http://localhost:3000/male-student.jpeg", title: "beach" },
+  { url: "http://localhost:3000/editedmalestudent.png", title: "beach" },
   { url: "http://localhost:3000/image-2.jpg", title: "boat" },
   { url: "http://localhost:3000/image-3.jpg", title: "forest" },
   { url: "http://localhost:3000/image-4.jpg", title: "city" },
@@ -19,7 +19,7 @@ const slides1 = [
 ];
 
 const slides2 = [
-  { url: "http://localhost:3000/Professional-development-1024x682-1.jpeg", title: "beach" },
+  { url: "http://localhost:3000/femaleprofessional.png", title: "beach" },
   { url: "http://localhost:3000/image-2.jpg", title: "boat" },
   { url: "http://localhost:3000/image-3.jpg", title: "forest" },
   { url: "http://localhost:3000/image-4.jpg", title: "city" },
@@ -28,7 +28,7 @@ const slides2 = [
 
 
 const slides3 = [
-  { url: "http://localhost:3000/pexels-emmy-e-2381069.jpg", title: "beach" },
+  { url: "http://localhost:3000/proffemale.png", title: "beach" },
   { url: "http://localhost:3000/image-2.jpg", title: "boat" },
   { url: "http://localhost:3000/image-3.jpg", title: "forest" },
   { url: "http://localhost:3000/image-4.jpg", title: "city" },
