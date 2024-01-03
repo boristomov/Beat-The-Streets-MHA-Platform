@@ -1,18 +1,33 @@
 :root {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background-color: var(--color-darkslategray);
 }
-.sign_in_parent {
+.input{
+  color:#003559;
+  width: 60%;
+  height: 20%;
+  margin: 0 auto;
+  z-index: 2;
+  display: block;
+  border-radius: 8px;
+  transition: scale 0.8s, color 0.8s;
+  
+}
+input:hover{
+  scale: 1.05;
+  color: #003559;
+}
+/* .sign_in_parent {
   position: absolute;
-  /*border: red;
-  border-style: solid;*/
+  
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  top: 15vh;
-  height: 30.06rem;
-  width: 31.19rem;
-}
+  margin-top: 0%;
+  height: 0%;
+  width: 30%;
+} */
 .frame,
 .frame_icon {
   position: absolute;
@@ -31,14 +46,56 @@
   /*width: 80rem;
   height: 44.63rem;*/
 }
-.frame00 {
-  top: 7.25rem;
-  left: 0;
-  /*left: 24.44*/
+.background {
+  top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 0px;
   border-radius: var(--br-11xl);
-  background: linear-gradient(180deg, #fff 13.79%, #ffe684);
-  width: 31.19rem;
-  height: 30.06rem;
+  background: linear-gradient(180deg, #fff 8%, #ffe684);
+  width: 25%;
+  height: 100%;
+  transition: scale 0.8s
+ 
+}
+.background:hover{
+  scale:1.05;
+}
+
+.form{
+  display:flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top:20%;
+}
+.content{
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  z-index:1;
+}
+.label{
+  display: block;
+  left: 5%;
+  margin-top: 3%;
+  margin-bottom: 1.5%;
+  position: inherit;
+  font-size: 16px;
+  font-family: inherit;
+  color: #003559;
+}
+.alt_text{
+  display: block;
+  left: 5%;
+  margin-top: 3%;
+  margin-bottom: 1.5%;
+  position: inherit;
+  font-size: 16px;
+  font-family: inherit;
+  color: #003559;
+  padding-bottom: 25px;
 }
 .frame10,
 .or {
@@ -53,21 +110,24 @@
   font-size: 1.6rem;
 }
 .submit_button {
-  top: 11.3rem;
-  position: absolute;
+  margin:5%;
   display: inline-block;
-  height: 2rem;
-  width: 11.5rem;
+  height: 15%;
+  width: 35%;
+  font-size: 16px;
   flex-shrink: 0;
   background-color: lightyellow;
+  border-color: #003559;
   border-radius: 15px;
   /*text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);*/
   font-size: 1.3rem;
+  transition: scale 0.8s, background-color 0.8s, color 0.8s;
   z-index: 1;
 }
 .submit_button:hover {
   scale: 1.05;
-  background-color: rgb(235, 235, 218);
+  background: rgb(255, 119, 0);
+  color: white;
   cursor: pointer;
 }
 .frame10 {
@@ -81,17 +141,21 @@
   justify-content: flex-end;
 }
 .frame_child {
+  top: 2%;
   position: relative;
-  border-radius: var(--br-11xl);
-  background: linear-gradient(180deg, #003559, rgb(255, 119, 0));
-  width: 12.5rem;
-  height: 4.31rem;
+  margin: 0 auto;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #003559, 85%, rgb(255, 119, 0));
+  width: 20%;
+  height: 30%;
+  border-bottom:2px solid #003559;
 }
 .frame20 {
   position: absolute;
   top: -3.3rem;
   margin-left: auto;
   margin-right: auto;
+  height: 15%;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -100,23 +164,22 @@
   justify-content: flex-start;
 }
 .sign_in {
-  margin: 0;
+  margin: 5%;
   position: relative;
-  font-size: inherit;
+  font-size: 28px;
   font-weight: 700;
-  font-family: inherit;
+ 
   display: inline-block;
-  width: 11.5rem;
-  height: 3.88rem;
   flex-shrink: 0;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+
 }
 .frame30 {
   position: absolute;
-  top: -2.3rem;
-  left: 9.81rem;
-  width: 11.5rem;
-  height: 35.13rem;
+  top: 1%;
+  margin: 0 auto;
+  width: 20%;
+  height: 10%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -174,32 +237,37 @@
   height: 5rem;
 }
 .linkedin_icon {
-  position: absolute;
-  top: 26rem;
-  left: 21.31rem;
-  width: 8rem;
-  height: 8rem;
+  width: 14%;
+  height: 14%;
   overflow: hidden;
   border-radius: 50%;
   z-index: 1;
+  transition: scale 0.8s
 }
 .linkedin_icon:hover {
+   
+  /* background-color: #fff;
+  color: #003559; */
   cursor: pointer;
+  scale: 1.05;
+  
+  
 }
 .facebook_icon {
-  position: absolute;
-  top: 22.3rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 8rem;
-  height: 8rem;
-  overflow: hidden;
-  border-radius: 50%;
-  z-index: 1;
+  width: 18%;
+  height: 18%;
+  transition: transfer 0.8s;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: scale 0.8s;
 }
 .facebook_icon:hover {
+  /* background-color: #fff;
+  color: #003559; */
   cursor: pointer;
+  scale: 1.05;
 }
+
 .frame80 {
   /*border: black;
   border-style: solid;*/
@@ -279,11 +347,15 @@
 }
 .google_icon,
 .frame120 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0;
+  width: 14%;
+  height: 14%;
+  transition: scale 0.8s;
+}
+.google_icon:hover{
+  
+  cursor: pointer;
+  scale: 1.05;
+  
 }
 .frame120 {
   position: absolute;
@@ -297,9 +369,7 @@
   z-index: 1;
   border-radius: 50%;
 }
-.google_icon img:hover {
-  cursor: pointer;
-}
+
 .hide_icon {
   position: relative;
   width: 2.13rem;
@@ -308,7 +378,9 @@
 }
 .frame_icon90,
 .frame130 {
-  position: absolute;
+  position: relative;
+  margin: 0 auto;
+  top: 1%;
   overflow: hidden;
 }
 .frame130 {
@@ -321,17 +393,19 @@
   align-items: center;
   justify-content: flex-end;
 }
-.frame_icon90 {
-  top: 15rem;
-  left: 7.61rem;
-  width: 15.94rem;
-  height: 14.38rem;
+.line {
+  top:1%;
+  width: 50%;
 }
-.image_40_icon {
+.BTSlogo {
+  
+  display: block;
+  margin: 20px auto;
+
   position: relative;
-  width: 7.44rem;
-  height: 4.38rem;
   object-fit: cover;
+  width: 30%;
+  height: 20%;
 }
 .frame_icon100,
 .frame140 {
@@ -348,6 +422,17 @@
   align-items: center;
   justify-content: flex-start;
 }
+.header{
+  width: 100%;
+  height: 7px;
+}
+.icons{
+  position: inherit;
+  margin: 0 auto;
+  height: 10%;
+  width: 50%;
+  display: inline-block;
+}
 .frame_icon100 {
   top: 6.94rem;
   left: 22.87rem;
@@ -355,10 +440,13 @@
   height: 30.75rem;
 }
 .copyright_icon {
+  padding-top: 2%;
+  display: block;
+  margin: 0 auto;
   position: relative;
-  bottom: 0;
-  width: 16.44rem;
-  height: 1.81rem;
+  bottom: 0%;
+  width: 10%;
+  height: 5%;
   object-fit: cover;
 }
 .frame160 {
@@ -367,16 +455,25 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 44.38rem;
+  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
-.frame_icon130,
-.frame_icon140 {
+.bubbles1{
+  position:absolute;
+  top: 15%;
+  left:47%;
+  width: 40%;
+  height: 60%;
+}
+.bubbles2 {
+  top:35%;
   position: absolute;
-  overflow: hidden;
+  right:49%;
+  width: 40%;
+  height: 50%;
 }
 .frame_icon130 {
   top: -7rem;
@@ -391,14 +488,18 @@
   height: 30.34rem;
 }
 .technical_support_icon {
-  position: relative;
-  width: 10rem;
-  height: 10rem;
+  position: absolute;
+  right:2%;
+  bottom: 5%;
+  width: 15%;
+  height: 15%;
+  transition: scale 0.8s;
 }
 .technical_support_icon:hover {
   cursor: pointer;
+  scale: 1.05;
 }
-@media screen and ((max-width: 825px) or (max-height: 720px)) {
+@media screen and ((max-width: 600px) or (max-height: 550px)) {
   .technical_support_icon { display: none; }
   .frame160 { display: none; }
 }
@@ -414,45 +515,50 @@
   align-items: center;
   justify-content: flex-end;
 }
+
 .go_back_icon {
-  position: relative;
+  position: absolute;
+  left:-0.2%;
   width: 2.82rem;
   height: 7rem;
   object-fit: cover;
-  margin-top: -5.06rem;
+  bottom: 5%;
+  /* transition: color 0.8s, background-color 0.8s; */
+  transition: scale 0.8s;
 }
 .go_back_icon:hover {
+  /* background-color: #fff;
+  color: #003559; */
   cursor: pointer;
+  scale: 1.05;
 }
 @media screen and (max-width: 600px) {
   .go_back_icon { display: none; }
 }
 .frame180 {
-  width: 2.86rem;
-  height: 7.36rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
   position: absolute;
-  top: 3.51rem;
-  left: 0;
-  height: 37.59rem;
+  left: -0.5%;
+  bottom: 5%;
   overflow: hidden;
   justify-content: flex-end;
 }
 .locofy_login {
+  
   position: relative;
   background-color: var(--color-darkslategray);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   text-align: center;
   font-size: var(--font-size-6xl);
   color: var(--color-white);
   font-family: var(--font-inter);
   background-image: url(../assets/login/buildings_login.svg);
-  background-position: center bottom;
+  background-position:  bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0;
 }
 
