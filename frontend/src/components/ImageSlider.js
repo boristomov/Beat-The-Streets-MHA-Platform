@@ -7,24 +7,29 @@ const slideStyles = {
   borderRadius: "40px",
   backgroundSize: "cover",
   backgroundPosition: "center",
+  transition: "background-image 0.8s ease-in-out",
 };
 
 const rightArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "32px",
+  right: "20px",
   fontSize: "45px",
   color: "#fff",
   zIndex: 1,
   cursor: "pointer",
+};
+const expandedArrowStyles = {
+  fontSize: '55px',
+  transition: 'font-size 0.3s ease', // Added transition property for arrow expansion
 };
 
 const leftArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  left: "32px",
+  left: "20px",
   fontSize: "45px",
   color: "#fff",
   zIndex: 1,
@@ -34,6 +39,7 @@ const leftArrowStyles = {
 const sliderStyles = {
   position: "relative",
   height: "100%",
+  
 };
 
 const dotsContainerStyles = {

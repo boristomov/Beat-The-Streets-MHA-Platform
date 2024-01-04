@@ -163,12 +163,23 @@ input:hover{
   align-items: center;
   justify-content: flex-start;
 }
+.backgroundGraphic {
+  position: fixed;
+  fill: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+  bottom: 0%;
+  height: 60%;
+  width: 100%;
+  left:0%;
+  z-index: -1;
+  background: cover;
+  overflow: hidden;
+}
 .sign_in {
   margin: 5%;
   position: relative;
   font-size: 28px;
   font-weight: 700;
- 
+  font-family: Tahoma;
   display: inline-block;
   flex-shrink: 0;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);

@@ -1,7 +1,10 @@
 .Navbarlink {
-  color: #FFF;
+  color: white;
+  transition: color 0.8s;
 }
-
+.Navbarlink:hover{
+  color:rgba(253, 132, 28, 0.90);
+}
 .ul {
   list-style-type: none;
   margin: 0;
@@ -28,7 +31,7 @@
   position: sticky;
   top: 0;
   padding: 10px 100px 10px 0px;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 00px 0px;
 }
 
 .navbarmenu {
@@ -57,17 +60,20 @@
 }
 
 .nav-button {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-style: solid;
-  border-width: 2px;
-  border-color: orange;
-  border-radius: 10px;
+  
+  color: white;
+  /* background-color: transparent; */
+  background: transparent;
+  border-radius: 5px;
   padding: 5px;
-  /*text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);*/
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: scale 0.8s, background 0.8s, border-radius 0.8s;
 }
 .nav-button:hover {
   scale: 1.05;
-  background-color: rgba(67, 67, 67, 0.8);
+  color: rgba(253, 132, 28, 0.90);
+  background: linear-gradient(180deg, transparent, 85%, rgb(255, 119, 0));
+  border-radius: 15px;
   cursor: pointer;
 }
 a:link { text-decoration: none; }
