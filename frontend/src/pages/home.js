@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import ImageSlider from "../components/ImageSlider";
-import bubbles_bottom_left from "../assets/login/bubbles_bottom_left.svg"
-import bubbles_top_right from "../assets/login/bubbles_top_right.svg"
+import Circles from "../components/Circles";
+import bubbles_bottom_left from "../assets/login/bubbles_bottom_left.svg";
+import bubbles_top_right from "../assets/login/bubbles_top_right.svg";
+// import {Link} from "react-scroll";
 import "./homepagestyle.css";
 
 
@@ -53,7 +55,9 @@ function Home() {
   return (
     <div className="homepage">
       
-      <div className='welcomeBack'><b className='welcomeBack'> Welcome Back!</b> </div>
+      <div className='welcomeBack'><b className='welcomeBack'> Welcome Back!</b> 
+      <a id = "dashboard"></a>
+      </div>
       <img src="http://localhost:3000/sidebar.png" alt="Icon Description" className="sidebarright"></img>
       <img src="http://localhost:3000/sidebar.png" alt="Icon Description" className="sidebarleft"></img>
       <img className="bubbleleft" alt="" src={bubbles_top_right} />
@@ -62,8 +66,7 @@ function Home() {
         {/* ANALYTICS WELCOME MESSAGE */}
         <div className="analytics">
 
-
-          HERE IS MY ANALYTICSsssssssssssssssssssssssssssssssssssssss
+          <Circles/>
           
           
         </div>
@@ -72,7 +75,7 @@ function Home() {
           
           
           <section className="homepagecopy2child">
-            
+            <a id = "assessments"></a>
             {/* <Link to="/analytics" className="debuglink1">see analytics page</Link>
 
             <Link to="/assessments/take-assessment" className="debuglink2">take assessment page</Link> */}
@@ -88,15 +91,15 @@ function Home() {
           
             <div className= "containerlist">
               <div className="containerslider">
-              <p className="assessmenttype">  Anxiety Assessments</p>
+              <div className="assessmenttype hover_event_slider">  Anxiety Assessments</div>
                 <ImageSlider className="hover_event_slider" slides = {slides1}/>
               </div>
               <div className="containerslider">
-                <p className="assessmenttype">Depression Assessments</p>
+                <p className="assessmenttype hover_event_slider">Depression Assessments</p>
                 <ImageSlider className="hover_event_slider" slides = {slides2}/>
               </div>
               <div className="containerslider">
-              <p className="assessmenttype">   PTSD Assessments</p>
+              <p className="assessmenttype hover_event_slider">   PTSD Assessments</p>
                 <ImageSlider  className="hover_event_slider" slides = {slides3}/>
               </div>
             </div>

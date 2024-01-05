@@ -19,7 +19,9 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-
+.link_color{
+  color: #fff;
+}
 .navbar {
   background-color: #003559;
   max-width: 100%;

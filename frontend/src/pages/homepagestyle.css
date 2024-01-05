@@ -100,11 +100,13 @@
 }
 
 .containertext{
-  top:0%;
-  margin: 1%;
+  position: relative;
+  top:20%;
+  bottom: 10%;
+  margin: auto;
   color:white;
   font-weight: bold;
-  font-size: 110%;
+  font-size: 4vh;
 }
 
 .vectoricon {
@@ -209,18 +211,19 @@
   position: fixed;
   fill: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
   bottom: 0%;
-  height: 60%;
+  height: 85vh;
   width: 100%;
   z-index: 0;
   background: cover;
   overflow: hidden;
 }
 .hover_event_slider{
-  transition: scale 0.8s;
+  transition: scale 0.8s, color 0.8s;
 }
 .hover_event_slider:hover{
   scale: 1.05;
   cursor: pointer;
+  color: gold;
 }
 .footer {
   display: block;
@@ -246,7 +249,7 @@
   width: 30%;
   height: 40%;
   position: relative;
-  padding: 20px;
+  padding: 15px;
   top: 15%;
   z-index: 2;
   border-radius: 60px;
@@ -254,6 +257,7 @@
 }
 .containerslider:hover{
   scale: 1.05;
+  cursor: pointer;
 }
 .containerlist {
   display: flex;
@@ -295,13 +299,16 @@
   overflow: hidden;
   right: 6%;
 }
+.p{
+  margin: 0;
+}
 .assessmenttype{
   top:45%;
   position: absolute;
-  margin: 1%;
+  margin: 0.02%;
   color:white;
   font-weight: 700;
-  font-size: 45%;
+  font-size: 2vh;
   z-index: 4;
   justify-content: center;
   display: flex;

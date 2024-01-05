@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import {Link} from "react-scroll";
 import "./Navbar.css";
 
 // Data Retrieval Classes
@@ -29,16 +30,20 @@ function Navbar() {
       <ul className="navbarmenu">
         <li className="li">
           <div className="nav-button">
-            <Link className="Navbarlink" to="/">
+            {/* <Link className="Navbarlink" to="/">
               Dashboard
-            </Link>
+            </Link> */}
+            {/* <a className="link_color" href="#dashboard"> Dashboard </a> */}
+            <Link to="dashboard" spy={true} smooth={true} offset={-50} duration={1000} > Dashboard</Link>
           </div>
         </li>
         <li className="li">
           <div className="nav-button">
-            <Link className="Navbarlink" to="/assessments/take-assessment">
+            {/* <Link className="Navbarlink" to="/assessments/take-assessment">
               Take Assessment
-            </Link>
+            </Link> */}
+            {/* <a className="link_color" href="#assessments">Take Assessment</a> */}
+            <Link to="assessments" spy={true} smooth={true} offset={-100} duration={1000} > Take Assessment</Link>
           </div>
         </li>
         <li className="li">

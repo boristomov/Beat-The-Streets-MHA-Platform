@@ -19,7 +19,12 @@ const rightArrowStyles = {
   color: "#fff",
   zIndex: 1,
   cursor: "pointer",
+  transition: "color 0.8s",
 };
+rightArrowStyles[':hover'] = {
+  color: "red", // Change this to the color you want when hovering
+};
+
 const expandedArrowStyles = {
   fontSize: '55px',
   transition: 'font-size 0.3s ease', // Added transition property for arrow expansion
