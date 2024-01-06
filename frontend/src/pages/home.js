@@ -66,9 +66,9 @@ function Home() {
         {/* ANALYTICS WELCOME MESSAGE */}
         <div className="analytics">
 
-          <Circles/>
-          <Circles/>
-          <Circles/>
+          <Circles size={27} percentage={65}/>
+          <Circles size={30} percentage={40}/>
+          <Circles size={30} percentage={22}/>
           
         </div>
         {/* ASESSMENT DISPLAY */}

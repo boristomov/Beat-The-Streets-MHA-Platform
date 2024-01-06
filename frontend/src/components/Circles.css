@@ -58,17 +58,20 @@
 }
 
 circle{
-    r: 10vh;
+    /* r: 10vh;
     cx: 11vh;
-    cy:11vh;
+    cy:11vh; */
+    /* r: 29vh;
+    cx: 30vh;
+    cy:30vh; */
     /* left: 11%;
     top: 10%; */
     position: absolute;
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 2vh;
-    stroke-dasharray: 62.5vh;
-    stroke-dashoffset: 20vh;
+    stroke-dasharray: 100.5vh;
+    stroke-dashoffset: 0vh;
     animation: anim 1s linear forwards;
     transition: animation 0.8s;
 }
