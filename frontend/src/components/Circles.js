@@ -12,14 +12,14 @@ const Circles = () => {
             </div>
         </div>
       </div>
-      <svg className="circle_svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="20vh" height="20vh">
+      <svg className="circle_svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="30vh" height="30vh">
         <defs>
             <linearGradient id="GradientColor">
               <stop offset="0%" stop-color="#e91e63" />
                 <stop offset="100%" stop-color="#673ab7" />
             </linearGradient>
         </defs>
-        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        <circle  stroke-linecap="round" />
     </svg>
     </div>
   );

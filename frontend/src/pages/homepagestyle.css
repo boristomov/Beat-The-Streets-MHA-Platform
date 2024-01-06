@@ -176,8 +176,10 @@
 
 .analytics{
   /* position: absolute; */
-  display: block;
-  padding: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35vh;
   margin: 0 auto;
   /* width: 100%; */
   height: 50%;
@@ -276,6 +278,7 @@
   width: 5%;
   top: 30%;
   right: 0%;
+  z-index: 5;
 }
 .sidebarleft {
   position: fixed;

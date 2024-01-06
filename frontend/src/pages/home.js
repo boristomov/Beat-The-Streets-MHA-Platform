@@ -67,7 +67,8 @@ function Home() {
         <div className="analytics">
 
           <Circles/>
-          
+          <Circles/>
+          <Circles/>
           
         </div>
         {/* ASESSMENT DISPLAY */}

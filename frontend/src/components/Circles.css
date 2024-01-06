@@ -1,14 +1,26 @@
 .skill{
-    width: 20vh;
-    height: 20vh;
+    top: -10vh;
+    margin: 5vh;
+    width: 22vh;
+    height: 22vh;
     /* background: cornflowerblue; */
     position: relative;
+    z-index: 3;
+    transition: scale 0.8s, color 0.8s;
+    background-color: none;
+}
+.skill:hover{
+    scale: 1.30;
+    color: white;
 }
 
 .outer{
+    /* left: 5vh;
+    right: 5vh; */
+    margin: 0 auto;
     position: absolute;
-    height: 20vh;
-    width: 20vh;
+    height: 22vh;
+    width: 22vh;
     border-radius: 50%;
     box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
                 -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
@@ -16,33 +28,51 @@
 }
 
 .inner{
-    left: 11%;
-    top: 10%;
+    /* left: 5vh; */
+    /* top: 10; */
+    /* right: 5vh; */
+    background: linear-gradient(180deg, rgba(253, 132, 28, 0.90) 0%, rgba(253, 132, 28, 0.00) 100%);
+    margin: 2vh;
     position: absolute;
-    height: 15vh;
-    width: 15vh;
+    height: 18vh;
+    width: 18vh;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* transition: background-color 0.8s; */
     box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
                 inset 4px 4px 6px -1px rgba(255, 255, 255, 0.7),
                 -0.5px -0.5px 0px rgba(255, 255, 255, 1),
                 0.5px 0.5px 0.5px rgba(0,0,0,0.15),
                 0px 12px 10px -10px rgba(0,0,0,0.05);
 }
+.inner:hover{
+    background-color: white;
+}
 
 #number{
     font-weight: 600;
-    color: #555;
+    font-size: 2.5vh;
+    /* color: #555; */
 }
 
 circle{
+    r: 10vh;
+    cx: 11vh;
+    cy:11vh;
+    /* left: 11%;
+    top: 10%; */
+    position: absolute;
     fill: none;
     stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 100;
+    stroke-width: 2vh;
+    stroke-dasharray: 62.5vh;
+    stroke-dashoffset: 20vh;
+    animation: anim 1s linear forwards;
+    transition: animation 0.8s;
+}
+.circle:hover{
     animation: anim 2s linear forwards;
 }
 .circle_svg{
