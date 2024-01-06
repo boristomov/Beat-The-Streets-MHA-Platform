@@ -3,6 +3,7 @@ import React from 'react';
 import styles from "./Circles.css";
 
 const Circles = ({size, percentage}) => {
+  
   const circleSize = `${size}vh`;
   const innerSize = size - 4;
   const innerCircleSize = `${innerSize}vh`;
@@ -10,11 +11,16 @@ const Circles = ({size, percentage}) => {
   const radius = `${_radius}vh`;
   const _cx_vh = size/2;
   const cx_vh = `${_cx_vh}vh`;
+  const _text_size = size/10;
+  const text_size = `${_text_size}vh`;
+  const _circumference = size * 28;
+  const circumference = `${_circumference}vh`;
+  document.documentElement.style.setProperty('--text_size', text_size);
   return (
-    <div style={{height:circleSize,width:circleSize}} className="skill">
+    <div style={{height:circleSize,width:circleSize}}  className="skill">
       <div style={{height:circleSize,width:circleSize}} className="outer">
         <div style={{height:innerCircleSize ,width:innerCircleSize}} className="inner"> 
-            <div id="number">
+            <div id="number" >
                 {percentage}%
             </div>
         </div>
@@ -26,7 +32,7 @@ const Circles = ({size, percentage}) => {
                 <stop offset="100%" stop-color="#673ab7" />
             </linearGradient>
         </defs>
-        <circle  r={radius} cx={cx_vh} cy={cx_vh} stroke-linecap="round" />
+        <circle  r={radius} cx={cx_vh} cy={cx_vh} stroke-dasharray={circumference} stroke-linecap="round" />
     </svg>
     </div>
   );

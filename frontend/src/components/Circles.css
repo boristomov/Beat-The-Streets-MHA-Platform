@@ -8,6 +8,8 @@
     z-index: 3;
     transition: scale 0.8s, color 0.8s;
     background-color: none;
+    /* font-size: 2.5vh; */
+    font-size: var(--text_size);
 }
 .skill:hover{
     scale: 1.30;
@@ -53,7 +55,6 @@
 
 #number{
     font-weight: 600;
-    font-size: 2.5vh;
     /* color: #555; */
 }
 
@@ -70,8 +71,8 @@ circle{
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 2vh;
-    stroke-dasharray: 100.5vh;
-    stroke-dashoffset: 0vh;
+    stroke-dasharray: 680;
+    stroke-dashoffset: 0;
     animation: anim 1s linear forwards;
     transition: animation 0.8s;
 }
