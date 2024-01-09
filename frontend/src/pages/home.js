@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { useEffect } from 'react';
 import ImageSlider from "../components/ImageSlider";
 import Circles from "../components/Circles";
 import bubbles_bottom_left from "../assets/login/bubbles_bottom_left.svg";
@@ -21,8 +22,22 @@ function Home() {
   EventEmitter.subscribe("getUserData", setUserData);
   if (userData == null) {
     UserService.eventDispatch();
+    console.log("no data");
+  }
+  else {
+    const dataParse = new DataParse(userData);
+    console.log("data");
+    console.log(dataParse.getUsername());
   }
   const dataParse = new DataParse(userData);
+
+  useEffect(() => {
+    if (userData !== null) {
+      const dataParse = new DataParse(userData);
+      console.log("data");
+      console.log(dataParse.getUsername());
+    }
+  }, [userData]);
   
   
   const slides1 = [
@@ -56,6 +71,7 @@ function Home() {
     <div className="homepage">
       
       <div className='welcomeBack'><b className='welcomeBack'> Welcome Back!</b> 
+      {/* <div>{userData}</div> */}
       <a id = "dashboard"></a>
       </div>
       <img src="http://localhost:3000/sidebar.png" alt="Icon Description" className="sidebarright"></img>

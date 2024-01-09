@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import { useEffect } from 'react';
 import { UserService } from "./service/userService";
 import { EventEmitter } from "./service/eventEmitter";
 
@@ -11,6 +11,8 @@ import Analytics from "./pages/analytics";
 import Questions from "./pages/questions";
 
 function App() {
+
+
   const [loggedIn, setLoggedIn] = useState(false);
   EventEmitter.subscribe("getLoggedIn", setLoggedIn);
   if (UserService.checkLoggedIn() && loggedIn === false) {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { UserService } from "../service/userService";
-
+import { useEffect } from "react";
 import styles from "./login.module.css";
 import Particles from "../components/Particles";
 import BTS_inc from "../assets/login/BTS_inc.svg"
@@ -16,24 +16,55 @@ import login_middle_separator from "../assets/login/login_middle_separator.svg"
 //import login_sign_in from "../assets/login/login_sign_in.svg"
 import BTS_small_logo from "../assets/login/BTS_small_logo.png"
 import request_support from "../assets/login/request_support.svg"
-
+import { jwtDecode } from "jwt-decode";
 
 //<img className={styles.frame_icon} alt="" src={buildings_login} />
 //<b className={styles.or}>or</b>
 const Login = () => {
+  const [user, setUser] = useState({});
+
+  
+
+  function handleCallbackResponse(response){
+    console.log("Encoded JWT ID Token: " + response.credential);
+    var userObject = jwtDecode(response.credential);
+    console.log(userObject);
+    setUser(userObject);
+    setCredentials((prevCredentials) => ({
+      ...prevCredentials,
+      username: userObject.name,
+    }));
+    handleLogin();
+  }
+  
+  useEffect(() => {
+    /*global google*/
+    google.accounts.id.initialize({
+      client_id: "1093724845964-d6424avb3llqao12ek91umnn6m7cin6g.apps.googleusercontent.com",
+      callback: handleCallbackResponse
+    });
+
+    google.accounts.id.renderButton(
+      document.getElementById("signInDiv"),
+      { theme: "outline", size: "large", onSuccess: handleCallbackResponse}
+    );
+  },[]);
+
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
   });
 
   const handleLogin = async (e) => {
-    // e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
     UserService.loginUser(credentials);
-    window.location.reload(false);
   };
   
   return (
     <div className={styles.locofy_login}>
+      <div id="signInDiv"></div>
       <div className={styles.header}>
 
       </div>
@@ -90,7 +121,7 @@ const Login = () => {
       </div>
       {/* SING UP OPTIONS */}
       <div className={styles.icons}>
-        <img className={styles.google_icon} alt="" src={google_login} />
+        <img className={styles.google_icon} id ="signInDiv"alt="" src={google_login} />
         <img className={styles.facebook_icon} alt="" src={facebook_login} />
         <img className={styles.linkedin_icon} alt="" src={linkedin_login} />
       </div>
