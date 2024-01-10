@@ -2,12 +2,24 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 
-import { newUser, getUserData, updateTokens, updateAssessmentData } from "./database.mjs";
+import { newUser, getUserData, updateTokens, updateAssessmentData } from "./database.mjs";const express = require('express');
 
 const PORT = 5050;
 const app = express();
 app.use(cors());
 var jsonParser = bodyParser.json()
+
+app.get('/', (req, res) => {
+  // Set Cross-Origin-Opener-Policy header
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+
+  // Set other headers as needed
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  // Send the response
+  res.send('Hello, World!');
+});
 
 // POST: Login
 app.post("/auth", jsonParser, (req, res) => {

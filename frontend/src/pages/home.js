@@ -5,6 +5,7 @@ import ImageSlider from "../components/ImageSlider";
 import Circles from "../components/Circles";
 import bubbles_bottom_left from "../assets/login/bubbles_bottom_left.svg";
 import bubbles_top_right from "../assets/login/bubbles_top_right.svg";
+import Navbar from '../components/Navbar';
 // import {Link} from "react-scroll";
 import "./homepagestyle.css";
 
@@ -27,9 +28,9 @@ function Home() {
   else {
     const dataParse = new DataParse(userData);
     console.log("data");
-    console.log(dataParse.getUsername());
+    console.log(dataParse);
   }
-  const dataParse = new DataParse(userData);
+  // const dataParse = new DataParse(userData);
 
   useEffect(() => {
     if (userData !== null) {
@@ -69,7 +70,7 @@ function Home() {
 
   return (
     <div className="homepage">
-      
+      <Navbar />
       <div className='welcomeBack'><b className='welcomeBack'> Welcome Back!</b> 
       {/* <div>{userData}</div> */}
       <a id = "dashboard"></a>
@@ -108,16 +109,22 @@ function Home() {
           
             <div className= "containerlist">
               <div className="containerslider">
-              <div className="assessmenttype hover_event_slider">  Anxiety Assessments</div>
+              <div className="assessmenttype hover_event_slider">  </div>
+                <Link to="/questions" className="assessmenttype hover_event_slider">   Axiety Assessments</Link>
                 <ImageSlider className="hover_event_slider" slides = {slides1}/>
+               
               </div>
               <div className="containerslider">
-                <p className="assessmenttype hover_event_slider">Depression Assessments</p>
+                <Link to="/questions" className="assessmenttype hover_event_slider">   Depression Assessments</Link>
                 <ImageSlider className="hover_event_slider" slides = {slides2}/>
+                
+                  
+               
               </div>
               <div className="containerslider">
-              <p className="assessmenttype hover_event_slider">   PTSD Assessments</p>
+                <Link to="/questions" className="assessmenttype hover_event_slider">   PTSD Assessments</Link>
                 <ImageSlider  className="hover_event_slider" slides = {slides3}/>
+                
               </div>
             </div>
           </section>

@@ -9,8 +9,10 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import Analytics from "./pages/analytics";
 import Questions from "./pages/questions";
+import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 
 function App() {
+  
 
 
   const [loggedIn, setLoggedIn] = useState(false);
@@ -20,13 +22,16 @@ function App() {
   }
   
   if (!loggedIn) {
-    return <Login/>;
+
+    return <GoogleOAuthProvider clientId="1093724845964-d6424avb3llqao12ek91umnn6m7cin6g.apps.googleusercontent.com">
+              <Login/>
+            </GoogleOAuthProvider>;
   }
 
   return (
     
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route
@@ -34,7 +39,7 @@ function App() {
           element={<Home/>}
         ></Route>
         <Route
-          path="/assessments/take-assessment"
+          path="/questions"
           element={<Questions/>}
         ></Route>
         <Route

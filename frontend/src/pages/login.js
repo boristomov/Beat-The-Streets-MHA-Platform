@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { UserService } from "../service/userService";
 import { useEffect } from "react";
 import styles from "./login.module.css";
@@ -17,57 +16,54 @@ import login_middle_separator from "../assets/login/login_middle_separator.svg"
 import BTS_small_logo from "../assets/login/BTS_small_logo.png"
 import request_support from "../assets/login/request_support.svg"
 import { jwtDecode } from "jwt-decode";
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+import { useGoogleLogin } from '@react-oauth/google';
 
-//<img className={styles.frame_icon} alt="" src={buildings_login} />
-//<b className={styles.or}>or</b>
+
 const Login = () => {
   const [user, setUser] = useState({});
-
-  
-
-  function handleCallbackResponse(response){
-    console.log("Encoded JWT ID Token: " + response.credential);
-    var userObject = jwtDecode(response.credential);
-    console.log(userObject);
-    setUser(userObject);
-    setCredentials((prevCredentials) => ({
-      ...prevCredentials,
-      username: userObject.name,
-    }));
-    handleLogin();
-  }
-  
-  useEffect(() => {
-    /*global google*/
-    google.accounts.id.initialize({
-      client_id: "1093724845964-d6424avb3llqao12ek91umnn6m7cin6g.apps.googleusercontent.com",
-      callback: handleCallbackResponse
-    });
-
-    google.accounts.id.renderButton(
-      document.getElementById("signInDiv"),
-      { theme: "outline", size: "large", onSuccess: handleCallbackResponse}
-    );
-  },[]);
 
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
   });
-
+  
   const handleLogin = async (e) => {
     if (e) {
       e.preventDefault();
     }
     UserService.loginUser(credentials);
   };
+
+
+
+  const login = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      console.log("Google login successful. Token response:", tokenResponse);
+
+      // Decode the JWT ID Token
+      var userDecodedToken = jwtDecode(tokenResponse.access_token);
+      console.log("Decoded user object:", userDecodedToken);
+
+      // setUser(userObject);
+      // setCredentials({
+      //   username: userObject.name,
+      //   password: "none",
+      // });
+
+      // Perform login logic
+      // await handleLogin()
+    }
+  });
   
+
+
   return (
     <div className={styles.locofy_login}>
-      <div id="signInDiv"></div>
-      <div className={styles.header}>
-
-      </div>
+      {/* <div id="signInDiv"></div> */}
+      
+      <div className={styles.header}></div>
       {/* <img className={styles.buildings_login} alt="" src={buildings_login}/> */}
       <div className={styles.sign_in_parent}>
         {/* BUBBLES */}
@@ -121,7 +117,8 @@ const Login = () => {
       </div>
       {/* SING UP OPTIONS */}
       <div className={styles.icons}>
-        <img className={styles.google_icon} id ="signInDiv"alt="" src={google_login} />
+        <img className={styles.google_icon} alt="" src={google_login}  onClick={() => login()}>
+        </img>
         <img className={styles.facebook_icon} alt="" src={facebook_login} />
         <img className={styles.linkedin_icon} alt="" src={linkedin_login} />
       </div>
@@ -133,75 +130,7 @@ const Login = () => {
       </div> */}
       
     </div>
-  );
-
-{/*       
-        <div className={styles.frame40}>
-          <b className={styles.sign_up_with}>Sign up with</b>
-        </div>
-        <div className={styles.frame60}>
-          <b className={styles.username}>Username</b>
-        </div>
-        <div className={styles.frame70}>
-          <b className={styles.username}>Password</b>
-        </div> */}
-        
-        {/* <img className={styles.linkedin_icon} alt="" src={linkedin_login} />
-        <div className={styles.frame80}>
-          <img className={styles.facebook_icon} alt="" src={facebook_login} />
-        </div> */}
-        {/* <form onSubmit={handleLogin}>
-          <div className={styles.frame90}>
-            <div className={styles.frame_item}>
-              <input
-                  id="username"
-                  type="text"
-                  placeholder="Username"
-                  onChange={(e) =>
-                    setCredentials({
-                      username: e.target.value,
-                      password: credentials.password,
-                    })
-                  }
-                />
-            </div>
-          </div>
-          <div className={styles.frame100}>
-            <div className={styles.frame_item}>
-            <input
-                  id="password"
-                  type="text"
-                  placeholder="Password"
-                  onChange={(e) =>
-                    setCredentials({
-                      username: credentials.username,
-                      password: e.target.value,
-                    })
-                  }
-                />
-            </div>
-          </div>
-          <div className={styles.frame10}>
-            <button className={styles.submit_button} type="submit">
-              Sign in
-            </button>
-          </div>
-        </form> */}
-        {/* <div className={styles.frame110}>
-          <div className={styles.rectangle_div} />
-        </div>
-        <div className={styles.frame120}>
-          <div className={styles.google_icon}>
-            <img alt="" src={google_login} />
-          </div>
-        </div>
-        <img className={styles.frame_icon90} alt="" src={login_middle_separator} /> */}
-        {/* <div className={styles.frame140}>
-          <img className={styles.image_40_icon} alt="" src={BTS_small_logo} />
-        </div> */}
-      
-      
-      
+  );    
 };
 
 export default Login;

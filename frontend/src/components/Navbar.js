@@ -48,7 +48,7 @@ function Navbar() {
         </li>
         <li className="li">
           <div className="nav-button">
-            <Link className="Navbarlink" to="/analytics">
+            <Link className="Navbarlink" to="../analytics">
               Analytics
             </Link>
           </div>
