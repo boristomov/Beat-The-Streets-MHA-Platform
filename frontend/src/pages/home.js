@@ -149,11 +149,6 @@ function Home() {
           <b>Beat the Streets, Inc.</b>
         </div>
       </div>
-      {/* <div className="footer">
-        <u className="beatthestreets">Beat the Streets, Inc.</u>
-        <u className="youngadultemployment"> Young Adult Employment, Vocational & Life Services</u>
-      </div> */}
-
     </div>
   );
 }

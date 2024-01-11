@@ -1,9 +1,9 @@
 .blueMainPanel {
-  /* position: absolute; */
-  top: 80px;
-  width: 65%;
+  position: relative;
+  top: 0;
+  width: 60%;
   background-color: #e6f6fe;
-  height: 900px;
+  height: 100vh;
   /* z-index: 2; */
 }
 .detectedSymptomsMainPanel {
@@ -21,15 +21,15 @@
   transition: width 0.5s ease-in;
 }
 
-.containerStyles {
-  width: 280px;
-  height: 500px;
-  position: relative;
+.containerStyles1 {
+  width: 25vw;
+  height: 38vw;
+  position: absolute;
   padding: 20px;
-  top: 100px;
-  
+  top: 10vh;
 }
 .containerList {
+  position: relative;
   display: flex;
   position: relative;
   align-items: center;
@@ -333,7 +333,7 @@
   position: relative;
   background-color: var(--color-white);
   width: 100%;
-  height: 1960px;
+  height: 200vh;
   overflow: hidden;
   text-align: left;
   font-size: 15.57px;
@@ -346,13 +346,17 @@
   align-content: center;
   align-items: center;
   width: 100%;
-  height: 900px; 
-  top: 980px;
+  height: 100vh; 
+  top:100vh;
   background-color: #003559;
   font-size: var(--font-size-41xl);
   font-family: var(--font-inter);
+  display: flex;
+  justify-content: center;
 }
 .nextStepsContainerText {
+  position: absolute;
+  top: 2vh;
   text-align: center;
   font-size: var(--font-size-41xl);
   color: #fff;
@@ -367,17 +371,17 @@
 }
 .previousIcon{
   position: absolute;
-  left: -0.3%;
-  top: 27%;
-  height: 5%;
-  width: 5%;
+  left: 0.5vh;
+  top: 27vh;
+  height: 5vh;
+  width: 5vh;
 }
 .previousBar{
   position: absolute;
   left: -0.8%;
-  top: 20%;
-  height: 20%;
-  width: 6%;
+  top: 20vh;
+  height: 20vh;
+  width: 5vw;
   
 }
 .back_button {
@@ -388,8 +392,12 @@
 
 .vectorGraphic {
   position: absolute;
-  top: 32%;
-  z-index: 0;
+  fill: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+  bottom: 0;
+  background: cover;
+  width: 100%;
+  height: 45vw;
+  z-index: 1;
 }
 
 
@@ -426,19 +434,22 @@
   display: flex;
   position: absolute;
   width: 100%;
-  top: 80px;
+  top: 0;
 }
 
 .detectedSymptomsMainPanel {
-  position: absolute;
-  width: 55%;
-  left: 55%;
+  position: relative;
+  width: 40%;
+  right: 0%;
   background-color: #ffffff;
-  height: 900px;
+  height: 100vh;
   z-index: 1;
   align-content: center;
-  margin-right: 300px;
+  justify-content: center;
+  display: flex;
+  /* margin-right: 300px; */
   transition: width 0.5s ease-in;
+  box-shadow: -10px 0 10px -5px #888888;
 }
 .containerStyles {
   width: 280px;
@@ -446,8 +457,6 @@
   position: relative;
   padding: 20px;
   top: 100px;
-  
-  
 }
 .containerList {
   display: flex;
@@ -463,10 +472,11 @@
 }
 .yourResultsAndContainer {
   position: absolute;
-  top: 90px;
-  left: 50px;
+  top: 10vh;
+  left: 10vw;
   font-size: var(--font-size-41xl);
   font-family: var(--font-inter);
+  z-index: 2;
 }
 
 .analyticsV2Child1 {
@@ -525,8 +535,8 @@
   align-content: center;
   align-items: center;
   width: 100%;
-  height: 900px; 
-  top: 980px;
+  height: 100vh; 
+  /* top: 100vh; */
   background-color: #003559;
   font-size: var(--font-size-41xl);
   font-family: var(--font-inter);
@@ -544,6 +554,8 @@
   left: 5%;
   bottom: 5%;
   display: flex;
+  height: 20vw;
+  width: 20vw;
   z-index: 1;
 }
 
@@ -553,6 +565,7 @@
   bottom: 80px;
  
 }
+
 
 .footerBar {
   position: absolute;

@@ -24,3 +24,62 @@
   margin: 30px 0; /* Add some vertical spacing between items */
   padding-left: 450px;
 }
+
+.SymptomBar{
+  margin: 0.75rem;
+  position: relative;
+  width: 75%;
+  height: 3.4vw;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 10px 10px 10px #888888;
+  display: flex;
+  align-items: center;
+  transition: backgroun-color 2s ease, border 0s, transform 0.3s ease, margin 0s;
+  color: #003559;
+}
+.SymptomBar:hover{
+  transform: scale(1.05);
+  background-color: #003559;
+  color: white;
+  border: 2px solid orange;
+  margin: 0.62rem;
+}
+.coloredBar{
+  margin: 0.3vw;
+  position: absolute;
+  /* left: 0.5vh; */
+  border-radius: 1.5vw 0 0 1.5vw;
+  /* background-color: aqua; */
+  z-index: 2;
+  /* width: 60%; */
+  height: 2.8vw;
+  display: flex;
+  align-items: center;
+  
+  
+}
+.circle{
+  position: relative;
+  margin: 0.3vw;
+  height: 2.2vw;
+  width: 2.2vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.criteriaText{
+  position: absolute;
+  right: 1vw;
+  font-size: var(--font-size-lgi);
+  font-family: var(--font-poppins);
+  font-weight: 600;
+}
+.categoryText{
+  z-index: 3;
+  position: absolute;
+  left: 3.5vw;
+  font-weight: 600;
+}
