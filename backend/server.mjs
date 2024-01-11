@@ -2,7 +2,8 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 
-import { newUser, getUserData, updateTokens, updateAssessmentData } from "./database.mjs";const express = require('express');
+import { newUser, getUserData, updateTokens, updateAssessmentData } from "./database.mjs";
+// const express = require('express');
 
 const PORT = 5050;
 const app = express();

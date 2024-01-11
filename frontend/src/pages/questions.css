@@ -49,6 +49,8 @@ body {
     display: flex;
     justify-content: center;
     margin: 0.5vh;
+    background: linear-gradient(180deg, transparent, 30%, rgba(253, 132, 28, 0.90) 100%);
+    box-shadow: ;
 
   }
   .number_style {
@@ -118,11 +120,11 @@ body {
     position: absolute;
     overflow: hidden;
     top: 30vh;
-    left: -5vh;
+    left: -8vh;
     border-radius: 4vh;
     background-color: var(--color-gray);
     width: 20%;
-    height: 35vh;
+    height: 55vh;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
@@ -130,11 +132,11 @@ body {
     position: absolute;
     overflow: hidden;
     top: 30vh;
-    right: -5vh;
+    right: -8vh;
     border-radius: 4vh;
     background-color: var(--color-gray);
     width: 20%;
-    height: 35vh;
+    height: 55vh;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
@@ -167,12 +169,17 @@ body {
     position: absolute;
     top: 1vh;
     font-weight: 500;
-    display: inline-block;
+    display: flex;
     width: 60%;
+    align-items: center;
+    justify-content: center;
+
   }
   .prompt{
-    font-size: 3vh;
+    font-size: 4vh;
     color:var(--color-darkslateblue);
+    z-index: 2;
+    text-align: center;
   }
   
   .me,
@@ -267,15 +274,19 @@ body {
     display:flex;
     justify-content: center;
     position: absolute;
-    top: 15vh;
+    top: 17vh;
     /* margin: 5vh; */
-    width: 55vw;
-    height: 65vh;
+    width: 50vw;
+    height: 60vh;
     /* overflow: hidden; */
     border-radius: var(--br-11xl);
     background-color: var(--color-white);
     box-shadow: 0 7px 20px rgba(25, 22, 22, 0.4);
     z-index: 1;
+    transition: scale 0.7s;
+  }
+  .big_rectangle:hover{
+    scale: 1.05;
   }
   .bubbleleft{
     position: absolute;
@@ -293,7 +304,7 @@ body {
     height: 60vh;
     right: 6%;
   }
-  .backgroundGraphic {
+  .backgroundGraphic_questions {
     position: fixed;
     fill: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
     bottom: 0vh;
@@ -569,7 +580,7 @@ body {
   .navigation {
     position: relative;
     width: 100%;
-    bottom: 14vh;
+    bottom: 12vh;
     font-family: var(--font-poppins);
     display: flex;
     flex-direction: row;

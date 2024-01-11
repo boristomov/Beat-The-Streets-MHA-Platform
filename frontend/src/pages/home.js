@@ -92,7 +92,7 @@ function Home() {
         <div className="assessments-container">
           
           
-          <section className="homepagecopy2child">
+          <section className="assessment_panel">
             <a id = "assessments"></a>
             {/* <Link to="/analytics" className="debuglink1">see analytics page</Link>
 

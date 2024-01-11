@@ -8,8 +8,8 @@
     z-index: 3;
     transition: scale 0.8s, color 0.8s;
     background-color: none;
-    /* font-size: 2.5vh; */
-    font-size: var(--text_size);
+    font-size: 4vh;
+    /* font-size: var(--text_size); */
 }
 .skill:hover{
     scale: 1.30;

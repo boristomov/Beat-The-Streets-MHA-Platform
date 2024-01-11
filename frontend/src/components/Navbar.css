@@ -23,7 +23,8 @@
   color: #fff;
 }
 .navbar {
-  background-color: #003559;
+  /* background-color: #003559; */
+  background-color: transparent;
   max-width: 100%;
   height: 50px;
   display: flex;  
@@ -34,6 +35,7 @@
   top: 0;
   padding: 10px 100px 10px 0px;
   margin: 0px 0px 00px 0px;
+  z-index: 5;
 }
 
 .navbarmenu {
