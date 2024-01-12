@@ -7,7 +7,7 @@ const slideStyles = {
   borderRadius: "40px",
   backgroundSize: "cover",
   backgroundPosition: "center",
-  transition: "background-image 0.8s ease-in-out",
+  transition: "background-image 0.3s ease-in-out",
 };
 
 const rightArrowStyles = {

@@ -15,6 +15,15 @@ import BTSLOGO from "../assets/BTS-Logo.svg"
 
 // Import Questions and Create Iterator
 import AllQuestions from "../questionCategories.json";
+// let left_panel = document.getElementById('left_panel');
+// let right_panel = document.getElementById('right_panel');
+// let big_rectangle = document.getElementById('big_rectangle');
+
+// window.addEventListener('scroll', function(){
+//   let value = window.scrollY;
+//   big_rectangle.style.top = value*1.05 + 'px';
+// });
+
 function createIterator(array) {
   let i = 0;
   const length = array.length;
@@ -183,8 +192,9 @@ function Questions() {
           {/* PANELS */}
         
           <div className="panel_holder">
-            <div className="left_panel"></div>
-            <div className="big_rectangle">
+            
+            <div id = "left_panel" className="left_panel"></div>
+            <div id = "big_rectangle" className="big_rectangle">
               <div className="prompt_container">
                 <p className="prompt">
                   {iter.curr().question}
@@ -212,7 +222,7 @@ function Questions() {
               </div>
               
             </div>
-            <div className="right_panel"></div>
+            <div id = "right_panel" className="right_panel"></div>
           </div>
         </div>
         <svg width = "100%" className="backgroundGraphic_questions" xmlns="http://www.w3.org/2000/svg">
