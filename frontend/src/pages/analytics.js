@@ -73,7 +73,8 @@ function Analytics() {
     const handleScroll = () => {
       const value = window.scrollY;
       console.log("scroll value:", value);
-      yourResults.style.top = value * 1.05 + 'px';
+      // yourResults.style.top = Math.min(value * 1.45 , 100) + 'vh';
+      yourResults.style.top =  value * 0.15  + 'vh';
       console.log("scroll value:", yourResults);
     };
   
@@ -122,7 +123,7 @@ function Analytics() {
 
         {/* Collapsed Left Section - Your Results and Next Steps */}
         {!isExpanded && (
-          <div className={styles.blueMainPanel}>
+          <div id="blueMainPanel" className={styles.blueMainPanel}>
             <b className={styles.yourResultsAndContainer}>
               <p id="yourResults" className={styles.yourResults}>Your Results are here!</p>
             </b>
