@@ -6,7 +6,7 @@ import "./questions.css";
 import Woman_seeking_psycholigist_help from "../assets/Woman_seeking_psycholigist_help.svg"
 import LeftArrow from "../assets/LeftArrow.svg"
 import RightArrow from "../assets/RightArrow.svg"
-
+import { useEffect } from "react";
 import MeButton from "../assets/MeButton.svg"
 import NotMeButton from "../assets/NotMeButton.svg"
 import bubbles_bottom_left from "../assets/login/bubbles_bottom_left.svg";
@@ -15,14 +15,11 @@ import BTSLOGO from "../assets/BTS-Logo.svg"
 
 // Import Questions and Create Iterator
 import AllQuestions from "../questionCategories.json";
-// let left_panel = document.getElementById('left_panel');
-// let right_panel = document.getElementById('right_panel');
-// let big_rectangle = document.getElementById('big_rectangle');
+let left_panel = document.getElementById('left_panel');
+let right_panel = document.getElementById('right_panel');
+let big_rectangle = document.getElementById('big_rectangle');
 
-// window.addEventListener('scroll', function(){
-//   let value = window.scrollY;
-//   big_rectangle.style.top = value*1.05 + 'px';
-// });
+
 
 function createIterator(array) {
   let i = 0;
@@ -105,6 +102,39 @@ function Questions() {
     let questNum = iter.indexNum() + displacement + 1
     return 1<=questNum && questNum<=iter.length() ? questNum : " ";
   }
+
+  
+  
+  const [rotationX, setRotationX] = useState(0);
+  const [rotationY, setRotationY] = useState(0);
+  const [translationX, setTranslationX] = useState(0);
+
+  useEffect(() => {
+    const handleWheel = (event) => {
+    const sensitivity = 0.3; // You can adjust this value to control sensitivity
+    const delta = event.deltaY * sensitivity;
+
+      setRotationX((prevRotationX) => prevRotationX + event.deltaY / 8);
+      setRotationY((prevRotationY) => prevRotationY + event.deltaX / 8);
+      setTranslationX((prevTranslationX) => prevTranslationX + delta);
+    };
+
+    // Attach the wheel event listener when the component mounts
+    window.addEventListener("wheel", handleWheel);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
+  const transformStyle = {
+    transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg) translateX(${translationX}px)`,
+  };
+
+
+
+  
 
   return (
     <>
@@ -193,8 +223,8 @@ function Questions() {
         
           <div className="panel_holder">
             
-            <div id = "left_panel" className="left_panel"></div>
-            <div id = "big_rectangle" className="big_rectangle">
+            <div id = "left_panel" style={transformStyle} className="left_panel"></div>
+            <div id = "big_rectangle" style={transformStyle} className="big_rectangle">
               <div className="prompt_container">
                 <p className="prompt">
                   {iter.curr().question}
@@ -222,7 +252,7 @@ function Questions() {
               </div>
               
             </div>
-            <div id = "right_panel" className="right_panel"></div>
+            <div id = "right_panel" className="right_panel" style={transformStyle}></div>
           </div>
         </div>
         <svg width = "100%" className="backgroundGraphic_questions" xmlns="http://www.w3.org/2000/svg">
