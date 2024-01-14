@@ -30,27 +30,13 @@ function Navbar() {
       <ul className="navbarmenu">
         <li className="li">
           <div className="nav-button">
-            {/* <Link className="Navbarlink" to="/">
-              Dashboard
-            </Link> */}
-            {/* <a className="link_color" href="#dashboard"> Dashboard </a> */}
+            
             <Link to="dashboard" spy={true} smooth={true} offset={-50} duration={1000} > Dashboard</Link>
           </div>
         </li>
         <li className="li">
           <div className="nav-button">
-            {/* <Link className="Navbarlink" to="/assessments/take-assessment">
-              Take Assessment
-            </Link> */}
-            {/* <a className="link_color" href="#assessments">Take Assessment</a> */}
             <Link to="assessments" spy={true} smooth={true} offset={-100} duration={1000} > Take Assessment</Link>
-          </div>
-        </li>
-        <li className="li">
-          <div className="nav-button">
-            <Link className="Navbarlink" to="../analytics">
-              Analytics
-            </Link>
           </div>
         </li>
         <li className="li">

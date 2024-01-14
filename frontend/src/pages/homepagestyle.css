@@ -47,6 +47,7 @@
 .maincontent{
   /* position: absol; */
   /* display: flex; */
+  /* background-image: linear-gradient( #003559, white); */
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -197,6 +198,7 @@
   align-items: center;
   z-index: 1;
   padding-top: 13%;
+  
 }
 .assessment_panel {
   display: flex;
