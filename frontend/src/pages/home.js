@@ -92,23 +92,23 @@ function Home() {
         </div>
         <div className="assessments-container">
           
-          
+          <div className="rectangleassigned">
+            <p className='containertext'>Assigned</p>
+          </div>
+          <div className="rectanglecompleted">
+            <p className='containertext'>Completed</p>
+          </div>
+          <div className="pictureframe">
+            <img className="circlepicture" alt="" src="http://localhost:3000/userImageCircle.svg" />
+            {/* <img className="profilePicture" alt="" src="http://localhost:3000/profilePic.png" /> */}
+          </div>
           <section className="assessment_panel">
             <a id = "assessments"></a>
             {/* <Link to="/analytics" className="debuglink1">see analytics page</Link>
 
             <Link to="/assessments/take-assessment" className="debuglink2">take assessment page</Link> */}
             {/* Image Sliders */}
-            <div className="rectangleassigned">
-              <p className='containertext'>Assigned</p>
-            </div>
-            <div className="rectanglecompleted">
-              <p className='containertext'>Completed</p>
-            </div>
-            <div className="pictureframe">
-              <img className="circlepicture" alt="" src="http://localhost:3000/userImageCircle.svg" />
-              {/* <img className="profilePicture" alt="" src="http://localhost:3000/profilePic.png" /> */}
-            </div>
+            
             <div className= "containerlist">
               <div className="containerslider">
               <div className="assessmenttype hover_event_slider">  </div>

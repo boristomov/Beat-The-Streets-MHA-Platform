@@ -64,10 +64,7 @@ const dotStyle = {
 //   left: "10%",
 //   right: "10%",
 // }
-const label = {
-  fontSize: "50px",
-  fontWeight: "500",
-}
+
 
 
 const ImageSlider = ({ slides, label }) => {
