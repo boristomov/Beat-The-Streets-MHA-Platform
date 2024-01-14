@@ -112,23 +112,23 @@ function Home() {
             <div className= "containerlist">
               <div className="containerslider">
               <div className="assessmenttype hover_event_slider">  </div>
-                <Link to="/questions" className="assessmenttype hover_event_slider">   Axiety Assessments</Link>
+                <Link to="/questions" className="assessmenttype hover_event_slider">  </Link>
                 <div className="testingOverlay1"></div>
-                <ImageSlider className="hover_event_slider" slides = {slides1}/>
+                <ImageSlider className="hover_event_slider" slides = {slides1} label={"Anxiety Assessments"}/>
                
               </div>
               <div className="containerslider">
-                <Link to="/questions" className="assessmenttype hover_event_slider">   Depression Assessments</Link>
+                <Link to="/questions" className="assessmenttype hover_event_slider">  </Link>
                 <div className="testingOverlay1"></div>
-                <ImageSlider className="hover_event_slider" slides = {slides2}/>
+                <ImageSlider className="hover_event_slider" slides = {slides2} label={"Depression Assessments"}/>
                 
                   
                
               </div>
               <div className="containerslider">
-                <Link to="/questions" className="assessmenttype hover_event_slider">   PTSD Assessments</Link>
+                <Link to="/questions" className="assessmenttype hover_event_slider">  </Link>
                 <div className="testingOverlay1"></div>
-                <ImageSlider  className="hover_event_slider" slides = {slides3}/>
+                <ImageSlider  className="hover_event_slider" slides = {slides3} label={"PTSD Assessments"}/>
                 
               </div>
             </div>

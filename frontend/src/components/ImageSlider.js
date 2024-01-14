@@ -14,7 +14,7 @@ const rightArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "20px",
+  right: "2vh",
   fontSize: "45px",
   color: "#fff",
   zIndex: 1,
@@ -34,7 +34,7 @@ const leftArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  left: "20px",
+  left: "2vh",
   fontSize: "45px",
   color: "#fff",
   zIndex: 1,
@@ -64,9 +64,13 @@ const dotStyle = {
 //   left: "10%",
 //   right: "10%",
 // }
+const label = {
+  fontSize: "50px",
+  fontWeight: "500",
+}
 
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides, label }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -84,7 +88,20 @@ const ImageSlider = ({ slides }) => {
   const slideStylesWidthBackground = {
     ...slideStyles,
     backgroundImage: `url(${slides[currentIndex].url})`,
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    textAlign: "center",
+    alignItems: "center",
+    fontSize: "2vw",
+    fontWeight: "1000",
+    color: "white",
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.25)",
   };
+  const labelStyle = {
+    textShadow: "0 4px 10px black",
+  };
+  
 
   return (
     <div style={sliderStyles}>
@@ -97,7 +114,9 @@ const ImageSlider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground}></div>
+      <div style={slideStylesWidthBackground}>
+        <b style={labelStyle}>{label}</b>
+      </div>
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
           <div

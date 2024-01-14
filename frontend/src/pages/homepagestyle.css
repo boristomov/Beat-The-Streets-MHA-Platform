@@ -14,7 +14,11 @@
   left: 0.0vw;
   border-radius: 41.5px;
   z-index: 2;
+  /* transition: background 2s; */
 }
+/* .testingOverlay1:hover{
+  background: linear-gradient(180deg, rgba(253, 132, 28, 0.90) 10%, transparent 60%);
+} */
 .debuglink1{
   bottom: 15%;
   position: absolute;

@@ -98,7 +98,7 @@
   scale: 1.05;
   color: rgba(253, 132, 28, 0.90);
   /* background: linear-gradient(180deg, transparent, 85%, rgb(255, 119, 0)); */
-  border-radius: 15px;
+  border-radius: 65px;
   background: linear-gradient(180deg, transparent, 85%, white);
   cursor: pointer;
 }
