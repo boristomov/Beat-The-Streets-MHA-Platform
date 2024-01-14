@@ -5,8 +5,9 @@ import styles from "./analytics.module.css";
 import { Link } from "react-router-dom";
 import bubbles_bottom_left from "../assets/login/bubbles_bottom_left.svg";
 import bubbles_top_right from "../assets/login/bubbles_top_right.svg";
-import { useEffect } from 'react';
+import Navbar from '../components/Navbar';
 // Data Retrieval Classes
+import { useEffect } from 'react';
 import { UserService } from "../service/userService";
 import { EventEmitter } from "../service/eventEmitter";
 import { DataParse } from "../service/dataParse";
@@ -88,7 +89,6 @@ function Analytics() {
 
   return (
     <div className={styles.analyticsV2}>
-      
       {/* Main Content Area */}
       <div className={`${styles.panelList} ${isExpanded ? styles.expandedPanel : ''}`}>
 

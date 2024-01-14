@@ -16,44 +16,28 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbarmenu">
-        <ul className="navbarmenu">
-          <li className="li">
-            <div className="nav-button">
-              <Link className="Navbarlink" to="https://www.beatthestreetsca.org/">
-                Back to Main Website
-              </Link>
-            </div>
-          </li>
-        </ul>
+      <div className="left_part">
+        <div className="nav-button">
+          <a className="Navbarlink" href="https://www.beatthestreetsca.org/" to="https://www.beatthestreetsca.org/">
+            Back to Website
+          </a>
+        </div>
+        <div className="nav-button">
+          <Link to="dashboard" spy={true} smooth={true} offset={-50} duration={1000} className="Navbarlink"> Dashboard</Link>
+        </div>
+        <div className="nav-button">
+          <Link className="Navbarlink" to="/">
+            Quick Links
+          </Link>
+        </div>
       </div>
-      <ul className="navbarmenu">
-        <li className="li">
-          <div className="nav-button">
-            
-            <Link to="dashboard" spy={true} smooth={true} offset={-50} duration={1000} > Dashboard</Link>
-          </div>
-        </li>
-        <li className="li">
-          <div className="nav-button">
-            <Link to="assessments" spy={true} smooth={true} offset={-100} duration={1000} > Take Assessment</Link>
-          </div>
-        </li>
-        <li className="li">
-          <div className="nav-button">
-            <Link className="Navbarlink" to="/">
-              Quick Links
-            </Link>
-          </div>
-        </li>
-        <li className="li">
-          <div className="nav-button">
-            <Link className="Navbarlink" onClick={logoutUser}>
-              Logout
-            </Link>
-          </div>
-        </li>
-      </ul>
+      <div className="right_part">
+        <div className="nav-button">
+          <Link className="logout" onClick={logoutUser}>
+            Logout
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 }
