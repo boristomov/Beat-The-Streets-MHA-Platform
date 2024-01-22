@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const slideStyles = {
   width: "100%",
@@ -18,7 +19,7 @@ const rightArrowStyles = {
   fontSize: "45px",
   color: "#fff",
   zIndex: 1,
-  cursor: "pointer",
+  // cursor: "pointer",
   transition: "color 0.8s",
 };
 rightArrowStyles[':hover'] = {
@@ -38,7 +39,8 @@ const leftArrowStyles = {
   fontSize: "45px",
   color: "#fff",
   zIndex: 1,
-  cursor: "pointer",
+  // cursor: "pointer",
+  scale: 1.05,
 };
 
 const sliderStyles = {
@@ -67,7 +69,7 @@ const dotStyle = {
 
 
 
-const ImageSlider = ({ slides, label }) => {
+const ImageSlider = ({ slides, label, link }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -99,6 +101,7 @@ const ImageSlider = ({ slides, label }) => {
     textShadow: "0 4px 10px black",
   };
   
+  
 
   return (
     <div style={sliderStyles}>
@@ -111,9 +114,11 @@ const ImageSlider = ({ slides, label }) => {
           ❱
         </div>
       </div>
-      <div style={slideStylesWidthBackground}>
-        <b style={labelStyle}>{label}</b>
-      </div>
+      <Link to= {link}>
+        <div style={slideStylesWidthBackground}>
+          <b style={labelStyle}>{label}</b>
+        </div>
+      </Link>
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
           <div

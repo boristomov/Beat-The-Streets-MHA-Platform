@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import bubbles_bottom_left from "../assets/login/bubbles_bottom_left.svg";
 import bubbles_top_right from "../assets/login/bubbles_top_right.svg";
 import Navbar from '../components/Navbar';
+import Circles from "../components/Circles";
 // Data Retrieval Classes
 import { useEffect } from 'react';
 import { UserService } from "../service/userService";
@@ -66,17 +67,25 @@ function Analytics() {
   // Toggle the expanded state
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
+    if (!isExpanded) {
+      const yourResults = document.getElementById('yourResults');
+      yourResults.style.top = ''; // Reset to default value
+    }
   };
 
   useEffect(() => {
     const yourResults = document.getElementById('yourResults');
   
     const handleScroll = () => {
-      const value = window.scrollY;
-      console.log("scroll value:", value);
-      // yourResults.style.top = Math.min(value * 1.45 , 100) + 'vh';
-      yourResults.style.top =  value * 0.15  + 'vh';
-      console.log("scroll value:", yourResults);
+      console.log("handleScroll called");
+      if (!isExpanded){
+        console.log("handleScroll not expanded");
+        const value = window.scrollY;
+        console.log("scroll value:", value);
+        // yourResults.style.top = Math.min(value * 1.45 , 100) + 'vh';
+        yourResults.style.top =  value * 0.15  + 'vh';
+        console.log("scroll value:", yourResults);
+      }
     };
   
     window.addEventListener('scroll', handleScroll);
@@ -96,13 +105,19 @@ function Analytics() {
         {isExpanded && (
           <div className={styles.moreInformationPanel}>
             <div className={styles.messageResult}>
-            <h2>You are born a champion!</h2>
-            <div className={styles.messageResultP}>
-            <p>Your survey results show you have a greart character when it comes to deling with stress but may need some help maintaining your emotional balance. Dont worry! Everyone has room to grow, read to find out how!</p>
+              <h2>You are born a champion!</h2>
+              <div className={styles.messageResultP}>
+                <p>Your survey results show you have a greart character when it comes to deling with stress but may need some help maintaining your emotional balance. Dont worry! Everyone has room to grow, read to find out how!</p>
+              </div>
             </div>
+            <div className={styles.analyticsCircles}> 
+              <Circles size={35} percentage={67}/>
+              <Circles size={50} percentage={80}/>
+              <Circles size={35} percentage={43}/>
             </div>
-            <h2>Question Analysis</h2>
-            {/* Button Container with Circular Buttons */}
+
+            {/* <h2>Question Analysis</h2> */}
+            {/* Button Container with Circular Buttons
             <div className={styles.buttonContainer}>
                 {Array.from({ length: 10 }, (_, i) => (
                   <button key={i} className={styles.circleButton}>
@@ -117,8 +132,8 @@ function Analytics() {
               <p>Consectetur adipiscing elit...</p>
               <h3>Symptom</h3>
               <p>Sed do eiusmod tempor incididunt...</p>
-            </div>
-            </div>
+            </div> */}
+          </div>
         )}
 
         {/* Collapsed Left Section - Your Results and Next Steps */}
@@ -151,7 +166,7 @@ function Analytics() {
               <img src="http://localhost:3000/backExpandButton.png" alt="Icon Description" className = {styles.toggleOff}></img> 
               : 
               <img src="http://localhost:3000/learnMore.png" alt="Icon Description" className = {styles.toggleOn}></img>
-              }
+            }
         </button>
         {/* Right Section - Detected Symptoms */}
         {!isExpanded && (  
@@ -166,8 +181,7 @@ function Analytics() {
             <DetectedSymtomsBars percentage={100} color={"red"} category={"Depression"}/>
             {/* Bubbles */}
             <img src="http://localhost:3000/bubbles1.png" alt="" className={styles.bubbles1}></img>
-          </div>
-          
+          </div> 
         )}
       </div>
       
