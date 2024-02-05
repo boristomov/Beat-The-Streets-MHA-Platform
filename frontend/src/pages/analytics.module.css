@@ -368,7 +368,7 @@
 .vectorGraphics {
   position: absolute;
   background-color: var(--color-black);
-  bottom: 80px;
+  bottom: 0;
   z-index: 2;
 }
 .previousIcon{
@@ -398,12 +398,12 @@
 
 .vectorGraphic {
   position: absolute;
-  fill: linear-gradient(180deg, #9AD5FD 50%, rgba(255, 255, 255, 0.00) 10%);
+  background-size: cover;
   bottom: 0;
-  background: cover;
-  width: 100%;
-  height: 45vw;
+  
+  height: 110vh;
   z-index: 1;
+  
 }
 
 
@@ -477,6 +477,7 @@
   font-size: 20vh;
   color: #003559;
   font-weight: 1000;
+  left: -5vw;
 }
 .yourResultsAndContainer {
   position: absolute;
@@ -621,34 +622,34 @@
 .toggleButton {
   /* Add styles for your expand/exit button here */
   cursor: pointer;
-  /* padding: 10px 20px; */
-  /* margin-top: 20px;  */
-  /* Adjust as needed */
-  /* margin-left: 10px; */
-  /* background-color: #e2e2e2; */
-   /* Example color - use what fits your design */
-  /* color: rgb(92, 92, 92); */
   
-  font-size: 16px;
   
+  bottom: 5vh;
   position: absolute;
    /* Position it relative to the parent */
   /* right: 2%; */
-  top: 85%;
   /* Centers the button vertically */
   /* Add more styles for button appearance */
   z-index: 2;
 }
 .toggleOn {
   position: absolute;
-  top: 85%;
-  left: 98%;
+  left: 47vw;
+  width: 110px;
+  height: 35px;
+  border-radius: 50px;
+  bottom: 5vh;
+  background-color: #003559;
   
 }
 .toggleOff {
   position: absolute;
-  top: 85%;
-  left: 98%;
+  width: 110px;
+  height: 30px;
+  border-radius: 50px;
+  right: 60vw;
+  bottom: 5vh;
+  background-color: #003559;
 }
 
 
@@ -687,6 +688,12 @@
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+}
+
+.buttonFont{
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
 }
 
 .circleButton {

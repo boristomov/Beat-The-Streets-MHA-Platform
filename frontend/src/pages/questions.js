@@ -109,28 +109,28 @@ function Questions() {
   const [rotationY, setRotationY] = useState(0);
   const [translationX, setTranslationX] = useState(0);
 
-  useEffect(() => {
-    const handleWheel = (event) => {
-    const sensitivity = 0.3; // You can adjust this value to control sensitivity
-    const delta = event.deltaY * sensitivity;
+  // useEffect(() => {
+  //   const handleWheel = (event) => {
+  //   const sensitivity = 0.3; // You can adjust this value to control sensitivity
+  //   const delta = event.deltaY * sensitivity;
 
-      setRotationX((prevRotationX) => prevRotationX + event.deltaY / 8);
-      setRotationY((prevRotationY) => prevRotationY + event.deltaX / 8);
-      setTranslationX((prevTranslationX) => prevTranslationX + delta);
-    };
+  //     setRotationX((prevRotationX) => prevRotationX + event.deltaY / 8);
+  //     setRotationY((prevRotationY) => prevRotationY + event.deltaX / 8);
+  //     setTranslationX((prevTranslationX) => prevTranslationX + delta);
+  //   };
 
-    // Attach the wheel event listener when the component mounts
-    window.addEventListener("wheel", handleWheel);
+  //   // Attach the wheel event listener when the component mounts
+  //   window.addEventListener("wheel", handleWheel);
 
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("wheel", handleWheel);
-    };
-  }, []); // Empty dependency array ensures the effect runs only once on mount
+  //   // Remove the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener("wheel", handleWheel);
+  //   };
+  // }, []); // Empty dependency array ensures the effect runs only once on mount
 
-  const transformStyle = {
-    transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg) translateX(${translationX}px)`,
-  };
+  // const transformStyle = {
+  //   transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg) translateX(${translationX}px)`,
+  // };
 
 
 
@@ -223,8 +223,8 @@ function Questions() {
         
           <div className="panel_holder">
             
-            <div id = "left_panel" style={transformStyle} className="left_panel"></div>
-            <div id = "big_rectangle" style={transformStyle} className="big_rectangle">
+            <div id = "left_panel" className="left_panel"></div>
+            <div id = "big_rectangle" className="big_rectangle">
               <div className="prompt_container">
                 <p className="prompt">
                   {iter.curr().question}
@@ -252,7 +252,7 @@ function Questions() {
               </div>
               
             </div>
-            <div id = "right_panel" className="right_panel" style={transformStyle}></div>
+            <div id = "right_panel" className="right_panel" ></div>
           </div>
         </div>
         <svg width = "100%" className="backgroundGraphic_questions" xmlns="http://www.w3.org/2000/svg">
