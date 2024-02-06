@@ -47,4 +47,8 @@ export class DataParse {
   getAllAssessments() {
     return this.userData.assessmentData;
   }
+
+  getAssessmentData(){
+    return this.userData.assessmentData
+  }
 }

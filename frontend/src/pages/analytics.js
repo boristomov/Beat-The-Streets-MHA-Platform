@@ -14,9 +14,19 @@ import { EventEmitter } from "../service/eventEmitter";
 import { DataParse } from "../service/dataParse";
 
 // User result processing
-// const dataParser = new DataParse(userData);
-// const assessment_data = dataParser.getMostRecentAssessments();
-// console.log(assessment_data);
+// const userData = UserService.getUserData();
+// let data_parser;
+// console.log(userData)
+// userData.then(result => {
+//   const data = result
+//   const data_parser = new DataParse(data);
+//   console.log(data_parser)
+// })
+
+// const assessment_data = data_parser.getMostRecentAssessments();
+
+
+
 
 
 const slides1 = [
@@ -47,14 +57,77 @@ const slides3 = [
 
 function Analytics() {
   // Data Retrieval Setup
-  const [userData, setUserData] = useState(null);
-  EventEmitter.subscribe("getUserData", setUserData);
-  if (userData == null) {
-    UserService.eventDispatch();
-  }
-  const dataParse = new DataParse(userData);
+  
+  const [assessmentData, setAssessmentData] = useState({});
+  const [scores, setScores] = useState({});
+  useEffect(() => {
+    const userDataPromise = UserService.getUserData();
+    userDataPromise.then(result => {
+      const data = result;
+      const dataParser = new DataParse(data);
+      const parsedData = dataParser.getAssessmentData();
+      setAssessmentData(parsedData);
+      console.log('Parsed data:', parsedData);
+      // Log assessmentData after it's been updated
+      console.log('Assessment data:', parsedData);
+      
+      // Calculate scores after assessmentData is set
+      const calculateScores = (assessmentData) => {
+        const maxScores = {
+          Depression: 0,
+          Anxiety: 0,
+          Stress: 0,
+          'Self-esteem': 0,
+          'Cultural Sensitivity': 0,
+          'Quality of Life': 0,
+          PTSD: 0,
+        };
+        const userScores = {
+          Depression: 0,
+          Anxiety: 0,
+          Stress: 0,
+          'Self-esteem': 0,
+          'Cultural Sensitivity': 0,
+          'Quality of Life': 0,
+          PTSD: 0,
+        };
+      
+        assessmentData[0].questions.forEach((question) => {
+          // Increment maximum score based on question weights
+          Object.keys(maxScores).forEach((category) => {
+            maxScores[category] += question[category];
+          });
+      
+          // Increment user score if the user responded positively
+          if (question.user_response) {
+            Object.keys(userScores).forEach((category) => {
+              userScores[category] += question[category];
+            });
+          }
+        });
+      
+        // Calculate percentages
+        const percentages = {};
+        Object.keys(maxScores).forEach((category) => {
+          // Prevent division by zero
+          if (maxScores[category] !== 0) {
+            percentages[category] = Math.floor((userScores[category] / maxScores[category]) * 100);
+          } else {
+            percentages[category] = 0;
+          }
+        });
+      
+        return percentages;
+      };
+      
+      // Call calculateScores with parsedData
+      setScores(calculateScores(parsedData));
+      
+    });
+  }, []);
+  console.log('scores', scores);
 
-
+  
   // State to control whether the details are expanded or not
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -69,18 +142,15 @@ function Analytics() {
 
   useEffect(() => {
     const yourResults = document.getElementById('yourResults');
-
-  
-  
     const handleScroll = () => {
-      console.log("handleScroll called");
+      // console.log("handleScroll called");
       if (!isExpanded){
-        console.log("handleScroll not expanded");
+        // console.log("handleScroll not expanded");
         const value = window.scrollY;
-        console.log("scroll value:", value);
+        // console.log("scroll value:", value);
         // yourResults.style.top = Math.min(value * 1.45 , 100) + 'vh';
         yourResults.style.top =  value * 0.15  + 'vh';
-        console.log("scroll value:", yourResults);
+        // console.log("scroll value:", yourResults);
       }
     };
   
@@ -90,12 +160,8 @@ function Analytics() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isExpanded]);
 
-  // document.getElementById('expandButton').addEventListener('click', function() {
-  //   var elementToHide = document.getElementById('elementToHide');
-  //   elementToHide.style.display = 'none'; // or 'visibility: hidden;' for hiding without collapsing the space
-  // });
 
  
   return (
@@ -162,13 +228,13 @@ function Analytics() {
         {!isExpanded && (  
           
           <div className={`${styles.detectedSymptomsMainPanel} ${isExpanded ? styles.expandedPanel : ''}`}>
-            <DetectedSymtomsBars id = "elementToHide" percentage={60} color={"aqua"} category={"Anxiety"} />
-            <DetectedSymtomsBars id = "elementToHide" percentage={45} color={"orange"} category={"Quality of Life"}/>
-            <DetectedSymtomsBars id = "elementToHide" percentage={80} color={"gold"} category={"PTSD"}/>
-            <DetectedSymtomsBars id = "elementToHide" percentage={100} color={"#d8bfd8"} category={"Cultural Sensitivity"}/>
-            <DetectedSymtomsBars id = "elementToHide" percentage={55} color={"lightgreen"} category={"Stress"}/>
-            <DetectedSymtomsBars id = "elementToHide" percentage={80} color={"pink"} category={"Self-Esteem"}/>
-            <DetectedSymtomsBars id = "elementToHide" percentage={100} color={"red"} category={"Depression"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={scores['Anxiety']} color={"aqua"} category={"Anxiety"} />
+            <DetectedSymtomsBars id = "elementToHide" percentage={scores['Quality of Life']} color={"orange"} category={"Quality of Life"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={scores['PTSD']} color={"gold"} category={"PTSD"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={scores['Cultural Sensitivity']} color={"#d8bfd8"} category={"Cultural Sensitivity"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={scores['Stress']} color={"lightgreen"} category={"Stress"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={scores['Self-esteem']} color={"pink"} category={"Self-Esteem"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={scores['Depression']} color={"red"} category={"Depression"}/>
             {/* Bubbles */}
             <img src="http://localhost:3000/bubbles1.png" alt="" className={styles.bubbles1}></img>
           </div> 
