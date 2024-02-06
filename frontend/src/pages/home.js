@@ -23,20 +23,20 @@ function Home() {
   EventEmitter.subscribe("getUserData", setUserData);
   if (userData == null) {
     UserService.eventDispatch();
-    console.log("no data");
+    // console.log("no data");
   }
   else {
     const dataParse = new DataParse(userData);
-    console.log("data");
-    console.log(dataParse);
+    // console.log("data");
+    // console.log(dataParse);
   }
   // const dataParse = new DataParse(userData);
 
   useEffect(() => {
     if (userData !== null) {
       const dataParse = new DataParse(userData);
-      console.log("data");
-      console.log(dataParse.getUsername());
+      // console.log("data");
+      // console.log(dataParse.getUsername());
     }
   }, [userData]);
   

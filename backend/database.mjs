@@ -2,11 +2,13 @@ import fs from "fs";
 
 // Helper Functions
 function readUserData() {
-  var currData = JSON.parse(fs.readFileSync("database/userData.json"));
+  var currData = JSON.parse(fs.readFileSync("database/currentSessionData.json"));
+  console.log(JSON.stringify(currData))
   return currData;
 }
 function writeUserData(currData) {
-  fs.writeFile("database/userData.json", JSON.stringify(currData), (error) => {
+  clearUserData()
+  fs.writeFile("database/currentSessionData.json", JSON.stringify(currData), (error) => {
     if (error) {
       console.error(error);
       throw error;
@@ -16,6 +18,7 @@ function writeUserData(currData) {
 
 // Main Functions
 export function newUser(user) {
+  clearUserData()
   var currData = readUserData();
   if (!currData.hasOwnProperty(`${user.username}`)) {
     currData[`${user.username}`] = { username: user.username, assessmentData: [] };
@@ -43,10 +46,21 @@ export function updateTokens(user, token) {
     }
   });
 }
+function clearUserData() {
+  // Write an empty JSON object to the file
+  fs.writeFileSync("database/currentSessionData.json", "{}");
+}
 
 export function updateAssessmentData(userData, data) {
-  var currData = readUserData();
-  var assessmentData = currData[`${userData.username}`].assessmentData;
-  assessmentData.push(data);
-  writeUserData(currData);
+  
+  
+  var newData = readUserData();
+  // Update the assessment data for the specified user
+  newData[userData.username] = {
+    username: userData.username,
+    assessmentData: [data]  // Overwrite the existing assessment data with new data
+  };
+
+  // Write the updated data back to the file
+  writeUserData(newData);
 }

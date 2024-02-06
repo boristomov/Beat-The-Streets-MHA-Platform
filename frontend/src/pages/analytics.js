@@ -13,16 +13,10 @@ import { UserService } from "../service/userService";
 import { EventEmitter } from "../service/eventEmitter";
 import { DataParse } from "../service/dataParse";
 
-// let yourResults = document.getElementById('yourResults');
-// let right_panel = document.getElementById('right_panel');
-// let big_rectangle = document.getElementById('big_rectangle');
-
-// window.addEventListener('scroll', function(){
-//   let value = window.scrollY;
-//   console.log("scroll value:", value);
-//   yourResults.styles.top = value*1.05 + 'px';
-//   console.log("scroll value:", yourResults);
-// });
+// User result processing
+// const dataParser = new DataParse(userData);
+// const assessment_data = dataParser.getMostRecentAssessments();
+// console.log(assessment_data);
 
 
 const slides1 = [
@@ -75,6 +69,8 @@ function Analytics() {
 
   useEffect(() => {
     const yourResults = document.getElementById('yourResults');
+
+  
   
     const handleScroll = () => {
       console.log("handleScroll called");
@@ -96,6 +92,12 @@ function Analytics() {
     };
   }, []);
 
+  // document.getElementById('expandButton').addEventListener('click', function() {
+  //   var elementToHide = document.getElementById('elementToHide');
+  //   elementToHide.style.display = 'none'; // or 'visibility: hidden;' for hiding without collapsing the space
+  // });
+
+ 
   return (
     <div className={styles.analyticsV2}>
       {/* Main Content Area */}
@@ -107,20 +109,21 @@ function Analytics() {
             <div className={styles.messageResult}>
               <h2>You are born a champion!</h2>
               <div className={styles.messageResultP}>
-                <p>Your survey results show you have a greart character when it comes to deling with stress but may need some help maintaining your emotional balance. Dont worry! Everyone has room to grow, read to find out how!</p>
+                <p>Your survey results show you have a greart character when it comes to dealing with stress but may need some help maintaining your emotional balance. Dont worry! Everyone has room to grow, read to find out how!</p>
+              </div>
+              <div className={styles.analyticsCircles}> 
+                <Circles size={20} percentage={67}/>
+                <Circles size={25} percentage={80}/>
+                <Circles size={20} percentage={43}/>
               </div>
             </div>
-            <div className={styles.analyticsCircles}> 
-              <Circles size={20} percentage={67}/>
-              <Circles size={25} percentage={80}/>
-              <Circles size={20} percentage={43}/>
-            </div>
+            
             {/* Conditionally rendered Expand/Exit button */}
-            <div onClick={toggleExpand} className={styles.toggleButton}>
+            <div id = 'expandButton' onClick={toggleExpand} className={styles.toggleButton}>
               {isExpanded ?
-                <div className={styles.toggleOff}/> 
+                <div id = 'expandButton' className={styles.toggleOff}/> 
                 : 
-                <div className = {styles.toggleOn}/>
+                <div id = 'expandButton' className = {styles.toggleOn}/>
               }
             </div>
           </div>
@@ -133,7 +136,7 @@ function Analytics() {
             <b className={styles.yourResultsAndContainer}>
               <p id="yourResults" className={styles.yourResults}>Your Results are here!</p>
             </b>
-            <Link to="/home">
+            <Link className={styles.link_back} to="/home">
              <img src="http://localhost:3000/Union.png" alt="Icon Description" className={styles.previousBar}></img>
              <img src="http://localhost:3000/icons8-next-96.png" alt="Icon Description" className={styles.previousIcon}></img>
             </Link>
@@ -159,13 +162,13 @@ function Analytics() {
         {!isExpanded && (  
           
           <div className={`${styles.detectedSymptomsMainPanel} ${isExpanded ? styles.expandedPanel : ''}`}>
-            <DetectedSymtomsBars percentage={60} color={"aqua"} category={"Anxiety"} />
-            <DetectedSymtomsBars percentage={45} color={"orange"} category={"Quality of Life"}/>
-            <DetectedSymtomsBars percentage={80} color={"gold"} category={"PTSD"}/>
-            <DetectedSymtomsBars percentage={100} color={"#d8bfd8"} category={"Cultural Sensitivity"}/>
-            <DetectedSymtomsBars percentage={55} color={"lightgreen"} category={"Stress"}/>
-            <DetectedSymtomsBars percentage={80} color={"pink"} category={"Self-Esteem"}/>
-            <DetectedSymtomsBars percentage={100} color={"red"} category={"Depression"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={60} color={"aqua"} category={"Anxiety"} />
+            <DetectedSymtomsBars id = "elementToHide" percentage={45} color={"orange"} category={"Quality of Life"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={80} color={"gold"} category={"PTSD"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={100} color={"#d8bfd8"} category={"Cultural Sensitivity"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={55} color={"lightgreen"} category={"Stress"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={80} color={"pink"} category={"Self-Esteem"}/>
+            <DetectedSymtomsBars id = "elementToHide" percentage={100} color={"red"} category={"Depression"}/>
             {/* Bubbles */}
             <img src="http://localhost:3000/bubbles1.png" alt="" className={styles.bubbles1}></img>
           </div> 
@@ -194,9 +197,9 @@ function Analytics() {
         </div>
       </div>
       {/* Go back */}
-      <a href="https://www.example.com">
+      <Link to="/home">
         <img src="http://localhost:3000/icons8-next-96.png" alt="Icon Description" className={styles.back_button}></img>
-      </a>
+      </Link>
       <div className={styles.footerBar} />
     </div>
   );
