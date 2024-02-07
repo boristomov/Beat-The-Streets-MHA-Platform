@@ -144,6 +144,20 @@
   font-size: 45.14px;
 
 }
+.DetectedSymtomsHeader{
+  font-size: 6vh;
+  display: inline block;
+  font-weight: 800;
+  position: relative;
+  color:#003559;
+  /* height: 15vh; */
+  width: 75%;
+  top: 2vh;
+  line-height: 1.0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 6vh;
+  
+}
 .analyticsV2Child5 {
   position: absolute;
   top: 284.74px;

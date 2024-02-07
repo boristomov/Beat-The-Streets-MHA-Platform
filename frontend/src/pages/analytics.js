@@ -30,28 +30,24 @@ import { DataParse } from "../service/dataParse";
 
 
 const slides1 = [
-  { url: "http://localhost:3000/editedmalestudent.png", title: "beach" },
-  { url: "http://localhost:3000/image-2.jpg", title: "boat" },
-  { url: "http://localhost:3000/image-3.jpg", title: "forest" },
-  { url: "http://localhost:3000/image-4.jpg", title: "city" },
-  { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+  { url: "http://localhost:3000/professional_pic3.jpeg", title: "beach" },
+  { url: "http://localhost:3000/slider_pic5.jpg", title: "boat" },
+  { url: "http://localhost:3000/slider_pic7.jpg", title: "forest" },
 ];
 
 const slides2 = [
-  { url: "http://localhost:3000/femaleprofessional.png", title: "beach" },
+  { url: "http://localhost:3000/professional_pic1.jpeg", title: "beach" },
   { url: "http://localhost:3000/image-2.jpg", title: "boat" },
   { url: "http://localhost:3000/image-3.jpg", title: "forest" },
-  { url: "http://localhost:3000/image-4.jpg", title: "city" },
-  { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+  
 ];
 
 
 const slides3 = [
-  { url: "http://localhost:3000/proffemale.png", title: "beach" },
-  { url: "http://localhost:3000/image-2.jpg", title: "boat" },
+  { url: "http://localhost:3000/professional_pic2.jpg", title: "beach" },
+  { url: "http://localhost:3000/healthy.jpg", title: "boat" },
   { url: "http://localhost:3000/image-3.jpg", title: "forest" },
-  { url: "http://localhost:3000/image-4.jpg", title: "city" },
-  { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+  
 ];
 
 
@@ -228,6 +224,7 @@ function Analytics() {
         {!isExpanded && (  
           
           <div className={`${styles.detectedSymptomsMainPanel} ${isExpanded ? styles.expandedPanel : ''}`}>
+            <div className = {styles.DetectedSymtomsHeader}> Detected Symptoms </div>
             <DetectedSymtomsBars id = "elementToHide" percentage={scores['Anxiety']} color={"aqua"} category={"Anxiety"} />
             <DetectedSymtomsBars id = "elementToHide" percentage={scores['Quality of Life']} color={"orange"} category={"Quality of Life"}/>
             <DetectedSymtomsBars id = "elementToHide" percentage={scores['PTSD']} color={"gold"} category={"PTSD"}/>
@@ -249,16 +246,16 @@ function Analytics() {
         <b className={styles.nextStepsContainerText}> Your Next Steps: </b>
         <div className={styles.containerList}>
           <div className={styles.containerStyles}>
-            <div className={styles.testingOverlay}></div>
-            <ImageSlider slides = {slides1}/>
+            
+            <ImageSlider slides = {slides1} label = {"Depression Tips"} position={'-20vh'}/>
           </div>
           <div className={styles.containerStyles}>
-            <div className={styles.testingOverlay}></div>
-            <ImageSlider slides = {slides2}/>
+            
+            <ImageSlider slides = {slides2} label = {"Overcoming the effects of PTSD"} position={'-20vh'}/>
           </div>
           <div className={styles.containerStyles}>
-            <div className={styles.testingOverlay}></div>
-            <ImageSlider slides = {slides3}/>
+            
+            <ImageSlider slides = {slides3} label = {"Improving daily habits"} position={'-20vh'}/>
           </div>
         </div>
       </div>

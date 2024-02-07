@@ -18,7 +18,7 @@ const rightArrowStyles = {
   right: "2vh",
   fontSize: "45px",
   color: "#fff",
-  zIndex: 1,
+  zIndex: 2,
   // cursor: "pointer",
   transition: "color 0.8s",
 };
@@ -38,7 +38,7 @@ const leftArrowStyles = {
   left: "2vh",
   fontSize: "45px",
   color: "#fff",
-  zIndex: 1,
+  zIndex: 2,
   // cursor: "pointer",
   scale: 1.05,
 };
@@ -60,16 +60,24 @@ const dotStyle = {
   fontSize: "20px",
   color: "white",
 };
-// const text = {
-//   position: "absolute",
-//   top: "50%",
-//   left: "10%",
-//   right: "10%",
-// }
+
+const Overlay = {
+  background: 'linear-gradient(180deg, rgba(253, 132, 28, 0.90) 10%, transparent 60%)',
+  position: "absolute",
+  display: "flex",
+  height: "100%",
+  width: "100%",
+  zIndex: "0",
+  display: "flex",
+  justifyContent: "center",
+  textAlign: "center",
+  alignItems: "center",
+  borderRadius: "40px",
+}
 
 
 
-const ImageSlider = ({ slides, label, link }) => {
+const ImageSlider = ({ slides, label, link, position }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -99,6 +107,9 @@ const ImageSlider = ({ slides, label, link }) => {
   };
   const labelStyle = {
     textShadow: "0 4px 10px black",
+    position: "relative",
+    top: position,
+    zIndex: 2,
   };
   
   
@@ -116,7 +127,9 @@ const ImageSlider = ({ slides, label, link }) => {
       </div>
       <Link to= {link}>
         <div style={slideStylesWidthBackground}>
-          <b style={labelStyle}>{label}</b>
+          <div style={Overlay}>
+            <b style={labelStyle}>{label}</b>
+          </div>
         </div>
       </Link>
       <div style={dotsContainerStyles}>
