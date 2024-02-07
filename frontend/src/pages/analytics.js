@@ -247,15 +247,15 @@ function Analytics() {
         <div className={styles.containerList}>
           <div className={styles.containerStyles}>
             
-            <ImageSlider slides = {slides1} label = {"Depression Tips"} position={'-20vh'}/>
+            <ImageSlider slides = {slides1} label = {"Depression Tips"} position={'-20vh'} overlayColor={'linear-gradient(180deg, rgba(253, 132, 28, 0.90) 10%, transparent 60%)'}/>
           </div>
           <div className={styles.containerStyles}>
             
-            <ImageSlider slides = {slides2} label = {"Overcoming the effects of PTSD"} position={'-20vh'}/>
+            <ImageSlider slides = {slides2} label = {"Overcoming the effects of PTSD"} position={'-20vh'} overlayColor={'linear-gradient(180deg, rgba(253, 132, 28, 0.90) 10%, transparent 60%)'}/>
           </div>
           <div className={styles.containerStyles}>
             
-            <ImageSlider slides = {slides3} label = {"Improving daily habits"} position={'-20vh'}/>
+            <ImageSlider slides = {slides3} label = {"Improving daily habits"} position={'-20vh'} overlayColor={'linear-gradient(180deg, rgba(253, 132, 28, 0.90) 10%, transparent 60%)'}/>
           </div>
         </div>
       </div>

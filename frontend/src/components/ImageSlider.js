@@ -61,23 +61,11 @@ const dotStyle = {
   color: "white",
 };
 
-const Overlay = {
-  background: 'linear-gradient(180deg, rgba(253, 132, 28, 0.90) 10%, transparent 60%)',
-  position: "absolute",
-  display: "flex",
-  height: "100%",
-  width: "100%",
-  zIndex: "0",
-  display: "flex",
-  justifyContent: "center",
-  textAlign: "center",
-  alignItems: "center",
-  borderRadius: "40px",
-}
 
 
 
-const ImageSlider = ({ slides, label, link, position }) => {
+
+const ImageSlider = ({ slides, label, link, position, overlayColor }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -110,6 +98,20 @@ const ImageSlider = ({ slides, label, link, position }) => {
     position: "relative",
     top: position,
     zIndex: 2,
+    width: "70%",
+  };
+  const Overlay = {
+    background: overlayColor,
+    position: "absolute",
+    display: "flex",
+    height: "100%",
+    width: "100%",
+    zIndex: "0",
+    display: "flex",
+    justifyContent: "center",
+    textAlign: "center",
+    alignItems: "center",
+    borderRadius: "40px",
   };
   
   

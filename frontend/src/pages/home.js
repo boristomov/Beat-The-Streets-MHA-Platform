@@ -113,22 +113,21 @@ function Home() {
               <div className="containerslider">
               <div className="assessmenttype hover_event_slider">  </div>
                 
-                <div className="testingOverlay1"></div>
-                <ImageSlider className="hover_event_slider" slides = {slides1} label={"Anxiety Assessments"} link={"/questions"}/>
+                
+                <ImageSlider className="hover_event_slider" slides = {slides1} label={"Anxiety Assessments"} link={"/questions"} position={'0vh'} overlayColor={'linear-gradient(180deg, rgba(0,53,89, 0.90) 10%, transparent 60%)'}/>
                
               </div>
               <div className="containerslider">
                
-                <div className="testingOverlay1"></div>
-                <ImageSlider className="hover_event_slider" slides = {slides2} label={"Depression Assessments"} link={"/questions"}/>
+                
+                <ImageSlider className="hover_event_slider" slides = {slides2} label={"Depression Assessments"} link={"/questions"} position={'0vh'} overlayColor={'linear-gradient(180deg, rgba(0,53,89, 0.90) 10%, transparent 60%)'}/>
                 
                   
                
               </div>
               <div className="containerslider">
-               
-                <div className="testingOverlay1"></div>
-                <ImageSlider  className="hover_event_slider" slides = {slides3} label={"PTSD Assessments"} link={"/questions"}/>
+              
+                <ImageSlider  className="hover_event_slider" slides = {slides3} label={"PTSD Assessments"} link={"/questions"} position={'0vh'} overlayColor={'linear-gradient(180deg, rgba(0,53,89, 0.90) 10%, transparent 60%)'}/>
                 
               </div>
             </div>
